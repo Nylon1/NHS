@@ -2,69 +2,84 @@
 
 import { useMemo, useState } from "react";
 
-const medicines = [
-  { name: "Atorvastatin 20 mg", qty: 28, days: 28, lastSupplyDaysAgo: 24, change: "None", stock: 10, value: 2.1 },
-  { name: "Amlodipine 5 mg", qty: 28, days: 28, lastSupplyDaysAgo: 27, change: "Dose changed to 10 mg after recent review", stock: 7, value: 1.45 },
-  { name: "Omeprazole 20 mg", qty: 28, days: 28, lastSupplyDaysAgo: 13, change: "None", stock: 18, value: 1.9 },
+type Status = "pending" | "acknowledged" | "reconciled" | "conflict";
+
+type Service = {
+  name: string;
+  role: string;
+  currentState: string;
+  targetState: string;
+  startingStatus: Status;
+};
+
+const services: Service[] = [
+  { name: "Acute hospital", role: "Authorised change source", currentState: "Amlodipine stopped at discharge", targetState: "Signed stop event issued", startingStatus: "reconciled" },
+  { name: "GP / PCN", role: "Repeat list owner", currentState: "Amlodipine 10 mg still active on repeat", targetState: "Repeat list reconciled", startingStatus: "conflict" },
+  { name: "Community pharmacy", role: "Dispensing workflow", currentState: "Next supply still scheduled", targetState: "Old supply held / cancelled", startingStatus: "pending" },
+  { name: "Care home", role: "Administration workflow", currentState: "eMAR still shows amlodipine", targetState: "eMAR updated after signed instruction", startingStatus: "pending" },
+  { name: "Community nursing", role: "Care-team visibility", currentState: "Old medication list still visible", targetState: "Current medication state acknowledged", startingStatus: "pending" },
 ];
 
-type Decision = "need" | "enough" | "review";
+const statusLabel: Record<Status, string> = {
+  pending: "Pending action",
+  acknowledged: "Acknowledged",
+  reconciled: "Reconciled",
+  conflict: "Conflict detected",
+};
 
 export default function MedicineLoopDemoPage() {
-  const [confirmed, setConfirmed] = useState<Record<string, Decision>>({});
-  const [active, setActive] = useState(medicines[0].name);
+  const [states, setStates] = useState<Record<string, Status>>(() => Object.fromEntries(services.map((s) => [s.name, s.startingStatus])));
+  const [active, setActive] = useState(services[1].name);
 
-  const rows = useMemo(() => medicines.map((m) => {
-    const expectedUsed = Math.min(m.qty, Math.floor(m.lastSupplyDaysAgo * (m.qty / m.days)));
-    const expectedRemaining = Math.max(0, m.qty - expectedUsed);
-    const early = m.lastSupplyDaysAgo < m.days - 3;
-    const changed = m.change !== "None";
-    const mismatch = m.stock > expectedRemaining + 4;
-    const status = changed ? "Clinical review" : early || mismatch ? "Check need" : "Routine";
-    const reasons = [
-      ...(early ? [`Requested ${m.days - m.lastSupplyDaysAgo} days before the expected cycle end.`] : []),
-      ...(mismatch ? [`Patient-reported stock (${m.stock}) is higher than the modelled remainder (${expectedRemaining}).`] : []),
-      ...(changed ? [m.change] : []),
-    ];
-    return { ...m, expectedRemaining, status, reasons };
-  }), []);
+  const current = services.find((s) => s.name === active) || services[0];
+  const currentStatus = states[current.name];
+  const closed = useMemo(() => services.every((s) => states[s.name] === "reconciled"), [states]);
+  const reconciledCount = services.filter((s) => states[s.name] === "reconciled").length;
+  const conflictCount = services.filter((s) => states[s.name] === "conflict").length;
 
-  const current = rows.find((m) => m.name === active) || rows[0];
-  const avoided = rows.filter((m) => confirmed[m.name] === "enough");
-  const reviews = rows.filter((m) => confirmed[m.name] === "review");
-  const completed = Object.keys(confirmed).length;
-  const avoidedValue = avoided.reduce((sum, m) => sum + m.value, 0);
-  const decision = confirmed[current.name];
-  const decisionCopy = !decision
-    ? { title: "Awaiting a human decision", body: "Sitora has identified the signal. Nothing changes until the patient response or authorised professional decision is recorded." }
-    : decision === "need"
-      ? { title: "Supply remains required", body: "The repeat continues through the normal pathway. No resource recovery is claimed." }
-      : decision === "enough"
-        ? { title: "Supply deferred this cycle", body: "The patient confirms sufficient stock. The avoided item can enter the Resource Recovery Record after the dispensing outcome is verified." }
-        : { title: "Professional review required", body: "The case is escalated to a pharmacist or prescriber. Sitora does not make the clinical change." };
+  function nextAction(name: string) {
+    setStates((prev) => ({ ...prev, [name]: "reconciled" }));
+  }
 
   return (
     <>
       <section className="page-head demo-head">
         <div className="shell demo-head-grid">
           <div>
-            <div className="eyebrow">Prototype 1 · fictional data</div>
-            <h1>Medicine Loop</h1>
-            <p className="lede">Before another repeat is supplied, connect the previous supply, expected use, patient-held stock and medication changes. Routine requests flow through. Exceptions get the smallest safe intervention.</p>
+            <div className="eyebrow">Medicine Loop Core · fictional data</div>
+            <h1>One medication change. Every affected service aligned.</h1>
+            <p className="lede">A hospital has stopped amlodipine. The clinical decision is correct, but the loop is still open because GP, pharmacy and care workflows have not all caught up. CareGrid tracks the change from signed decision to confirmed downstream reconciliation.</p>
           </div>
           <div className="demo-status-card">
             <span className="badge">Demo patient</span>
-            <strong>DEMO-1042</strong>
-            <span>3 repeat medicines requested today</span>
-            <span>{completed}/3 reviewed</span>
+            <strong>DEMO-2048</strong>
+            <span>Amlodipine 10 mg stopped in hospital</span>
+            <span>{reconciledCount}/{services.length} services reconciled</span>
           </div>
         </div>
       </section>
 
       <section className="section">
         <div className="shell">
-          <div className="demo-stepper" aria-label="Demo flow">
-            {[["1","Detect"],["2","Explain"],["3","Decide"],["4","Record"]].map(([n,t]) => <div className="demo-step" key={n}><span>{n}</span><strong>{t}</strong></div>)}
+          <div className="demo-stepper" aria-label="Medicine Loop flow">
+            {[["1","Authorise"],["2","Notify"],["3","Reconcile"],["4","Acknowledge"],["5","Close"]].map(([n,t]) => <div className="demo-step" key={n}><span>{n}</span><strong>{t}</strong></div>)}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="shell two-col">
+          <div className="card evidence-card">
+            <div className="meta-row"><span className="badge">Signed medication change</span><span>Source: acute discharge</span></div>
+            <h2>Amlodipine 10 mg → STOP</h2>
+            <p><strong>Authorised by:</strong> hospital prescriber</p>
+            <p><strong>Reason:</strong> fictional adverse-effect review</p>
+            <p><strong>Effective:</strong> today, 14:30</p>
+            <p><strong>Follow-up:</strong> GP medication review within 7 days</p>
+          </div>
+          <div className={`callout ${closed ? "" : ""}`}>
+            <strong>{closed ? "Loop closed" : "Loop still open"}</strong>
+            <p>{closed ? "Every affected workflow has acknowledged and reconciled the authorised change." : `${services.length - reconciledCount} service workflow(s) still need action. A notification alone is not closure.`}</p>
           </div>
         </div>
       </section>
@@ -72,13 +87,13 @@ export default function MedicineLoopDemoPage() {
       <section className="section">
         <div className="shell demo-workspace">
           <aside className="demo-sidebar">
-            <div className="eyebrow">Repeat request</div>
-            <h3>Choose a medicine</h3>
+            <div className="eyebrow">Affected services</div>
+            <h3>Choose a workflow</h3>
             <div className="demo-list">
-              {rows.map((m) => (
-                <button key={m.name} className={`demo-list-item ${active === m.name ? "active" : ""}`} onClick={() => setActive(m.name)}>
-                  <span><strong>{m.name}</strong><small>{m.status}</small></span>
-                  <span className={`signal-dot ${m.status === "Routine" ? "ok" : m.status === "Clinical review" ? "danger" : "warn"}`} />
+              {services.map((s) => (
+                <button key={s.name} className={`demo-list-item ${active === s.name ? "active" : ""}`} onClick={() => setActive(s.name)}>
+                  <span><strong>{s.name}</strong><small>{statusLabel[states[s.name]]}</small></span>
+                  <span className={`signal-dot ${states[s.name] === "reconciled" ? "ok" : states[s.name] === "conflict" ? "danger" : "warn"}`} />
                 </button>
               ))}
             </div>
@@ -86,50 +101,53 @@ export default function MedicineLoopDemoPage() {
 
           <div className="demo-main">
             <div className="demo-panel">
-              <div className="meta-row"><span className="badge">{current.status}</span><span>Last supplied {current.lastSupplyDaysAgo} days ago</span></div>
+              <div className="meta-row"><span className="badge">{statusLabel[currentStatus]}</span><span>{current.role}</span></div>
               <h2>{current.name}</h2>
-              <div className="demo-signal-grid">
-                <div><small>Last quantity</small><strong>{current.qty}</strong><span>tablets</span></div>
-                <div><small>Expected remaining</small><strong>{current.expectedRemaining}</strong><span>estimated</span></div>
-                <div><small>Patient reports</small><strong>{current.stock}</strong><span>remaining</span></div>
+              <div className="comparison-grid">
+                <div className="comparison-card baseline"><span>Current local state</span><strong>{current.currentState}</strong><small>Before reconciliation</small></div>
+                <div className="comparison-arrow">→</div>
+                <div className="comparison-card selected"><span>Required state</span><strong>{current.targetState}</strong><small>After authorised change is actioned</small></div>
               </div>
+
               <div className="demo-flag-box">
-                <span className="badge">Why Sitora flagged this</span>
-                {current.reasons.length ? <ul className="list-clean">{current.reasons.map((r) => <li key={r}>{r}</li>)}</ul> : <p>No exceptional signal. Routine supply can continue with minimal friction.</p>}
+                <span className="badge">Why this matters</span>
+                <p>{currentStatus === "conflict" ? "The hospital record says STOPPED while this service still has the medicine active. CareGrid shows both sources and requires an accountable reconciliation rather than silently overwriting one with the other." : currentStatus === "pending" ? "The service has been affected by the authorised medication change but has not yet confirmed that its local workflow reflects it." : currentStatus === "acknowledged" ? "The service has seen the change, but acknowledgement alone does not prove the local medication workflow was corrected." : "This service has reconciled its local workflow with the authorised change."}</p>
               </div>
+
               <div className="demo-decision-block">
-                <div><div className="eyebrow">Human decision</div><h3>What should happen next?</h3></div>
-                <div className="demo-choice-grid">
-                  <button className={decision === "need" ? "demo-choice selected" : "demo-choice"} onClick={() => setConfirmed(s => ({...s,[current.name]:"need"}))}><strong>Supply required</strong><span>Continue normal pathway</span></button>
-                  <button className={decision === "enough" ? "demo-choice selected" : "demo-choice"} onClick={() => setConfirmed(s => ({...s,[current.name]:"enough"}))}><strong>Enough stock</strong><span>Defer this repeat cycle</span></button>
-                  <button className={decision === "review" ? "demo-choice selected" : "demo-choice"} onClick={() => setConfirmed(s => ({...s,[current.name]:"review"}))}><strong>Send for review</strong><span>Pharmacist/prescriber check</span></button>
-                </div>
+                <div><div className="eyebrow">Accountable next action</div><h3>{currentStatus === "reconciled" ? "This service is complete" : "Reconcile this workflow"}</h3></div>
+                {currentStatus !== "reconciled" && <button className="button primary" onClick={() => nextAction(current.name)}>Mark reconciled for demo</button>}
               </div>
             </div>
-            <div className="demo-outcome-panel"><span className="badge">Recorded outcome</span><h3>{decisionCopy.title}</h3><p>{decisionCopy.body}</p></div>
+
+            <div className={`demo-outcome-panel ${currentStatus === "reconciled" ? "success" : ""}`}>
+              <span className="badge">Workflow status</span>
+              <h3>{statusLabel[currentStatus]}</h3>
+              <p>{currentStatus === "reconciled" ? "The service has confirmed its local repeat, supply, administration or care workflow reflects the signed change." : "CareGrid keeps this action visible and owned until the responsible service resolves it."}</p>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="section">
         <div className="shell">
-          <div className="section-head"><div><div className="eyebrow">Resource Recovery Record</div><h2>What this demo has actually recorded.</h2></div><p>Only explicit decisions appear here. A signal alone is not counted as recovery.</p></div>
+          <div className="section-head"><div><div className="eyebrow">Closed-loop record</div><h2>Visibility is not enough. The action has to close.</h2></div><p>Every service has its own role and permissions. CareGrid records provenance, ownership, acknowledgement and resolution.</p></div>
           <div className="metric-grid">
-            <div className="metric"><span className="badge">Reviewed</span><strong>{completed}</strong><h3>Items assessed</h3><small>Out of three requested medicines.</small></div>
-            <div className="metric"><span className="badge">Avoided</span><strong>{avoided.length}</strong><h3>Supplies deferred</h3><small>Demo items confirmed as not needed this cycle.</small></div>
-            <div className="metric"><span className="badge">Value</span><strong>£{avoidedValue.toFixed(2)}</strong><h3>Illustrative cost avoidance</h3><small>Demo only; real financial benefit requires validation.</small></div>
-            <div className="metric"><span className="badge">Safety</span><strong>{reviews.length}</strong><h3>Professional reviews</h3><small>Clinically meaningful cases escalated rather than automated.</small></div>
+            <div className="metric"><span className="badge">Affected</span><strong>{services.length}</strong><h3>Service workflows</h3><small>Different settings, one medication-change event.</small></div>
+            <div className="metric"><span className="badge">Reconciled</span><strong>{reconciledCount}</strong><h3>Confirmed complete</h3><small>Local workflow now reflects the authorised change.</small></div>
+            <div className="metric"><span className="badge">Conflict</span><strong>{conflictCount}</strong><h3>Unresolved discrepancies</h3><small>Conflicting medication states remain visible until resolved.</small></div>
+            <div className="metric"><span className="badge">Loop</span><strong>{closed ? "Closed" : "Open"}</strong><h3>Overall status</h3><small>The loop closes only when all required downstream actions are complete.</small></div>
           </div>
           <div className="recovery-record" style={{marginTop:18}}>
-            <div><small>Signal</small><strong>{avoided.length ? "Stock confirms repeat not required" : reviews.length ? "Medication discrepancy requires review" : "No verified recovery yet"}</strong></div>
-            <div><small>Action</small><strong>{avoided.length ? "Repeat deferred" : reviews.length ? "Escalated" : "Pending"}</strong></div>
-            <div><small>Benefit type</small><strong>{avoided.length ? "Cost avoidance" : "Not yet classified"}</strong></div>
-            <div><small>Autonomous medicine changes</small><strong>0</strong></div>
+            <div><small>Change</small><strong>STOP amlodipine 10 mg</strong></div>
+            <div><small>Source</small><strong>Hospital discharge</strong></div>
+            <div><small>Accountability</small><strong>{closed ? "All actions closed" : "Outstanding actions remain"}</strong></div>
+            <div><small>Silent overwrite</small><strong>Never</strong></div>
           </div>
         </div>
       </section>
 
-      <section className="section"><div className="shell quote">The innovation is not another reminder. It is a closed feedback loop between the previous supply and the next decision.</div></section>
+      <section className="section"><div className="shell quote">One medication view. Every change signed. Every service notified. Every action acknowledged. Every loop closed.</div></section>
     </>
   );
 }
