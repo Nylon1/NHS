@@ -11,6 +11,7 @@ const primary = [
 
 const more = [
   ["Business case", "/business-case"],
+  ["Technical implementation", "/technical-implementation"],
   ["Dashboard", "/dashboard"],
   ["Benchmarking", "/benchmarking"],
   ["Bottlenecks", "/bottlenecks"],
