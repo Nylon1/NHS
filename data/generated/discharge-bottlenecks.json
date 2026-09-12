@@ -1,0 +1,1743 @@
+{
+  "source_drd": "NHS England Discharge Ready Date, 2026-07",
+  "source_acute": "NHS England Acute Discharge Situation Report, August 2026",
+  "matched_provider_count": 112,
+  "drd_provider_count": 128,
+  "acute_provider_count": 117,
+  "join_rate": 0.875,
+  "methodology_warning": "This joins July 2026 DRD performance signals to August 2026 acute-discharge reason mix. It is a directional bottleneck analysis, not causal proof. Different months, coding practices and local context can affect interpretation.",
+  "priority_providers": [
+    {
+      "provider": "UNIVERSITY HOSPITALS SUSSEX NHS FOUNDATION TRUST",
+      "code": "RYR",
+      "region": "SOUTH EAST",
+      "icb": "NHS SURREY AND SUSSEX INTEGRATED CARE BOARD",
+      "discharges": 5895.0,
+      "bed_days_lost": 12736.0,
+      "average_delay_days": 2.1604749787955897,
+      "same_day_discharge_rate": 0.848515691,
+      "delay_21_plus_rate": 0.033757422,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9694780232007527,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 14299711.34,
+          "share": 0.9694780232007527
+        },
+        {
+          "reason": "Hospital process",
+          "value": 275630.99,
+          "share": 0.018686963741050343
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 82689.02,
+          "share": 0.005606070342536545
+        },
+        {
+          "reason": "Transport",
+          "value": 55125.6,
+          "share": 0.003737352205583432
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 36750.73,
+          "share": 0.00249159051007701
+        }
+      ],
+      "excess_bed_days_vs_median": 7500.820028795393
+    },
+    {
+      "provider": "SOMERSET NHS FOUNDATION TRUST",
+      "code": "RH5",
+      "region": "SOUTH WEST",
+      "icb": "NHS SOMERSET INTEGRATED CARE BOARD",
+      "discharges": 3443.0,
+      "bed_days_lost": 6869.0,
+      "average_delay_days": 1.9950624455416788,
+      "same_day_discharge_rate": 0.808016265,
+      "delay_21_plus_rate": 0.02584955,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9766772073440441,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 6144724.03,
+          "share": 0.9766772073440441
+        },
+        {
+          "reason": "Hospital process",
+          "value": 71000.82,
+          "share": 0.011285272090036753
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 71000.07,
+          "share": 0.011285152880792865
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 4733.49,
+          "share": 0.0007523676851262853
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ],
+      "excess_bed_days_vs_median": 3811.3707140190904
+    },
+    {
+      "provider": "EAST SUSSEX HEALTHCARE NHS TRUST",
+      "code": "RXC",
+      "region": "SOUTH EAST",
+      "icb": "NHS SURREY AND SUSSEX INTEGRATED CARE BOARD",
+      "discharges": 2589.0,
+      "bed_days_lost": 5562.0,
+      "average_delay_days": 2.1483198146002316,
+      "same_day_discharge_rate": 0.753186559,
+      "delay_21_plus_rate": 0.028968714,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9448761956641807,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 5479022.67,
+          "share": 0.9448761956641807
+        },
+        {
+          "reason": "Transport",
+          "value": 229744.47,
+          "share": 0.03962021949226275
+        },
+        {
+          "reason": "Hospital process",
+          "value": 79911.28,
+          "share": 0.013780973502899401
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 9988.85,
+          "share": 0.0017226113406572474
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ],
+      "excess_bed_days_vs_median": 3262.783554631258
+    },
+    {
+      "provider": "MERSEY AND WEST LANCASHIRE TEACHING HOSPITALS NHS TRUST",
+      "code": "RBN",
+      "region": "NORTH WEST",
+      "icb": "NHS CHESHIRE AND MERSEYSIDE INTEGRATED CARE BOARD",
+      "discharges": 4472.0,
+      "bed_days_lost": 7117.0,
+      "average_delay_days": 1.5914579606440071,
+      "same_day_discharge_rate": 0.849060823,
+      "delay_21_plus_rate": 0.022137746,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9879196164780034,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 9549811.06,
+          "share": 0.9879196164780034
+        },
+        {
+          "reason": "Hospital process",
+          "value": 82430.28,
+          "share": 0.008527340498375727
+        },
+        {
+          "reason": "Transport",
+          "value": 20607.38,
+          "share": 0.002131815469259816
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 13738.42,
+          "share": 0.0014212275543610316
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ],
+      "excess_bed_days_vs_median": 3145.545406068362
+    },
+    {
+      "provider": "PORTSMOUTH HOSPITALS UNIVERSITY NHS TRUST",
+      "code": "RHU",
+      "region": "SOUTH EAST",
+      "icb": "NHS HAMPSHIRE AND ISLE OF WIGHT INTEGRATED CARE BOARD",
+      "discharges": 3782.0,
+      "bed_days_lost": 6271.0,
+      "average_delay_days": 1.6581173982020094,
+      "same_day_discharge_rate": 0.757271285,
+      "delay_21_plus_rate": 0.015864622,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9780308826714615,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 10057342.05,
+          "share": 0.9780308826714615
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 142423.73,
+          "share": 0.013850061544368167
+        },
+        {
+          "reason": "Hospital process",
+          "value": 54022.88,
+          "share": 0.005253479969974217
+        },
+        {
+          "reason": "Transport",
+          "value": 24556.17,
+          "share": 0.0023879761174206517
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 4911.28,
+          "share": 0.00047759969677542137
+        }
+      ],
+      "excess_bed_days_vs_median": 2912.3145630032523
+    },
+    {
+      "provider": "LEEDS TEACHING HOSPITALS NHS TRUST",
+      "code": "RR8",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS WEST YORKSHIRE INTEGRATED CARE BOARD",
+      "discharges": 5186.0,
+      "bed_days_lost": 7183.0,
+      "average_delay_days": 1.3850752024681836,
+      "same_day_discharge_rate": 0.837639799,
+      "delay_21_plus_rate": 0.016583108,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.990564443450235,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 8783145.96,
+          "share": 0.990564443450235
+        },
+        {
+          "reason": "Transport",
+          "value": 46479.32,
+          "share": 0.005241944282541032
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 18592.23,
+          "share": 0.002096834328647404
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 18591.73,
+          "share": 0.0020967779385766957
+        },
+        {
+          "reason": "Hospital process",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ],
+      "excess_bed_days_vs_median": 2577.462539327041
+    },
+    {
+      "provider": "UNIVERSITY HOSPITALS DORSET NHS FOUNDATION TRUST",
+      "code": "R0D",
+      "region": "SOUTH WEST",
+      "icb": "NHS DORSET INTEGRATED CARE BOARD",
+      "discharges": 4103.0,
+      "bed_days_lost": 6112.0,
+      "average_delay_days": 1.4896417255666585,
+      "same_day_discharge_rate": 0.81891299,
+      "delay_21_plus_rate": 0.01901048,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.944562042557446,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 7599433.25,
+          "share": 0.944562042557446
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 180415.55,
+          "share": 0.022424524936399043
+        },
+        {
+          "reason": "Transport",
+          "value": 175402.0,
+          "share": 0.02180137201529616
+        },
+        {
+          "reason": "Hospital process",
+          "value": 65148.9,
+          "share": 0.00809760096970005
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 25057.25,
+          "share": 0.003114459521158708
+        }
+      ],
+      "excess_bed_days_vs_median": 2468.2436943422385
+    },
+    {
+      "provider": "BRISTOL NHS FOUNDATION TRUST",
+      "code": "RA7",
+      "region": "SOUTH WEST",
+      "icb": "NHS BRISTOL, NORTH SOMERSET AND SOUTH GLOUCESTERSHIRE INTEGRATED CARE BOARD",
+      "discharges": 7195.0,
+      "bed_days_lost": 8783.0,
+      "average_delay_days": 1.2207088255733147,
+      "same_day_discharge_rate": 0.858790827,
+      "delay_21_plus_rate": 0.011257818,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9751770759525872,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 15086988.98,
+          "share": 0.9751770759525872
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 278425.98,
+          "share": 0.017996608428995718
+        },
+        {
+          "reason": "Hospital process",
+          "value": 67206.29,
+          "share": 0.004344010157010242
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 38403.81,
+          "share": 0.0024823054614068344
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ],
+      "excess_bed_days_vs_median": 2393.327414280381
+    },
+    {
+      "provider": "UNITED LINCOLNSHIRE TEACHING HOSPITALS NHS TRUST",
+      "code": "RWD",
+      "region": "MIDLANDS",
+      "icb": "NHS LINCOLNSHIRE INTEGRATED CARE BOARD",
+      "discharges": 3379.0,
+      "bed_days_lost": 5083.0,
+      "average_delay_days": 1.5042912104172832,
+      "same_day_discharge_rate": 0.768866529,
+      "delay_21_plus_rate": 0.015093223,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.875803444151133,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 5571193.369999999,
+          "share": 0.875803444151133
+        },
+        {
+          "reason": "Hospital process",
+          "value": 631151.34,
+          "share": 0.09921833270572743
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 79446.45,
+          "share": 0.012489150872101356
+        },
+        {
+          "reason": "Transport",
+          "value": 52964.38,
+          "share": 0.008326113157571013
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 26481.57,
+          "share": 0.00416295911346716
+        }
+      ],
+      "excess_bed_days_vs_median": 2082.207273502906
+    },
+    {
+      "provider": "HAMPSHIRE HOSPITALS NHS FOUNDATION TRUST",
+      "code": "RN5",
+      "region": "SOUTH EAST",
+      "icb": "NHS HAMPSHIRE AND ISLE OF WIGHT INTEGRATED CARE BOARD",
+      "discharges": 3225.0,
+      "bed_days_lost": 4825.0,
+      "average_delay_days": 1.496124031007752,
+      "same_day_discharge_rate": 0.819844961,
+      "delay_21_plus_rate": 0.018294574,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9686144509091416,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 6315182.589999998,
+          "share": 0.9686144509091416
+        },
+        {
+          "reason": "Hospital process",
+          "value": 136418.3,
+          "share": 0.020923660537970065
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 28420.76,
+          "share": 0.004359139019260012
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 22736.26,
+          "share": 0.0034872578396228896
+        },
+        {
+          "reason": "Transport",
+          "value": 17052.51,
+          "share": 0.0026154916940054223
+        }
+      ],
+      "excess_bed_days_vs_median": 1960.970244760838
+    },
+    {
+      "provider": "UNIVERSITY HOSPITAL SOUTHAMPTON NHS FOUNDATION TRUST",
+      "code": "RHM",
+      "region": "SOUTH EAST",
+      "icb": "NHS HAMPSHIRE AND ISLE OF WIGHT INTEGRATED CARE BOARD",
+      "discharges": 4226.0,
+      "bed_days_lost": 5699.0,
+      "average_delay_days": 1.3485565546616185,
+      "same_day_discharge_rate": 0.806672977,
+      "delay_21_plus_rate": 0.012778041,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9640262773206927,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 7795060.16,
+          "share": 0.9640262773206927
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 115254.39,
+          "share": 0.014253675822377139
+        },
+        {
+          "reason": "Hospital process",
+          "value": 109766.48999999999,
+          "share": 0.013574979353239402
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 65860.54,
+          "share": 0.008145067503690769
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ],
+      "excess_bed_days_vs_median": 1946.0109315842794
+    },
+    {
+      "provider": "NORTHERN CARE ALLIANCE NHS FOUNDATION TRUST",
+      "code": "RM3",
+      "region": "NORTH WEST",
+      "icb": "NHS GREATER MANCHESTER INTEGRATED CARE BOARD",
+      "discharges": 5159.0,
+      "bed_days_lost": 6517.0,
+      "average_delay_days": 1.2632293080054273,
+      "same_day_discharge_rate": 0.870905214,
+      "delay_21_plus_rate": 0.014150029,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9922747510795242,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 3552374.2899999996,
+          "share": 0.9922747510795242
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 13828.44,
+          "share": 0.003862659376137456
+        },
+        {
+          "reason": "Transport",
+          "value": 9218.96,
+          "share": 0.0025751062507583036
+        },
+        {
+          "reason": "Hospital process",
+          "value": 4609.23,
+          "share": 0.0012874832935800455
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ],
+      "excess_bed_days_vs_median": 1935.4404628592752
+    },
+    {
+      "provider": "MEDWAY NHS FOUNDATION TRUST",
+      "code": "RPA",
+      "region": "SOUTH EAST",
+      "icb": "NHS KENT AND MEDWAY INTEGRATED CARE BOARD",
+      "discharges": 1798.0,
+      "bed_days_lost": 3517.0,
+      "average_delay_days": 1.9560622914349277,
+      "same_day_discharge_rate": 0.764182425,
+      "delay_21_plus_rate": 0.017241379,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9594037415428807,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 3909624.29,
+          "share": 0.9594037415428807
+        },
+        {
+          "reason": "Transport",
+          "value": 105693.66,
+          "share": 0.025936735946911437
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 59738.38,
+          "share": 0.014659522510207851
+        },
+        {
+          "reason": "Hospital process",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ],
+      "excess_bed_days_vs_median": 1920.2479070015465
+    },
+    {
+      "provider": "CALDERDALE AND HUDDERSFIELD NHS FOUNDATION TRUST",
+      "code": "RWY",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS WEST YORKSHIRE INTEGRATED CARE BOARD",
+      "discharges": 2682.0,
+      "bed_days_lost": 4173.0,
+      "average_delay_days": 1.5559284116331096,
+      "same_day_discharge_rate": 0.797912006,
+      "delay_21_plus_rate": 0.01901566,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9632277284062285,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 5150889.029999999,
+          "share": 0.9632277284062285
+        },
+        {
+          "reason": "Hospital process",
+          "value": 163068.15,
+          "share": 0.030494107480297655
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 28776.75,
+          "share": 0.00538131638479774
+        },
+        {
+          "reason": "Transport",
+          "value": 4795.92,
+          "share": 0.0008968477286760728
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ],
+      "excess_bed_days_vs_median": 1791.1929291313388
+    },
+    {
+      "provider": "NORTHAMPTON GENERAL HOSPITAL NHS TRUST",
+      "code": "RNS",
+      "region": "MIDLANDS",
+      "icb": "NHS NORTHAMPTONSHIRE INTEGRATED CARE BOARD",
+      "discharges": 2279.0,
+      "bed_days_lost": 3784.0,
+      "average_delay_days": 1.6603773584905661,
+      "same_day_discharge_rate": 0.728828434,
+      "delay_21_plus_rate": 0.01228609,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9804682682145879,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 5992096.24,
+          "share": 0.9804682682145879
+        },
+        {
+          "reason": "Hospital process",
+          "value": 59683.979999999996,
+          "share": 0.009765905981302146
+        },
+        {
+          "reason": "Transport",
+          "value": 32137.57,
+          "share": 0.005258571681840192
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 13773.21,
+          "share": 0.0022536679678655898
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 13772.71,
+          "share": 0.0022535861544042447
+        }
+      ],
+      "excess_bed_days_vs_median": 1760.0856396309925
+    },
+    {
+      "provider": "COUNTESS OF CHESTER HOSPITAL NHS FOUNDATION TRUST",
+      "code": "RJR",
+      "region": "NORTH WEST",
+      "icb": "NHS CHESHIRE AND MERSEYSIDE INTEGRATED CARE BOARD",
+      "discharges": 1708.0,
+      "bed_days_lost": 3231.0,
+      "average_delay_days": 1.8916861826697893,
+      "same_day_discharge_rate": 0.837822014,
+      "delay_21_plus_rate": 0.027517564,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9903724652903464,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 4289879.949999999,
+          "share": 0.9903724652903464
+        },
+        {
+          "reason": "Hospital process",
+          "value": 13900.82,
+          "share": 0.0032091782365512014
+        },
+        {
+          "reason": "Transport",
+          "value": 13900.82,
+          "share": 0.0032091782365512014
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 13900.82,
+          "share": 0.0032091782365512014
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ],
+      "excess_bed_days_vs_median": 1714.1743187756629
+    },
+    {
+      "provider": "SURREY AND SUSSEX HEALTHCARE NHS TRUST",
+      "code": "RTP",
+      "region": "SOUTH EAST",
+      "icb": "NHS SURREY AND SUSSEX INTEGRATED CARE BOARD",
+      "discharges": 2288.0,
+      "bed_days_lost": 3732.0,
+      "average_delay_days": 1.631118881118881,
+      "same_day_discharge_rate": 0.821678322,
+      "delay_21_plus_rate": 0.020541958,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.8818844696271526,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 3538215.33,
+          "share": 0.8818844696271526
+        },
+        {
+          "reason": "Hospital process",
+          "value": 388435.92000000004,
+          "share": 0.09681592931579297
+        },
+        {
+          "reason": "Transport",
+          "value": 54381.34,
+          "share": 0.013554307669430016
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 23306.4,
+          "share": 0.00580901677426124
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 7768.55,
+          "share": 0.0019362766133631602
+        }
+      ],
+      "excess_bed_days_vs_median": 1700.0929984535805
+    },
+    {
+      "provider": "NORTH CUMBRIA INTEGRATED CARE NHS FOUNDATION TRUST",
+      "code": "RNN",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS NORTH EAST AND NORTH CUMBRIA INTEGRATED CARE BOARD",
+      "discharges": 2089.0,
+      "bed_days_lost": 3454.0,
+      "average_delay_days": 1.6534226902824318,
+      "same_day_discharge_rate": 0.786500718,
+      "delay_21_plus_rate": 0.015797032,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9739956842026718,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 3186663.63,
+          "share": 0.9739956842026718
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 76123.4,
+          "share": 0.02326692480776004
+        },
+        {
+          "reason": "Hospital process",
+          "value": 4478.02,
+          "share": 0.0013686954947840695
+        },
+        {
+          "reason": "Transport",
+          "value": 4478.02,
+          "share": 0.0013686954947840695
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ],
+      "excess_bed_days_vs_median": 1598.8191755985708
+    },
+    {
+      "provider": "JAMES PAGET UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+      "code": "RGP",
+      "region": "EAST OF ENGLAND",
+      "icb": "NHS NORFOLK AND SUFFOLK INTEGRATED CARE BOARD",
+      "discharges": 1306.0,
+      "bed_days_lost": 2705.0,
+      "average_delay_days": 2.071209800918836,
+      "same_day_discharge_rate": 0.732771822,
+      "delay_21_plus_rate": 0.0237366,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9721046638322194,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 2451034.36,
+          "share": 0.9721046638322194
+        },
+        {
+          "reason": "Hospital process",
+          "value": 31970.28,
+          "share": 0.012679731789652239
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 15985.27,
+          "share": 0.006339917454122211
+        },
+        {
+          "reason": "Transport",
+          "value": 15984.77,
+          "share": 0.006339719149137243
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 6394.11,
+          "share": 0.002535967774868824
+        }
+      ],
+      "excess_bed_days_vs_median": 1545.1789580333812
+    },
+    {
+      "provider": "UNIVERSITY HOSPITALS OF MORECAMBE BAY NHS FOUNDATION TRUST",
+      "code": "RTX",
+      "region": "NORTH WEST",
+      "icb": "NHS LANCASHIRE AND SOUTH CUMBRIA INTEGRATED CARE BOARD",
+      "discharges": 1950.0,
+      "bed_days_lost": 3233.0,
+      "average_delay_days": 1.657948717948718,
+      "same_day_discharge_rate": 0.773846154,
+      "delay_21_plus_rate": 0.018461538,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9911842094828333,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 4988124.890000001,
+          "share": 0.9911842094828333
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 14788.71,
+          "share": 0.002938646516250492
+        },
+        {
+          "reason": "Transport",
+          "value": 14788.46,
+          "share": 0.002938596839055587
+        },
+        {
+          "reason": "Hospital process",
+          "value": 9858.64,
+          "share": 0.001958998323110518
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 4929.57,
+          "share": 0.000979548838750164
+        }
+      ],
+      "excess_bed_days_vs_median": 1501.2610782274837
+    },
+    {
+      "provider": "NORTH CHESHIRE AND MERSEY NHS FOUNDATION TRUST",
+      "code": "RWW",
+      "region": "NORTH WEST",
+      "icb": "NHS CHESHIRE AND MERSEYSIDE INTEGRATED CARE BOARD",
+      "discharges": 1597.0,
+      "bed_days_lost": 2849.0,
+      "average_delay_days": 1.783969943644333,
+      "same_day_discharge_rate": 0.833437696,
+      "delay_21_plus_rate": 0.026299311,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9660869828527845,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 3302103.1799999997,
+          "share": 0.9660869828527845
+        },
+        {
+          "reason": "Hospital process",
+          "value": 102540.26999999999,
+          "share": 0.029999916618356513
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 8916.7,
+          "share": 0.0026087336859060306
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 4458.35,
+          "share": 0.0013043668429530153
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ],
+      "excess_bed_days_vs_median": 1430.7502266304057
+    },
+    {
+      "provider": "UNIVERSITY HOSPITALS OF DERBY AND BURTON NHS FOUNDATION TRUST",
+      "code": "RTG",
+      "region": "MIDLANDS",
+      "icb": "NHS DERBY AND DERBYSHIRE INTEGRATED CARE BOARD",
+      "discharges": 5923.0,
+      "bed_days_lost": 6676.0,
+      "average_delay_days": 1.1271315211885868,
+      "same_day_discharge_rate": 0.8016208,
+      "delay_21_plus_rate": 0.011480669,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9816000157849055,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 5202728.879999999,
+          "share": 0.9816000157849055
+        },
+        {
+          "reason": "Hospital process",
+          "value": 48761.92,
+          "share": 0.009199922299564898
+        },
+        {
+          "reason": "Transport",
+          "value": 43886.32,
+          "share": 0.008280041762380173
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 4876.34,
+          "share": 0.0009200201531494309
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ],
+      "excess_bed_days_vs_median": 1415.954034021223
+    },
+    {
+      "provider": "CAMBRIDGE UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+      "code": "RGT",
+      "region": "EAST OF ENGLAND",
+      "icb": "NHS CENTRAL EAST INTEGRATED CARE BOARD",
+      "discharges": 3412.0,
+      "bed_days_lost": 4326.0,
+      "average_delay_days": 1.2678780773739742,
+      "same_day_discharge_rate": 0.712778429,
+      "delay_21_plus_rate": 0.008792497,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.8853196028448845,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 4674537.859999999,
+          "share": 0.8853196028448845
+        },
+        {
+          "reason": "Hospital process",
+          "value": 447918.58,
+          "share": 0.0848321505203179
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 124420.77,
+          "share": 0.023564285921101675
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 33179.67,
+          "share": 0.006283960713695949
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ],
+      "excess_bed_days_vs_median": 1295.9009225190634
+    },
+    {
+      "provider": "FRIMLEY HEALTH NHS FOUNDATION TRUST",
+      "code": "RDU",
+      "region": "SOUTH EAST",
+      "icb": "NHS THAMES VALLEY INTEGRATED CARE BOARD",
+      "discharges": 4431.0,
+      "bed_days_lost": 5178.0,
+      "average_delay_days": 1.1685849695328367,
+      "same_day_discharge_rate": 0.862784924,
+      "delay_21_plus_rate": 0.016023471,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9729965992699535,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 6599941.249999999,
+          "share": 0.9729965992699535
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 118520.38,
+          "share": 0.01747287169930227
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 53872.01,
+          "share": 0.007942083200488632
+        },
+        {
+          "reason": "Hospital process",
+          "value": 10774.6,
+          "share": 0.001588445830255541
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ],
+      "excess_bed_days_vs_median": 1242.9563269876815
+    },
+    {
+      "provider": "SHEFFIELD TEACHING HOSPITALS NHS FOUNDATION TRUST",
+      "code": "RHQ",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS SOUTH YORKSHIRE INTEGRATED CARE BOARD",
+      "discharges": 5700.0,
+      "bed_days_lost": 6231.0,
+      "average_delay_days": 1.093157894736842,
+      "same_day_discharge_rate": 0.793859649,
+      "delay_21_plus_rate": 0.008596491,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9586615822862828,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 6438023.249999999,
+          "share": 0.9586615822862828
+        },
+        {
+          "reason": "Hospital process",
+          "value": 197623.38,
+          "share": 0.029427346688684818
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 70579.67,
+          "share": 0.010509750507571356
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 9410.76,
+          "share": 0.0014013205174610794
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ],
+      "excess_bed_days_vs_median": 1168.9939209726442
+    },
+    {
+      "provider": "TORBAY AND SOUTH DEVON NHS FOUNDATION TRUST",
+      "code": "RA9",
+      "region": "SOUTH WEST",
+      "icb": "NHS DEVON INTEGRATED CARE BOARD",
+      "discharges": 1801.0,
+      "bed_days_lost": 2763.0,
+      "average_delay_days": 1.5341476957245974,
+      "same_day_discharge_rate": 0.799555802,
+      "delay_21_plus_rate": 0.011104942,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9774971964920766,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 2238012.4699999997,
+          "share": 0.9774971964920766
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 41216.58,
+          "share": 0.018002174670184657
+        },
+        {
+          "reason": "Hospital process",
+          "value": 5152.17,
+          "share": 0.0022503144188694276
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 5152.17,
+          "share": 0.0022503144188694276
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ],
+      "excess_bed_days_vs_median": 1163.5836932757425
+    },
+    {
+      "provider": "EAST KENT HOSPITALS UNIVERSITY NHS FOUNDATION TRUST",
+      "code": "RVV",
+      "region": "SOUTH EAST",
+      "icb": "NHS KENT AND MEDWAY INTEGRATED CARE BOARD",
+      "discharges": 3299.0,
+      "bed_days_lost": 4087.0,
+      "average_delay_days": 1.238860260685056,
+      "same_day_discharge_rate": 0.819339194,
+      "delay_21_plus_rate": 0.009093665,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9897859705588362,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 5293998.52,
+          "share": 0.9897859705588362
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 24832.12,
+          "share": 0.004642707001594229
+        },
+        {
+          "reason": "Transport",
+          "value": 14899.47,
+          "share": 0.0027856612197848262
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 14899.47,
+          "share": 0.0027856612197848262
+        },
+        {
+          "reason": "Hospital process",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ],
+      "excess_bed_days_vs_median": 1157.252972857676
+    },
+    {
+      "provider": "SOUTH TYNESIDE AND SUNDERLAND NHS FOUNDATION TRUST",
+      "code": "R0B",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS NORTH EAST AND NORTH CUMBRIA INTEGRATED CARE BOARD",
+      "discharges": 3546.0,
+      "bed_days_lost": 4282.0,
+      "average_delay_days": 1.2075578116187253,
+      "same_day_discharge_rate": 0.844613649,
+      "delay_21_plus_rate": 0.010998308,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9648287336932128,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 7534536.079999998,
+          "share": 0.9648287336932128
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 157674.15,
+          "share": 0.020190831773235562
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 45776.34,
+          "share": 0.0058618510398466325
+        },
+        {
+          "reason": "Hospital process",
+          "value": 35604.4,
+          "share": 0.004559291746852533
+        },
+        {
+          "reason": "Transport",
+          "value": 35604.4,
+          "share": 0.004559291746852533
+        }
+      ],
+      "excess_bed_days_vs_median": 1132.899376099824
+    },
+    {
+      "provider": "WIRRAL UNIVERSITY TEACHING HOSPITAL NHS FOUNDATION TRUST",
+      "code": "RBL",
+      "region": "NORTH WEST",
+      "icb": "NHS CHESHIRE AND MERSEYSIDE INTEGRATED CARE BOARD",
+      "discharges": 2500.0,
+      "bed_days_lost": 3257.0,
+      "average_delay_days": 1.3028,
+      "same_day_discharge_rate": 0.8792,
+      "delay_21_plus_rate": 0.0168,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9769431847283493,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 4059299.459999999,
+          "share": 0.9769431847283493
+        },
+        {
+          "reason": "Hospital process",
+          "value": 68430.67,
+          "share": 0.016469067468822495
+        },
+        {
+          "reason": "Transport",
+          "value": 18248.51,
+          "share": 0.004391831066325699
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 9124.26,
+          "share": 0.0021959167365024827
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ],
+      "excess_bed_days_vs_median": 1036.8218951634403
+    },
+    {
+      "provider": "GEORGE ELIOT HOSPITAL NHS TRUST",
+      "code": "RLT",
+      "region": "MIDLANDS",
+      "icb": "NHS COVENTRY AND WARWICKSHIRE INTEGRATED CARE BOARD",
+      "discharges": 1527.0,
+      "bed_days_lost": 2375.0,
+      "average_delay_days": 1.555337262606418,
+      "same_day_discharge_rate": 0.785854617,
+      "delay_21_plus_rate": 0.013752456,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9643174654517198,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 2684099.1599999997,
+          "share": 0.9643174654517198
+        },
+        {
+          "reason": "Hospital process",
+          "value": 92698.28,
+          "share": 0.033303751125697556
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 6621.15,
+          "share": 0.0023787834225825156
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ],
+      "excess_bed_days_vs_median": 1018.9152135658295
+    },
+    {
+      "provider": "MID YORKSHIRE TEACHING NHS TRUST",
+      "code": "RXF",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS WEST YORKSHIRE INTEGRATED CARE BOARD",
+      "discharges": 3512.0,
+      "bed_days_lost": 4045.0,
+      "average_delay_days": 1.1517653758542141,
+      "same_day_discharge_rate": 0.852505695,
+      "delay_21_plus_rate": 0.012243736,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9631823685876543,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 6264079.140000001,
+          "share": 0.9631823685876543
+        },
+        {
+          "reason": "Hospital process",
+          "value": 187800.64,
+          "share": 0.02887675286578154
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 18779.66,
+          "share": 0.002887613166405625
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 18779.41,
+          "share": 0.002887574725704803
+        },
+        {
+          "reason": "Transport",
+          "value": 14084.62,
+          "share": 0.002165690654453808
+        }
+      ],
+      "excess_bed_days_vs_median": 926.0937983256011
+    },
+    {
+      "provider": "NOTTINGHAM UNIVERSITY HOSPITALS NHS TRUST",
+      "code": "RX1",
+      "region": "MIDLANDS",
+      "icb": "NHS NOTTINGHAM AND NOTTINGHAMSHIRE INTEGRATED CARE BOARD",
+      "discharges": 6137.0,
+      "bed_days_lost": 6287.0,
+      "average_delay_days": 1.02444190972788,
+      "same_day_discharge_rate": 0.786866547,
+      "delay_21_plus_rate": 0.004888382,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.933631094864625,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 7425635.94,
+          "share": 0.933631094864625
+        },
+        {
+          "reason": "Hospital process",
+          "value": 356666.5,
+          "share": 0.04484396186227974
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 135531.59,
+          "share": 0.017040494279934152
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 28533.66,
+          "share": 0.003587559697451981
+        },
+        {
+          "reason": "Transport",
+          "value": 7133.41,
+          "share": 0.0008968892957090305
+        }
+      ],
+      "excess_bed_days_vs_median": 836.9067882472135
+    },
+    {
+      "provider": "LIVERPOOL UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+      "code": "REM",
+      "region": "NORTH WEST",
+      "icb": "NHS CHESHIRE AND MERSEYSIDE INTEGRATED CARE BOARD",
+      "discharges": 4623.0,
+      "bed_days_lost": 4887.0,
+      "average_delay_days": 1.0571057754704738,
+      "same_day_discharge_rate": 0.834090417,
+      "delay_21_plus_rate": 0.009950249,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9716561900144506,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 11442499.379999999,
+          "share": 0.9716561900144506
+        },
+        {
+          "reason": "Hospital process",
+          "value": 157620.37,
+          "share": 0.013384559010818841
+        },
+        {
+          "reason": "Transport",
+          "value": 88081.82,
+          "share": 0.007479593643704322
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 46359.54,
+          "share": 0.0039366866024005435
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 41723.03,
+          "share": 0.003542970728625779
+        }
+      ],
+      "excess_bed_days_vs_median": 781.4466485362344
+    },
+    {
+      "provider": "KETTERING GENERAL HOSPITAL NHS FOUNDATION TRUST",
+      "code": "RNQ",
+      "region": "MIDLANDS",
+      "icb": "NHS NORTHAMPTONSHIRE INTEGRATED CARE BOARD",
+      "discharges": 1874.0,
+      "bed_days_lost": 2407.0,
+      "average_delay_days": 1.284418356456777,
+      "same_day_discharge_rate": 0.803094984,
+      "delay_21_plus_rate": 0.011205977,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9853068758795861,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 2309195.66,
+          "share": 0.9853068758795861
+        },
+        {
+          "reason": "Hospital process",
+          "value": 18541.89,
+          "share": 0.007911608368778477
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 15893.37,
+          "share": 0.006781515751635501
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ],
+      "excess_bed_days_vs_median": 742.7544926145151
+    },
+    {
+      "provider": "ISLE OF WIGHT NHS TRUST",
+      "code": "R1F",
+      "region": "SOUTH EAST",
+      "icb": "NHS HAMPSHIRE AND ISLE OF WIGHT INTEGRATED CARE BOARD",
+      "discharges": 918.0,
+      "bed_days_lost": 1543.0,
+      "average_delay_days": 1.6808278867102397,
+      "same_day_discharge_rate": 0.701525054,
+      "delay_21_plus_rate": 0.01416122,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9498713391894202,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 2708050.1799999997,
+          "share": 0.9498713391894202
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 64065.47,
+          "share": 0.022471501537944038
+        },
+        {
+          "reason": "Hospital process",
+          "value": 54209.549999999996,
+          "share": 0.01901445484121562
+        },
+        {
+          "reason": "Transport",
+          "value": 19711.84,
+          "share": 0.006914093393456831
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 4928.21,
+          "share": 0.0017286110379633709
+        }
+      ],
+      "excess_bed_days_vs_median": 727.7505999040154
+    },
+    {
+      "provider": "LONDON NORTH WEST UNIVERSITY HEALTHCARE NHS TRUST",
+      "code": "R1K",
+      "region": "LONDON",
+      "icb": "NHS WEST AND NORTH LONDON INTEGRATED CARE BOARD",
+      "discharges": 3871.0,
+      "bed_days_lost": 4158.0,
+      "average_delay_days": 1.074141048824593,
+      "same_day_discharge_rate": 0.815293206,
+      "delay_21_plus_rate": 0.01084991,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9611058691321749,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 8308940.1,
+          "share": 0.9611058691321749
+        },
+        {
+          "reason": "Hospital process",
+          "value": 292578.4,
+          "share": 0.0338429226877326
+        },
+        {
+          "reason": "Transport",
+          "value": 39301.95,
+          "share": 0.004546107488888899
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 4366.69,
+          "share": 0.0005051006912037766
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ],
+      "excess_bed_days_vs_median": 720.2762224710708
+    },
+    {
+      "provider": "BEDFORDSHIRE HOSPITALS NHS FOUNDATION TRUST",
+      "code": "RC9",
+      "region": "EAST OF ENGLAND",
+      "icb": "NHS CENTRAL EAST INTEGRATED CARE BOARD",
+      "discharges": 4026.0,
+      "bed_days_lost": 4247.0,
+      "average_delay_days": 1.0548931942374564,
+      "same_day_discharge_rate": 0.838052658,
+      "delay_21_plus_rate": 0.00993542,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9688760609213236,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 2698046.1900000004,
+          "share": 0.9688760609213236
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 86671.38,
+          "share": 0.031123939078676475
+        },
+        {
+          "reason": "Hospital process",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ],
+      "excess_bed_days_vs_median": 671.625179971204
+    },
+    {
+      "provider": "EPSOM AND ST HELIER UNIVERSITY HOSPITALS NHS TRUST",
+      "code": "RVR",
+      "region": "LONDON",
+      "icb": "NHS SOUTH WEST LONDON INTEGRATED CARE BOARD",
+      "discharges": 1617.0,
+      "bed_days_lost": 2107.0,
+      "average_delay_days": 1.303030303030303,
+      "same_day_discharge_rate": 0.790352505,
+      "delay_21_plus_rate": 0.009894867,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9601577905518136,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 4532510.6499999985,
+          "share": 0.9601577905518136
+        },
+        {
+          "reason": "Hospital process",
+          "value": 122974.07,
+          "share": 0.026050575600161937
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 57870.76,
+          "share": 0.012259223496618656
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 7233.88,
+          "share": 0.0015324103514057835
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ],
+      "excess_bed_days_vs_median": 670.9888017917132
+    },
+    {
+      "provider": "DARTFORD AND GRAVESHAM NHS TRUST",
+      "code": "RN7",
+      "region": "SOUTH EAST",
+      "icb": "NHS KENT AND MEDWAY INTEGRATED CARE BOARD",
+      "discharges": 2054.0,
+      "bed_days_lost": 2406.0,
+      "average_delay_days": 1.1713729308666017,
+      "same_day_discharge_rate": 0.841285297,
+      "delay_21_plus_rate": 0.015092502,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9390208597345037,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 2371767.3,
+          "share": 0.9390208597345037
+        },
+        {
+          "reason": "Hospital process",
+          "value": 148096.43,
+          "share": 0.05863376100269649
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 5923.93,
+          "share": 0.002345379262799946
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ],
+      "excess_bed_days_vs_median": 581.9016690662825
+    },
+    {
+      "provider": "THE ROTHERHAM NHS FOUNDATION TRUST",
+      "code": "RFR",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS SOUTH YORKSHIRE INTEGRATED CARE BOARD",
+      "discharges": 2024.0,
+      "bed_days_lost": 2357.0,
+      "average_delay_days": 1.1645256916996047,
+      "same_day_discharge_rate": 0.822134387,
+      "delay_21_plus_rate": 0.007905138,
+      "match_method": "code",
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_share": 0.9817237785260771,
+      "ownership_bucket": "Unknown / mixed",
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 3290348.4300000006,
+          "share": 0.9817237785260771
+        },
+        {
+          "reason": "Hospital process",
+          "value": 51045.12,
+          "share": 0.015230061237531923
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 10209.52,
+          "share": 0.0030461602363909992
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ],
+      "excess_bed_days_vs_median": 559.5438063243214
+    }
+  ],
+  "dominant_cause_excess_bed_day_screen": [
+    {
+      "cause": "Other / uncategorised",
+      "screened_excess_bed_days": 74389.35914253716
+    }
+  ],
+  "ownership_excess_bed_day_screen": [
+    {
+      "owner": "Unknown / mixed",
+      "screened_excess_bed_days": 74389.35914253716
+    }
+  ]
+}
