@@ -4,6 +4,7 @@ const nav = [
   ["Dashboard", "/dashboard"],
   ["Benchmarking", "/benchmarking"],
   ["Bottlenecks", "/bottlenecks"],
+  ["Opportunities", "/opportunities"],
   ["Findings", "/findings"],
   ["Loss map", "/loss-map"],
   ["Register", "/register"],
