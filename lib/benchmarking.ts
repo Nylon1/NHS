@@ -21,6 +21,40 @@ export type BenchmarkCase = {
   sourceUrl: string;
 };
 
+export const latestDischargeDataset = {
+  month: "August 2026",
+  format: "CSV",
+  level: "Regional, ICB/system and provider organisation",
+  status: "Published",
+  sourceLabel: "NHS England, Acute Discharge Situation Report - August 2026",
+  sourceUrl: "https://www.england.nhs.uk/statistics/statistical-work-areas/discharge-delays/acute-discharge-situation-report/",
+  scope: "Adults in acute trusts with a type 1 A&E department; excludes paediatrics, maternity, deceased patients, mental health and specialist trusts.",
+  caveat: "Management information with rapid turnaround and minimal validation. Definitions for discharge pathways and delay reasons changed from 27 May 2024.",
+};
+
+export const dischargeMetrics = [
+  {
+    metric: "Patients no longer meeting criteria to reside",
+    use: "Measures the population clinically ready to leave acute care.",
+    benchmark: "Rate against relevant inpatient / discharge denominator and peer group, not raw count alone."
+  },
+  {
+    metric: "Patients not discharged by end of day",
+    use: "Shows how much discharge-ready capacity remains blocked each day.",
+    benchmark: "Compare as a proportion of patients no longer meeting criteria to reside."
+  },
+  {
+    metric: "Delay reasons for patients with 14+ day length of stay",
+    use: "Moves analysis from a total delay count toward causal attribution.",
+    benchmark: "Compare reason mix within peer groups and flag repeated excess causes."
+  },
+  {
+    metric: "Additional days after no-longer-meeting-criteria decision",
+    use: "Measures accumulated bed-day exposure after clinical readiness for discharge.",
+    benchmark: "Use 7+, 14+ and 21+ day cohorts and normalise for relevant activity."
+  }
+];
+
 export const benchmarkSources: BenchmarkSource[] = [
   {
     id: "discharge-ready-date",
@@ -42,7 +76,7 @@ export const benchmarkSources: BenchmarkSource[] = [
     status: "Public",
     sourceLabel: "NHS England, Acute Discharge Situation Report",
     sourceUrl: "https://www.england.nhs.uk/statistics/statistical-work-areas/discharge-delays/acute-discharge-situation-report/",
-    notes: "Provider-level management information. Definitions changed in May 2024, so trend analysis must respect the break in series."
+    notes: "Provider-level management information. August 2026 is currently published in CSV and Excel. Definitions changed in May 2024, so trend analysis must respect the break in series."
   },
   {
     id: "rtt",
@@ -122,4 +156,15 @@ export const benchmarkRules = [
   "Never convert statistical variation directly into cashable savings without pathway-level validation.",
   "Flag data-quality limitations and methodology breaks explicitly.",
   "Use benchmark variation to trigger investigation, not to declare poor care."
+];
+
+export const benchmarkPipeline = [
+  ["01", "Ingest", "Load the latest NHS monthly provider file and preserve the source month, publication URL and raw values."],
+  ["02", "Validate", "Reject malformed rows, flag missing providers and retain NHS management-information caveats."],
+  ["03", "Normalise", "Create rates using defensible denominators and assign comparable provider peer groups."],
+  ["04", "Benchmark", "Calculate peer median, percentile, distance from peer median and multi-month trend."],
+  ["05", "Investigate", "Flag material, persistent variation for causal review rather than labelling it waste."],
+  ["06", "Quantify", "Estimate excess resource exposure only after the operational cause and avoidability are understood."],
+  ["07", "Intervene", "Attach an owner, intervention and pre-agreed verification metric."],
+  ["08", "Verify", "Record actual bed days, hours, appointments or pounds recovered after implementation."]
 ];
