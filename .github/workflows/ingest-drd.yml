@@ -25,16 +25,18 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Download and analyse NHS DRD publication
+      - name: Discover, download and analyse NHS DRD publications
+        env:
+          DRD_BACKFILL_MONTHS: "12"
         run: python scripts/ingest_drd.py
-      - name: Commit generated dataset
+      - name: Commit generated history
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/generated/drd-latest.json data/raw/drd-july-2026.csv
+          git add data/generated/drd-latest.json data/generated/drd-history.json data/generated/drd-history/
           if git diff --cached --quiet; then
             echo "No data changes"
             exit 0
           fi
-          git commit -m "Update NHS discharge ready date data [skip ci]"
+          git commit -m "Update NHS discharge ready date history [skip ci]"
           git push
