@@ -5,70 +5,46 @@ export default function LossMapPage() {
     <>
       <section className="page-head">
         <div className="shell">
-          <div className="eyebrow">NHS resource loss map</div>
-          <h1>Where resource disappears, what we can already see, and what is still invisible.</h1>
-          <p className="lede">
-            The purpose of this map is not to label all activity as waste. It is to identify where measurable resource loss, avoidable variation or blocked capacity may exist, then define the data and intervention needed to test it safely.
-          </p>
+          <div className="eyebrow">Resource loss map</div>
+          <h1>See where resource may be leaking, then open the mechanism only when you need the detail.</h1>
+          <p className="lede">Each mechanism separates the visible signal from the missing data, the intervention and the proof required before anything can be called recoverable.</p>
         </div>
       </section>
 
       <section className="section">
-        <div className="shell">
-          <div className="metric-grid">
-            <div className="metric"><span className="badge">Map</span><strong>{lossMechanisms.length}</strong><h3>Priority mechanisms</h3><small>Selected for scale, measurability and realistic intervention potential.</small></div>
-            <div className="metric"><span className="badge">Question</span><strong>Cause</strong><h3>Why did the loss occur?</h3><small>Every signal needs root-cause attribution before it can become a savings claim.</small></div>
-            <div className="metric"><span className="badge">Question</span><strong>Recovery</strong><h3>What can be safely recovered?</h3><small>Capacity release, cost avoidance and cash savings are tracked separately.</small></div>
-            <div className="metric"><span className="badge">Question</span><strong>Proof</strong><h3>Did the intervention work?</h3><small>Every pilot requires a balance measure so apparent efficiency does not create harm elsewhere.</small></div>
-          </div>
+        <div className="shell metric-grid">
+          <div className="metric"><span className="badge">Map</span><strong>{lossMechanisms.length}</strong><h3>Priority mechanisms</h3><small>Selected for scale, measurability and intervention potential.</small></div>
+          <div className="metric"><span className="badge">Step 1</span><strong>Signal</strong><h3>What can we already see?</h3><small>Measured exposure, variation or blocked capacity.</small></div>
+          <div className="metric"><span className="badge">Step 2</span><strong>Cause</strong><h3>Why did it happen?</h3><small>Root-cause attribution before intervention.</small></div>
+          <div className="metric"><span className="badge">Step 3</span><strong>Proof</strong><h3>Did anything improve?</h3><small>Verified outcome with safety and workload guardrails.</small></div>
         </div>
       </section>
 
       <section className="section">
-        <div className="shell">
-          <div className="card-grid">
-            {lossMechanisms.map((item) => (
-              <article className="card evidence-card" key={item.id}>
-                <div className="meta-row">
-                  <span className="badge">{item.evidence}</span>
-                  <span>{item.period}</span>
-                  <span>Recoverability: {item.recoverability}</span>
+        <div className="shell opportunity-stack">
+          {lossMechanisms.map((item) => (
+            <details className="reveal-card" key={item.id}>
+              <summary>
+                <span><span className="badge">{item.area}</span> {item.signal}</span>
+                <strong>{item.scale}</strong>
+              </summary>
+              <div className="reveal-body">
+                <div className="meta-row"><span>Evidence: {item.evidence}</span><span>{item.period}</span><span>Recoverability: {item.recoverability}</span></div>
+                <div className="opportunity-grid">
+                  <div><strong>How the loss happens</strong><p>{item.lossMechanism}</p></div>
+                  <div><strong>Existing data</strong><p>{item.existingData}</p></div>
+                  <div><strong>Missing data</strong><p>{item.missingData}</p></div>
+                  <div><strong>Intervention to test</strong><p>{item.intervention}</p></div>
+                  <div><strong>Pilot proof</strong><p>{item.pilotMetric}</p></div>
                 </div>
-                <div className="eyebrow" style={{ marginTop: 14 }}>{item.area}</div>
-                <div className="evidence-value">{item.scale}</div>
-                <h3>{item.signal}</h3>
-
-                <div>
-                  <strong>How the loss happens</strong>
-                  <p>{item.lossMechanism}</p>
-                </div>
-
-                <div>
-                  <strong>Data that already exists</strong>
-                  <p>{item.existingData}</p>
-                </div>
-
-                <div>
-                  <strong>What is still missing</strong>
-                  <p>{item.missingData}</p>
-                </div>
-
-                <div>
-                  <strong>Intervention to test</strong>
-                  <p>{item.intervention}</p>
-                </div>
-
-                <div>
-                  <strong>Pilot proof</strong>
-                  <p>{item.pilotMetric}</p>
-                </div>
-
                 <a className="source-link" href={item.sourceUrl} target="_blank" rel="noreferrer">Source: {item.sourceLabel} ↗</a>
-              </article>
-            ))}
-          </div>
+              </div>
+            </details>
+          ))}
         </div>
       </section>
+
+      <section className="section"><div className="shell quote">A resource-loss signal is only the start. The useful output is a traceable chain from signal to cause to intervention to verified recovery.</div></section>
     </>
   );
 }
