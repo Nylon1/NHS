@@ -18,34 +18,59 @@
       "same_day_discharge_rate": 0.848515691,
       "delay_21_plus_rate": 0.033757422,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9694780232007527,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Community / rehabilitation",
+      "dominant_reason_share": 0.43017456359102246,
+      "ownership_bucket": "Cross-system",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 14299711.34,
-          "share": 0.9694780232007527
+          "reason": "Community / rehabilitation",
+          "value": 172.5,
+          "share": 0.43017456359102246
         },
         {
           "reason": "Hospital process",
-          "value": 275630.99,
-          "share": 0.018686963741050343
+          "value": 138.75,
+          "share": 0.34600997506234416
         },
         {
-          "reason": "Social care assessment",
-          "value": 82689.02,
-          "share": 0.005606070342536545
+          "reason": "Residential / nursing placement",
+          "value": 23.5,
+          "share": 0.05860349127182045
         },
         {
-          "reason": "Transport",
-          "value": 55125.6,
-          "share": 0.003737352205583432
+          "reason": "Care transfer hub",
+          "value": 21.0,
+          "share": 0.05236907730673317
+        },
+        {
+          "reason": "Home care / package of care",
+          "value": 20.0,
+          "share": 0.04987531172069826
+        },
+        {
+          "reason": "Cross-system interface",
+          "value": 7.25,
+          "share": 0.01807980049875312
         },
         {
           "reason": "Funding / approval",
-          "value": 36750.73,
-          "share": 0.00249159051007701
+          "value": 6.5,
+          "share": 0.016209476309226933
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 5.5,
+          "share": 0.01371571072319202
+        },
+        {
+          "reason": "Transport",
+          "value": 3.0,
+          "share": 0.007481296758104738
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 3.0,
+          "share": 0.007481296758104738
         }
       ],
       "excess_bed_days_vs_median": 7500.820028795393
@@ -61,29 +86,54 @@
       "same_day_discharge_rate": 0.808016265,
       "delay_21_plus_rate": 0.02584955,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9766772073440441,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Community / rehabilitation",
+      "dominant_reason_share": 0.28313253012048195,
+      "ownership_bucket": "Cross-system",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 6144724.03,
-          "share": 0.9766772073440441
+          "reason": "Community / rehabilitation",
+          "value": 47.0,
+          "share": 0.28313253012048195
         },
         {
           "reason": "Hospital process",
-          "value": 71000.82,
-          "share": 0.011285272090036753
+          "value": 35.0,
+          "share": 0.21084337349397592
         },
         {
-          "reason": "Social care assessment",
-          "value": 71000.07,
-          "share": 0.011285152880792865
+          "reason": "Cross-system interface",
+          "value": 29.75,
+          "share": 0.17921686746987953
+        },
+        {
+          "reason": "Residential / nursing placement",
+          "value": 23.0,
+          "share": 0.13855421686746988
         },
         {
           "reason": "Funding / approval",
-          "value": 4733.49,
-          "share": 0.0007523676851262853
+          "value": 7.5,
+          "share": 0.045180722891566265
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 7.0,
+          "share": 0.04216867469879518
+        },
+        {
+          "reason": "Home care / package of care",
+          "value": 6.5,
+          "share": 0.0391566265060241
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 5.75,
+          "share": 0.03463855421686747
+        },
+        {
+          "reason": "Care transfer hub",
+          "value": 4.5,
+          "share": 0.02710843373493976
         },
         {
           "reason": "Transport",
@@ -104,34 +154,59 @@
       "same_day_discharge_rate": 0.753186559,
       "delay_21_plus_rate": 0.028968714,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9448761956641807,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Community / rehabilitation",
+      "dominant_reason_share": 0.2396551724137931,
+      "ownership_bucket": "Cross-system",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 5479022.67,
-          "share": 0.9448761956641807
-        },
-        {
-          "reason": "Transport",
-          "value": 229744.47,
-          "share": 0.03962021949226275
+          "reason": "Community / rehabilitation",
+          "value": 34.75,
+          "share": 0.2396551724137931
         },
         {
           "reason": "Hospital process",
-          "value": 79911.28,
-          "share": 0.013780973502899401
+          "value": 30.25,
+          "share": 0.20862068965517241
         },
         {
-          "reason": "Social care assessment",
-          "value": 9988.85,
-          "share": 0.0017226113406572474
+          "reason": "Residential / nursing placement",
+          "value": 26.5,
+          "share": 0.18275862068965518
+        },
+        {
+          "reason": "Home care / package of care",
+          "value": 12.75,
+          "share": 0.08793103448275862
+        },
+        {
+          "reason": "Transport",
+          "value": 11.5,
+          "share": 0.07931034482758621
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 8.0,
+          "share": 0.05517241379310345
+        },
+        {
+          "reason": "Care transfer hub",
+          "value": 6.0,
+          "share": 0.041379310344827586
+        },
+        {
+          "reason": "Cross-system interface",
+          "value": 5.5,
+          "share": 0.03793103448275862
         },
         {
           "reason": "Funding / approval",
-          "value": 0.0,
-          "share": 0.0
+          "value": 5.25,
+          "share": 0.03620689655172414
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 4.5,
+          "share": 0.03103448275862069
         }
       ],
       "excess_bed_days_vs_median": 3262.783554631258
@@ -147,34 +222,59 @@
       "same_day_discharge_rate": 0.849060823,
       "delay_21_plus_rate": 0.022137746,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9879196164780034,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Residential / nursing placement",
+      "dominant_reason_share": 0.2802275960170697,
+      "ownership_bucket": "Community / social care / commissioning",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 9549811.06,
-          "share": 0.9879196164780034
+          "reason": "Residential / nursing placement",
+          "value": 49.25,
+          "share": 0.2802275960170697
         },
         {
-          "reason": "Hospital process",
-          "value": 82430.28,
-          "share": 0.008527340498375727
+          "reason": "Care transfer hub",
+          "value": 31.25,
+          "share": 0.17780938833570412
         },
         {
-          "reason": "Transport",
-          "value": 20607.38,
-          "share": 0.002131815469259816
+          "reason": "Home care / package of care",
+          "value": 25.25,
+          "share": 0.14366998577524892
+        },
+        {
+          "reason": "Community / rehabilitation",
+          "value": 24.0,
+          "share": 0.13655761024182078
         },
         {
           "reason": "Funding / approval",
-          "value": 13738.42,
-          "share": 0.0014212275543610316
+          "value": 17.5,
+          "share": 0.09957325746799431
         },
         {
-          "reason": "Social care assessment",
-          "value": 0.0,
-          "share": 0.0
+          "reason": "Hospital process",
+          "value": 9.75,
+          "share": 0.05547652916073969
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 7.75,
+          "share": 0.044096728307254626
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 5.25,
+          "share": 0.029871977240398292
+        },
+        {
+          "reason": "Cross-system interface",
+          "value": 5.0,
+          "share": 0.02844950213371266
+        },
+        {
+          "reason": "Transport",
+          "value": 0.75,
+          "share": 0.004267425320056899
         }
       ],
       "excess_bed_days_vs_median": 3145.545406068362
@@ -190,34 +290,59 @@
       "same_day_discharge_rate": 0.757271285,
       "delay_21_plus_rate": 0.015864622,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9780308826714615,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Community / rehabilitation",
+      "dominant_reason_share": 0.4168260038240918,
+      "ownership_bucket": "Cross-system",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 10057342.05,
-          "share": 0.9780308826714615
+          "reason": "Community / rehabilitation",
+          "value": 109.0,
+          "share": 0.4168260038240918
         },
         {
-          "reason": "Social care assessment",
-          "value": 142423.73,
-          "share": 0.013850061544368167
+          "reason": "Care transfer hub",
+          "value": 57.25,
+          "share": 0.21892925430210325
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 22.25,
+          "share": 0.08508604206500955
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 18.5,
+          "share": 0.07074569789674952
+        },
+        {
+          "reason": "Residential / nursing placement",
+          "value": 18.0,
+          "share": 0.06883365200764818
+        },
+        {
+          "reason": "Home care / package of care",
+          "value": 12.5,
+          "share": 0.04780114722753346
         },
         {
           "reason": "Hospital process",
-          "value": 54022.88,
-          "share": 0.005253479969974217
-        },
-        {
-          "reason": "Transport",
-          "value": 24556.17,
-          "share": 0.0023879761174206517
+          "value": 12.0,
+          "share": 0.045889101338432124
         },
         {
           "reason": "Funding / approval",
-          "value": 4911.28,
-          "share": 0.00047759969677542137
+          "value": 8.5,
+          "share": 0.032504780114722756
+        },
+        {
+          "reason": "Cross-system interface",
+          "value": 2.25,
+          "share": 0.008604206500956023
+        },
+        {
+          "reason": "Transport",
+          "value": 1.25,
+          "share": 0.004780114722753346
         }
       ],
       "excess_bed_days_vs_median": 2912.3145630032523
@@ -233,34 +358,59 @@
       "same_day_discharge_rate": 0.837639799,
       "delay_21_plus_rate": 0.016583108,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.990564443450235,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Community / rehabilitation",
+      "dominant_reason_share": 0.23819517313746066,
+      "ownership_bucket": "Cross-system",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 8783145.96,
-          "share": 0.990564443450235
+          "reason": "Community / rehabilitation",
+          "value": 56.75,
+          "share": 0.23819517313746066
         },
         {
-          "reason": "Transport",
-          "value": 46479.32,
-          "share": 0.005241944282541032
+          "reason": "Residential / nursing placement",
+          "value": 46.5,
+          "share": 0.19517313746065057
         },
         {
-          "reason": "Funding / approval",
-          "value": 18592.23,
-          "share": 0.002096834328647404
-        },
-        {
-          "reason": "Social care assessment",
-          "value": 18591.73,
-          "share": 0.0020967779385766957
+          "reason": "Home care / package of care",
+          "value": 27.75,
+          "share": 0.11647429171038824
         },
         {
           "reason": "Hospital process",
-          "value": 0.0,
-          "share": 0.0
+          "value": 26.0,
+          "share": 0.10912906610703044
+        },
+        {
+          "reason": "Cross-system interface",
+          "value": 20.5,
+          "share": 0.08604407135362015
+        },
+        {
+          "reason": "Care transfer hub",
+          "value": 17.25,
+          "share": 0.07240293809024134
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 16.75,
+          "share": 0.07030430220356768
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 14.0,
+          "share": 0.05876180482686254
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 10.25,
+          "share": 0.04302203567681007
+        },
+        {
+          "reason": "Transport",
+          "value": 2.5,
+          "share": 0.01049317943336831
         }
       ],
       "excess_bed_days_vs_median": 2577.462539327041
@@ -276,34 +426,59 @@
       "same_day_discharge_rate": 0.81891299,
       "delay_21_plus_rate": 0.01901048,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.944562042557446,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Community / rehabilitation",
+      "dominant_reason_share": 0.314214463840399,
+      "ownership_bucket": "Cross-system",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 7599433.25,
-          "share": 0.944562042557446
+          "reason": "Community / rehabilitation",
+          "value": 63.0,
+          "share": 0.314214463840399
         },
         {
-          "reason": "Funding / approval",
-          "value": 180415.55,
-          "share": 0.022424524936399043
-        },
-        {
-          "reason": "Transport",
-          "value": 175402.0,
-          "share": 0.02180137201529616
+          "reason": "Residential / nursing placement",
+          "value": 35.75,
+          "share": 0.17830423940149626
         },
         {
           "reason": "Hospital process",
-          "value": 65148.9,
-          "share": 0.00809760096970005
+          "value": 20.25,
+          "share": 0.10099750623441396
         },
         {
-          "reason": "Social care assessment",
-          "value": 25057.25,
-          "share": 0.003114459521158708
+          "reason": "Home care / package of care",
+          "value": 18.75,
+          "share": 0.09351620947630923
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 16.25,
+          "share": 0.08104738154613467
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 12.0,
+          "share": 0.059850374064837904
+        },
+        {
+          "reason": "Care transfer hub",
+          "value": 11.5,
+          "share": 0.057356608478802994
+        },
+        {
+          "reason": "Transport",
+          "value": 8.75,
+          "share": 0.043640897755610975
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 8.0,
+          "share": 0.0399002493765586
+        },
+        {
+          "reason": "Cross-system interface",
+          "value": 6.25,
+          "share": 0.03117206982543641
         }
       ],
       "excess_bed_days_vs_median": 2468.2436943422385
@@ -319,32 +494,57 @@
       "same_day_discharge_rate": 0.858790827,
       "delay_21_plus_rate": 0.011257818,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9751770759525872,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Community / rehabilitation",
+      "dominant_reason_share": 0.38944099378881986,
+      "ownership_bucket": "Cross-system",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 15086988.98,
-          "share": 0.9751770759525872
+          "reason": "Community / rehabilitation",
+          "value": 156.75,
+          "share": 0.38944099378881986
+        },
+        {
+          "reason": "Residential / nursing placement",
+          "value": 103.75,
+          "share": 0.2577639751552795
+        },
+        {
+          "reason": "Care transfer hub",
+          "value": 56.5,
+          "share": 0.14037267080745341
         },
         {
           "reason": "Funding / approval",
-          "value": 278425.98,
-          "share": 0.017996608428995718
+          "value": 36.25,
+          "share": 0.09006211180124224
+        },
+        {
+          "reason": "Home care / package of care",
+          "value": 21.75,
+          "share": 0.05403726708074534
         },
         {
           "reason": "Hospital process",
-          "value": 67206.29,
-          "share": 0.004344010157010242
+          "value": 12.75,
+          "share": 0.031677018633540374
         },
         {
-          "reason": "Social care assessment",
-          "value": 38403.81,
-          "share": 0.0024823054614068344
+          "reason": "Equipment / housing",
+          "value": 9.5,
+          "share": 0.02360248447204969
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 5.25,
+          "share": 0.013043478260869565
         },
         {
           "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Cross-system interface",
           "value": 0.0,
           "share": 0.0
         }
@@ -362,34 +562,59 @@
       "same_day_discharge_rate": 0.768866529,
       "delay_21_plus_rate": 0.015093223,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.875803444151133,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Hospital process",
+      "dominant_reason_share": 0.33194444444444443,
+      "ownership_bucket": "Provider-led / operational",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 5571193.369999999,
-          "share": 0.875803444151133
+          "reason": "Hospital process",
+          "value": 59.75,
+          "share": 0.33194444444444443
         },
         {
-          "reason": "Hospital process",
-          "value": 631151.34,
-          "share": 0.09921833270572743
+          "reason": "Community / rehabilitation",
+          "value": 36.5,
+          "share": 0.20277777777777778
+        },
+        {
+          "reason": "Home care / package of care",
+          "value": 23.75,
+          "share": 0.13194444444444445
+        },
+        {
+          "reason": "Care transfer hub",
+          "value": 23.5,
+          "share": 0.13055555555555556
+        },
+        {
+          "reason": "Cross-system interface",
+          "value": 8.0,
+          "share": 0.044444444444444446
         },
         {
           "reason": "Funding / approval",
-          "value": 79446.45,
-          "share": 0.012489150872101356
+          "value": 7.5,
+          "share": 0.041666666666666664
+        },
+        {
+          "reason": "Residential / nursing placement",
+          "value": 7.0,
+          "share": 0.03888888888888889
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 5.75,
+          "share": 0.03194444444444444
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 5.25,
+          "share": 0.029166666666666667
         },
         {
           "reason": "Transport",
-          "value": 52964.38,
-          "share": 0.008326113157571013
-        },
-        {
-          "reason": "Social care assessment",
-          "value": 26481.57,
-          "share": 0.00416295911346716
+          "value": 3.0,
+          "share": 0.016666666666666666
         }
       ],
       "excess_bed_days_vs_median": 2082.207273502906
@@ -405,34 +630,59 @@
       "same_day_discharge_rate": 0.819844961,
       "delay_21_plus_rate": 0.018294574,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9686144509091416,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Community / rehabilitation",
+      "dominant_reason_share": 0.2530541012216405,
+      "ownership_bucket": "Cross-system",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 6315182.589999998,
-          "share": 0.9686144509091416
+          "reason": "Community / rehabilitation",
+          "value": 36.25,
+          "share": 0.2530541012216405
+        },
+        {
+          "reason": "Care transfer hub",
+          "value": 24.5,
+          "share": 0.17102966841186737
         },
         {
           "reason": "Hospital process",
-          "value": 136418.3,
-          "share": 0.020923660537970065
+          "value": 22.5,
+          "share": 0.15706806282722513
+        },
+        {
+          "reason": "Residential / nursing placement",
+          "value": 18.75,
+          "share": 0.13089005235602094
+        },
+        {
+          "reason": "Home care / package of care",
+          "value": 17.25,
+          "share": 0.12041884816753927
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 12.0,
+          "share": 0.08376963350785341
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 6.25,
+          "share": 0.04363001745200698
         },
         {
           "reason": "Funding / approval",
-          "value": 28420.76,
-          "share": 0.004359139019260012
+          "value": 3.25,
+          "share": 0.02268760907504363
         },
         {
-          "reason": "Social care assessment",
-          "value": 22736.26,
-          "share": 0.0034872578396228896
+          "reason": "Cross-system interface",
+          "value": 1.75,
+          "share": 0.012216404886561954
         },
         {
           "reason": "Transport",
-          "value": 17052.51,
-          "share": 0.0026154916940054223
+          "value": 0.75,
+          "share": 0.005235602094240838
         }
       ],
       "excess_bed_days_vs_median": 1960.970244760838
@@ -448,29 +698,54 @@
       "same_day_discharge_rate": 0.806672977,
       "delay_21_plus_rate": 0.012778041,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9640262773206927,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Community / rehabilitation",
+      "dominant_reason_share": 0.28396739130434784,
+      "ownership_bucket": "Cross-system",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 7795060.16,
-          "share": 0.9640262773206927
+          "reason": "Community / rehabilitation",
+          "value": 52.25,
+          "share": 0.28396739130434784
         },
         {
-          "reason": "Social care assessment",
-          "value": 115254.39,
-          "share": 0.014253675822377139
+          "reason": "Home care / package of care",
+          "value": 36.5,
+          "share": 0.1983695652173913
+        },
+        {
+          "reason": "Residential / nursing placement",
+          "value": 31.5,
+          "share": 0.17119565217391305
         },
         {
           "reason": "Hospital process",
-          "value": 109766.48999999999,
-          "share": 0.013574979353239402
+          "value": 15.75,
+          "share": 0.08559782608695653
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 12.75,
+          "share": 0.06929347826086957
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 9.75,
+          "share": 0.05298913043478261
         },
         {
           "reason": "Funding / approval",
-          "value": 65860.54,
-          "share": 0.008145067503690769
+          "value": 9.0,
+          "share": 0.04891304347826087
+        },
+        {
+          "reason": "Care transfer hub",
+          "value": 8.75,
+          "share": 0.04755434782608696
+        },
+        {
+          "reason": "Cross-system interface",
+          "value": 7.75,
+          "share": 0.042119565217391304
         },
         {
           "reason": "Transport",
@@ -491,34 +766,59 @@
       "same_day_discharge_rate": 0.870905214,
       "delay_21_plus_rate": 0.014150029,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9922747510795242,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Community / rehabilitation",
+      "dominant_reason_share": 0.41494845360824745,
+      "ownership_bucket": "Cross-system",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 3552374.2899999996,
-          "share": 0.9922747510795242
+          "reason": "Community / rehabilitation",
+          "value": 40.25,
+          "share": 0.41494845360824745
+        },
+        {
+          "reason": "Residential / nursing placement",
+          "value": 30.5,
+          "share": 0.31443298969072164
+        },
+        {
+          "reason": "Care transfer hub",
+          "value": 6.0,
+          "share": 0.061855670103092786
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 5.25,
+          "share": 0.05412371134020619
         },
         {
           "reason": "Funding / approval",
-          "value": 13828.44,
-          "share": 0.003862659376137456
+          "value": 5.0,
+          "share": 0.05154639175257732
         },
         {
-          "reason": "Transport",
-          "value": 9218.96,
-          "share": 0.0025751062507583036
+          "reason": "Equipment / housing",
+          "value": 3.0,
+          "share": 0.030927835051546393
         },
         {
           "reason": "Hospital process",
-          "value": 4609.23,
-          "share": 0.0012874832935800455
+          "value": 2.5,
+          "share": 0.02577319587628866
         },
         {
-          "reason": "Social care assessment",
-          "value": 0.0,
-          "share": 0.0
+          "reason": "Cross-system interface",
+          "value": 2.25,
+          "share": 0.023195876288659795
+        },
+        {
+          "reason": "Home care / package of care",
+          "value": 1.75,
+          "share": 0.01804123711340206
+        },
+        {
+          "reason": "Transport",
+          "value": 0.5,
+          "share": 0.005154639175257732
         }
       ],
       "excess_bed_days_vs_median": 1935.4404628592752
@@ -534,34 +834,59 @@
       "same_day_discharge_rate": 0.764182425,
       "delay_21_plus_rate": 0.017241379,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9594037415428807,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Hospital process",
+      "dominant_reason_share": 0.24830699774266365,
+      "ownership_bucket": "Provider-led / operational",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 3909624.29,
-          "share": 0.9594037415428807
+          "reason": "Hospital process",
+          "value": 27.5,
+          "share": 0.24830699774266365
+        },
+        {
+          "reason": "Community / rehabilitation",
+          "value": 26.5,
+          "share": 0.23927765237020315
+        },
+        {
+          "reason": "Residential / nursing placement",
+          "value": 24.0,
+          "share": 0.21670428893905191
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 7.25,
+          "share": 0.0654627539503386
+        },
+        {
+          "reason": "Cross-system interface",
+          "value": 6.5,
+          "share": 0.05869074492099323
+        },
+        {
+          "reason": "Home care / package of care",
+          "value": 6.25,
+          "share": 0.056433408577878104
         },
         {
           "reason": "Transport",
-          "value": 105693.66,
-          "share": 0.025936735946911437
+          "value": 5.75,
+          "share": 0.05191873589164785
         },
         {
-          "reason": "Social care assessment",
-          "value": 59738.38,
-          "share": 0.014659522510207851
+          "reason": "Care transfer hub",
+          "value": 4.0,
+          "share": 0.03611738148984198
         },
         {
-          "reason": "Hospital process",
-          "value": 0.0,
-          "share": 0.0
+          "reason": "Patient / family / safeguarding",
+          "value": 2.0,
+          "share": 0.01805869074492099
         },
         {
           "reason": "Funding / approval",
-          "value": 0.0,
-          "share": 0.0
+          "value": 1.0,
+          "share": 0.009029345372460496
         }
       ],
       "excess_bed_days_vs_median": 1920.2479070015465
@@ -577,34 +902,59 @@
       "same_day_discharge_rate": 0.797912006,
       "delay_21_plus_rate": 0.01901566,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9632277284062285,
+      "dominant_reason": "Care transfer hub",
+      "dominant_reason_share": 0.4129263913824057,
       "ownership_bucket": "Unknown / mixed",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 5150889.029999999,
-          "share": 0.9632277284062285
+          "reason": "Care transfer hub",
+          "value": 57.5,
+          "share": 0.4129263913824057
+        },
+        {
+          "reason": "Community / rehabilitation",
+          "value": 31.5,
+          "share": 0.22621184919210055
         },
         {
           "reason": "Hospital process",
-          "value": 163068.15,
-          "share": 0.030494107480297655
+          "value": 20.25,
+          "share": 0.14542190305206462
+        },
+        {
+          "reason": "Residential / nursing placement",
+          "value": 10.25,
+          "share": 0.07360861759425494
         },
         {
           "reason": "Funding / approval",
-          "value": 28776.75,
-          "share": 0.00538131638479774
+          "value": 8.75,
+          "share": 0.06283662477558348
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 4.75,
+          "share": 0.03411131059245961
+        },
+        {
+          "reason": "Home care / package of care",
+          "value": 2.5,
+          "share": 0.017953321364452424
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 2.25,
+          "share": 0.01615798922800718
+        },
+        {
+          "reason": "Cross-system interface",
+          "value": 1.25,
+          "share": 0.008976660682226212
         },
         {
           "reason": "Transport",
-          "value": 4795.92,
-          "share": 0.0008968477286760728
-        },
-        {
-          "reason": "Social care assessment",
-          "value": 0.0,
-          "share": 0.0
+          "value": 0.25,
+          "share": 0.0017953321364452424
         }
       ],
       "excess_bed_days_vs_median": 1791.1929291313388
@@ -620,34 +970,59 @@
       "same_day_discharge_rate": 0.728828434,
       "delay_21_plus_rate": 0.01228609,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9804682682145879,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Community / rehabilitation",
+      "dominant_reason_share": 0.3774436090225564,
+      "ownership_bucket": "Cross-system",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 5992096.24,
-          "share": 0.9804682682145879
+          "reason": "Community / rehabilitation",
+          "value": 62.75,
+          "share": 0.3774436090225564
         },
         {
           "reason": "Hospital process",
-          "value": 59683.979999999996,
-          "share": 0.009765905981302146
+          "value": 32.75,
+          "share": 0.19699248120300752
         },
         {
-          "reason": "Transport",
-          "value": 32137.57,
-          "share": 0.005258571681840192
+          "reason": "Residential / nursing placement",
+          "value": 18.5,
+          "share": 0.11127819548872181
+        },
+        {
+          "reason": "Cross-system interface",
+          "value": 16.75,
+          "share": 0.10075187969924812
+        },
+        {
+          "reason": "Care transfer hub",
+          "value": 11.0,
+          "share": 0.06616541353383458
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 10.5,
+          "share": 0.06315789473684211
         },
         {
           "reason": "Funding / approval",
-          "value": 13773.21,
-          "share": 0.0022536679678655898
+          "value": 7.0,
+          "share": 0.042105263157894736
         },
         {
-          "reason": "Social care assessment",
-          "value": 13772.71,
-          "share": 0.0022535861544042447
+          "reason": "Equipment / housing",
+          "value": 3.25,
+          "share": 0.019548872180451128
+        },
+        {
+          "reason": "Home care / package of care",
+          "value": 2.0,
+          "share": 0.012030075187969926
+        },
+        {
+          "reason": "Transport",
+          "value": 1.75,
+          "share": 0.010526315789473684
         }
       ],
       "excess_bed_days_vs_median": 1760.0856396309925
@@ -663,34 +1038,59 @@
       "same_day_discharge_rate": 0.837822014,
       "delay_21_plus_rate": 0.027517564,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9903724652903464,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Residential / nursing placement",
+      "dominant_reason_share": 0.2334047109207709,
+      "ownership_bucket": "Community / social care / commissioning",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 4289879.949999999,
-          "share": 0.9903724652903464
+          "reason": "Residential / nursing placement",
+          "value": 27.25,
+          "share": 0.2334047109207709
+        },
+        {
+          "reason": "Community / rehabilitation",
+          "value": 26.0,
+          "share": 0.22269807280513917
+        },
+        {
+          "reason": "Home care / package of care",
+          "value": 19.0,
+          "share": 0.16274089935760172
+        },
+        {
+          "reason": "Care transfer hub",
+          "value": 17.75,
+          "share": 0.15203426124197003
         },
         {
           "reason": "Hospital process",
-          "value": 13900.82,
-          "share": 0.0032091782365512014
+          "value": 8.5,
+          "share": 0.0728051391862955
         },
         {
-          "reason": "Transport",
-          "value": 13900.82,
-          "share": 0.0032091782365512014
+          "reason": "Patient / family / safeguarding",
+          "value": 6.5,
+          "share": 0.055674518201284794
         },
         {
-          "reason": "Social care assessment",
-          "value": 13900.82,
-          "share": 0.0032091782365512014
+          "reason": "Cross-system interface",
+          "value": 6.0,
+          "share": 0.05139186295503212
         },
         {
           "reason": "Funding / approval",
-          "value": 0.0,
-          "share": 0.0
+          "value": 3.25,
+          "share": 0.027837259100642397
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 1.75,
+          "share": 0.014989293361884369
+        },
+        {
+          "reason": "Transport",
+          "value": 0.75,
+          "share": 0.006423982869379015
         }
       ],
       "excess_bed_days_vs_median": 1714.1743187756629
@@ -706,34 +1106,59 @@
       "same_day_discharge_rate": 0.821678322,
       "delay_21_plus_rate": 0.020541958,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.8818844696271526,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Hospital process",
+      "dominant_reason_share": 0.34689922480620156,
+      "ownership_bucket": "Provider-led / operational",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 3538215.33,
-          "share": 0.8818844696271526
-        },
-        {
           "reason": "Hospital process",
-          "value": 388435.92000000004,
-          "share": 0.09681592931579297
+          "value": 44.75,
+          "share": 0.34689922480620156
         },
         {
-          "reason": "Transport",
-          "value": 54381.34,
-          "share": 0.013554307669430016
+          "reason": "Community / rehabilitation",
+          "value": 32.25,
+          "share": 0.25
+        },
+        {
+          "reason": "Residential / nursing placement",
+          "value": 17.25,
+          "share": 0.13372093023255813
         },
         {
           "reason": "Funding / approval",
-          "value": 23306.4,
-          "share": 0.00580901677426124
+          "value": 11.25,
+          "share": 0.0872093023255814
         },
         {
-          "reason": "Social care assessment",
-          "value": 7768.55,
-          "share": 0.0019362766133631602
+          "reason": "Home care / package of care",
+          "value": 7.0,
+          "share": 0.05426356589147287
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 4.75,
+          "share": 0.03682170542635659
+        },
+        {
+          "reason": "Transport",
+          "value": 3.5,
+          "share": 0.027131782945736434
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 3.5,
+          "share": 0.027131782945736434
+        },
+        {
+          "reason": "Cross-system interface",
+          "value": 3.25,
+          "share": 0.025193798449612403
+        },
+        {
+          "reason": "Care transfer hub",
+          "value": 1.5,
+          "share": 0.011627906976744186
         }
       ],
       "excess_bed_days_vs_median": 1700.0929984535805
@@ -749,34 +1174,59 @@
       "same_day_discharge_rate": 0.786500718,
       "delay_21_plus_rate": 0.015797032,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9739956842026718,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Community / rehabilitation",
+      "dominant_reason_share": 0.3643835616438356,
+      "ownership_bucket": "Cross-system",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 3186663.63,
-          "share": 0.9739956842026718
-        },
-        {
-          "reason": "Social care assessment",
-          "value": 76123.4,
-          "share": 0.02326692480776004
+          "reason": "Community / rehabilitation",
+          "value": 33.25,
+          "share": 0.3643835616438356
         },
         {
           "reason": "Hospital process",
-          "value": 4478.02,
-          "share": 0.0013686954947840695
+          "value": 14.0,
+          "share": 0.15342465753424658
         },
         {
-          "reason": "Transport",
-          "value": 4478.02,
-          "share": 0.0013686954947840695
+          "reason": "Home care / package of care",
+          "value": 9.0,
+          "share": 0.09863013698630137
+        },
+        {
+          "reason": "Residential / nursing placement",
+          "value": 9.0,
+          "share": 0.09863013698630137
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 7.0,
+          "share": 0.07671232876712329
         },
         {
           "reason": "Funding / approval",
-          "value": 0.0,
-          "share": 0.0
+          "value": 6.0,
+          "share": 0.06575342465753424
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 5.5,
+          "share": 0.06027397260273973
+        },
+        {
+          "reason": "Care transfer hub",
+          "value": 4.75,
+          "share": 0.052054794520547946
+        },
+        {
+          "reason": "Cross-system interface",
+          "value": 2.5,
+          "share": 0.0273972602739726
+        },
+        {
+          "reason": "Transport",
+          "value": 0.25,
+          "share": 0.0027397260273972603
         }
       ],
       "excess_bed_days_vs_median": 1598.8191755985708
@@ -792,34 +1242,59 @@
       "same_day_discharge_rate": 0.732771822,
       "delay_21_plus_rate": 0.0237366,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9721046638322194,
+      "dominant_reason": "Care transfer hub",
+      "dominant_reason_share": 0.2969543147208122,
       "ownership_bucket": "Unknown / mixed",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 2451034.36,
-          "share": 0.9721046638322194
+          "reason": "Care transfer hub",
+          "value": 29.25,
+          "share": 0.2969543147208122
         },
         {
           "reason": "Hospital process",
-          "value": 31970.28,
-          "share": 0.012679731789652239
+          "value": 16.75,
+          "share": 0.1700507614213198
+        },
+        {
+          "reason": "Residential / nursing placement",
+          "value": 15.0,
+          "share": 0.15228426395939088
+        },
+        {
+          "reason": "Community / rehabilitation",
+          "value": 10.5,
+          "share": 0.1065989847715736
+        },
+        {
+          "reason": "Home care / package of care",
+          "value": 8.75,
+          "share": 0.08883248730964467
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 8.0,
+          "share": 0.08121827411167512
+        },
+        {
+          "reason": "Cross-system interface",
+          "value": 5.25,
+          "share": 0.0532994923857868
         },
         {
           "reason": "Funding / approval",
-          "value": 15985.27,
-          "share": 0.006339917454122211
+          "value": 3.0,
+          "share": 0.030456852791878174
         },
         {
           "reason": "Transport",
-          "value": 15984.77,
-          "share": 0.006339719149137243
+          "value": 1.25,
+          "share": 0.012690355329949238
         },
         {
-          "reason": "Social care assessment",
-          "value": 6394.11,
-          "share": 0.002535967774868824
+          "reason": "Equipment / housing",
+          "value": 0.75,
+          "share": 0.007614213197969543
         }
       ],
       "excess_bed_days_vs_median": 1545.1789580333812
@@ -835,34 +1310,59 @@
       "same_day_discharge_rate": 0.773846154,
       "delay_21_plus_rate": 0.018461538,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9911842094828333,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Community / rehabilitation",
+      "dominant_reason_share": 0.6568627450980392,
+      "ownership_bucket": "Cross-system",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 4988124.890000001,
-          "share": 0.9911842094828333
-        },
-        {
-          "reason": "Social care assessment",
-          "value": 14788.71,
-          "share": 0.002938646516250492
-        },
-        {
-          "reason": "Transport",
-          "value": 14788.46,
-          "share": 0.002938596839055587
+          "reason": "Community / rehabilitation",
+          "value": 83.75,
+          "share": 0.6568627450980392
         },
         {
           "reason": "Hospital process",
-          "value": 9858.64,
-          "share": 0.001958998323110518
+          "value": 11.75,
+          "share": 0.09215686274509804
+        },
+        {
+          "reason": "Care transfer hub",
+          "value": 8.5,
+          "share": 0.06666666666666667
+        },
+        {
+          "reason": "Home care / package of care",
+          "value": 8.0,
+          "share": 0.06274509803921569
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 7.0,
+          "share": 0.054901960784313725
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 2.75,
+          "share": 0.021568627450980392
         },
         {
           "reason": "Funding / approval",
-          "value": 4929.57,
-          "share": 0.000979548838750164
+          "value": 2.75,
+          "share": 0.021568627450980392
+        },
+        {
+          "reason": "Residential / nursing placement",
+          "value": 1.25,
+          "share": 0.00980392156862745
+        },
+        {
+          "reason": "Cross-system interface",
+          "value": 1.0,
+          "share": 0.00784313725490196
+        },
+        {
+          "reason": "Transport",
+          "value": 0.75,
+          "share": 0.0058823529411764705
         }
       ],
       "excess_bed_days_vs_median": 1501.2610782274837
@@ -878,29 +1378,54 @@
       "same_day_discharge_rate": 0.833437696,
       "delay_21_plus_rate": 0.026299311,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9660869828527845,
+      "dominant_reason": "Care transfer hub",
+      "dominant_reason_share": 0.42036553524804177,
       "ownership_bucket": "Unknown / mixed",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 3302103.1799999997,
-          "share": 0.9660869828527845
+          "reason": "Care transfer hub",
+          "value": 40.25,
+          "share": 0.42036553524804177
         },
         {
           "reason": "Hospital process",
-          "value": 102540.26999999999,
-          "share": 0.029999916618356513
+          "value": 15.0,
+          "share": 0.1566579634464752
         },
         {
-          "reason": "Social care assessment",
-          "value": 8916.7,
-          "share": 0.0026087336859060306
+          "reason": "Residential / nursing placement",
+          "value": 13.25,
+          "share": 0.13838120104438642
+        },
+        {
+          "reason": "Community / rehabilitation",
+          "value": 9.75,
+          "share": 0.10182767624020887
+        },
+        {
+          "reason": "Home care / package of care",
+          "value": 5.5,
+          "share": 0.057441253263707574
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 3.25,
+          "share": 0.033942558746736295
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 3.25,
+          "share": 0.033942558746736295
         },
         {
           "reason": "Funding / approval",
-          "value": 4458.35,
-          "share": 0.0013043668429530153
+          "value": 3.0,
+          "share": 0.031331592689295036
+        },
+        {
+          "reason": "Cross-system interface",
+          "value": 2.5,
+          "share": 0.02610966057441253
         },
         {
           "reason": "Transport",
@@ -921,34 +1446,59 @@
       "same_day_discharge_rate": 0.8016208,
       "delay_21_plus_rate": 0.011480669,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9816000157849055,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Hospital process",
+      "dominant_reason_share": 0.4714548802946593,
+      "ownership_bucket": "Provider-led / operational",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 5202728.879999999,
-          "share": 0.9816000157849055
-        },
-        {
           "reason": "Hospital process",
-          "value": 48761.92,
-          "share": 0.009199922299564898
+          "value": 64.0,
+          "share": 0.4714548802946593
         },
         {
-          "reason": "Transport",
-          "value": 43886.32,
-          "share": 0.008280041762380173
+          "reason": "Community / rehabilitation",
+          "value": 26.5,
+          "share": 0.19521178637200737
+        },
+        {
+          "reason": "Residential / nursing placement",
+          "value": 13.0,
+          "share": 0.09576427255985268
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 10.25,
+          "share": 0.07550644567219153
         },
         {
           "reason": "Funding / approval",
-          "value": 4876.34,
-          "share": 0.0009200201531494309
+          "value": 8.0,
+          "share": 0.058931860036832415
         },
         {
-          "reason": "Social care assessment",
-          "value": 0.0,
-          "share": 0.0
+          "reason": "Care transfer hub",
+          "value": 7.5,
+          "share": 0.055248618784530384
+        },
+        {
+          "reason": "Cross-system interface",
+          "value": 2.5,
+          "share": 0.01841620626151013
+        },
+        {
+          "reason": "Transport",
+          "value": 2.25,
+          "share": 0.016574585635359115
+        },
+        {
+          "reason": "Home care / package of care",
+          "value": 1.25,
+          "share": 0.009208103130755065
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 0.5,
+          "share": 0.003683241252302026
         }
       ],
       "excess_bed_days_vs_median": 1415.954034021223
@@ -964,29 +1514,54 @@
       "same_day_discharge_rate": 0.712778429,
       "delay_21_plus_rate": 0.008792497,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.8853196028448845,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Hospital process",
+      "dominant_reason_share": 0.30345911949685533,
+      "ownership_bucket": "Provider-led / operational",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 4674537.859999999,
-          "share": 0.8853196028448845
-        },
-        {
           "reason": "Hospital process",
-          "value": 447918.58,
-          "share": 0.0848321505203179
+          "value": 48.25,
+          "share": 0.30345911949685533
         },
         {
-          "reason": "Social care assessment",
-          "value": 124420.77,
-          "share": 0.023564285921101675
+          "reason": "Community / rehabilitation",
+          "value": 41.25,
+          "share": 0.25943396226415094
+        },
+        {
+          "reason": "Home care / package of care",
+          "value": 25.75,
+          "share": 0.1619496855345912
+        },
+        {
+          "reason": "Care transfer hub",
+          "value": 23.0,
+          "share": 0.14465408805031446
+        },
+        {
+          "reason": "Residential / nursing placement",
+          "value": 8.25,
+          "share": 0.05188679245283019
         },
         {
           "reason": "Funding / approval",
-          "value": 33179.67,
-          "share": 0.006283960713695949
+          "value": 6.5,
+          "share": 0.040880503144654086
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 3.0,
+          "share": 0.018867924528301886
+        },
+        {
+          "reason": "Cross-system interface",
+          "value": 2.0,
+          "share": 0.012578616352201259
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 1.0,
+          "share": 0.006289308176100629
         },
         {
           "reason": "Transport",
@@ -1007,29 +1582,54 @@
       "same_day_discharge_rate": 0.862784924,
       "delay_21_plus_rate": 0.016023471,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9729965992699535,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Community / rehabilitation",
+      "dominant_reason_share": 0.26232114467408585,
+      "ownership_bucket": "Cross-system",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 6599941.249999999,
-          "share": 0.9729965992699535
+          "reason": "Community / rehabilitation",
+          "value": 41.25,
+          "share": 0.26232114467408585
+        },
+        {
+          "reason": "Care transfer hub",
+          "value": 38.75,
+          "share": 0.246422893481717
+        },
+        {
+          "reason": "Home care / package of care",
+          "value": 29.75,
+          "share": 0.1891891891891892
+        },
+        {
+          "reason": "Cross-system interface",
+          "value": 14.0,
+          "share": 0.0890302066772655
+        },
+        {
+          "reason": "Residential / nursing placement",
+          "value": 13.5,
+          "share": 0.08585055643879173
         },
         {
           "reason": "Funding / approval",
-          "value": 118520.38,
-          "share": 0.01747287169930227
+          "value": 10.0,
+          "share": 0.06359300476947535
         },
         {
-          "reason": "Social care assessment",
-          "value": 53872.01,
-          "share": 0.007942083200488632
+          "reason": "Equipment / housing",
+          "value": 4.75,
+          "share": 0.030206677265500796
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 3.25,
+          "share": 0.02066772655007949
         },
         {
           "reason": "Hospital process",
-          "value": 10774.6,
-          "share": 0.001588445830255541
+          "value": 2.0,
+          "share": 0.012718600953895072
         },
         {
           "reason": "Transport",
@@ -1050,29 +1650,54 @@
       "same_day_discharge_rate": 0.793859649,
       "delay_21_plus_rate": 0.008596491,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9586615822862828,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Community / rehabilitation",
+      "dominant_reason_share": 0.21458625525946703,
+      "ownership_bucket": "Cross-system",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 6438023.249999999,
-          "share": 0.9586615822862828
+          "reason": "Community / rehabilitation",
+          "value": 38.25,
+          "share": 0.21458625525946703
+        },
+        {
+          "reason": "Care transfer hub",
+          "value": 30.5,
+          "share": 0.17110799438990182
+        },
+        {
+          "reason": "Residential / nursing placement",
+          "value": 29.25,
+          "share": 0.1640953716690042
         },
         {
           "reason": "Hospital process",
-          "value": 197623.38,
-          "share": 0.029427346688684818
+          "value": 17.75,
+          "share": 0.09957924263674614
         },
         {
-          "reason": "Social care assessment",
-          "value": 70579.67,
-          "share": 0.010509750507571356
+          "reason": "Home care / package of care",
+          "value": 16.0,
+          "share": 0.08976157082748948
+        },
+        {
+          "reason": "Cross-system interface",
+          "value": 15.25,
+          "share": 0.08555399719495091
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 13.25,
+          "share": 0.07433380084151472
         },
         {
           "reason": "Funding / approval",
-          "value": 9410.76,
-          "share": 0.0014013205174610794
+          "value": 9.25,
+          "share": 0.051893408134642355
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 8.75,
+          "share": 0.04908835904628331
         },
         {
           "reason": "Transport",
@@ -1093,32 +1718,57 @@
       "same_day_discharge_rate": 0.799555802,
       "delay_21_plus_rate": 0.011104942,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9774971964920766,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Community / rehabilitation",
+      "dominant_reason_share": 0.42342342342342343,
+      "ownership_bucket": "Cross-system",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 2238012.4699999997,
-          "share": 0.9774971964920766
-        },
-        {
-          "reason": "Social care assessment",
-          "value": 41216.58,
-          "share": 0.018002174670184657
+          "reason": "Community / rehabilitation",
+          "value": 23.5,
+          "share": 0.42342342342342343
         },
         {
           "reason": "Hospital process",
-          "value": 5152.17,
-          "share": 0.0022503144188694276
+          "value": 16.75,
+          "share": 0.30180180180180183
+        },
+        {
+          "reason": "Residential / nursing placement",
+          "value": 6.25,
+          "share": 0.11261261261261261
+        },
+        {
+          "reason": "Care transfer hub",
+          "value": 3.5,
+          "share": 0.06306306306306306
         },
         {
           "reason": "Funding / approval",
-          "value": 5152.17,
-          "share": 0.0022503144188694276
+          "value": 2.25,
+          "share": 0.04054054054054054
+        },
+        {
+          "reason": "Home care / package of care",
+          "value": 2.0,
+          "share": 0.036036036036036036
+        },
+        {
+          "reason": "Cross-system interface",
+          "value": 0.75,
+          "share": 0.013513513513513514
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 0.5,
+          "share": 0.009009009009009009
         },
         {
           "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Patient / family / safeguarding",
           "value": 0.0,
           "share": 0.0
         }
@@ -1136,34 +1786,59 @@
       "same_day_discharge_rate": 0.819339194,
       "delay_21_plus_rate": 0.009093665,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9897859705588362,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Community / rehabilitation",
+      "dominant_reason_share": 0.26579925650557623,
+      "ownership_bucket": "Cross-system",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 5293998.52,
-          "share": 0.9897859705588362
+          "reason": "Community / rehabilitation",
+          "value": 35.75,
+          "share": 0.26579925650557623
         },
         {
-          "reason": "Social care assessment",
-          "value": 24832.12,
-          "share": 0.004642707001594229
-        },
-        {
-          "reason": "Transport",
-          "value": 14899.47,
-          "share": 0.0027856612197848262
-        },
-        {
-          "reason": "Funding / approval",
-          "value": 14899.47,
-          "share": 0.0027856612197848262
+          "reason": "Care transfer hub",
+          "value": 34.5,
+          "share": 0.25650557620817843
         },
         {
           "reason": "Hospital process",
-          "value": 0.0,
-          "share": 0.0
+          "value": 30.25,
+          "share": 0.22490706319702602
+        },
+        {
+          "reason": "Residential / nursing placement",
+          "value": 17.0,
+          "share": 0.12639405204460966
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 6.0,
+          "share": 0.04460966542750929
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 3.75,
+          "share": 0.027881040892193308
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 3.5,
+          "share": 0.026022304832713755
+        },
+        {
+          "reason": "Home care / package of care",
+          "value": 2.5,
+          "share": 0.01858736059479554
+        },
+        {
+          "reason": "Transport",
+          "value": 0.75,
+          "share": 0.0055762081784386614
+        },
+        {
+          "reason": "Cross-system interface",
+          "value": 0.5,
+          "share": 0.0037174721189591076
         }
       ],
       "excess_bed_days_vs_median": 1157.252972857676
@@ -1179,34 +1854,59 @@
       "same_day_discharge_rate": 0.844613649,
       "delay_21_plus_rate": 0.010998308,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9648287336932128,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Home care / package of care",
+      "dominant_reason_share": 0.27509778357235987,
+      "ownership_bucket": "Community / social care / commissioning",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 7534536.079999998,
-          "share": 0.9648287336932128
+          "reason": "Home care / package of care",
+          "value": 52.75,
+          "share": 0.27509778357235987
         },
         {
-          "reason": "Social care assessment",
-          "value": 157674.15,
-          "share": 0.020190831773235562
+          "reason": "Community / rehabilitation",
+          "value": 31.25,
+          "share": 0.16297262059973924
+        },
+        {
+          "reason": "Care transfer hub",
+          "value": 30.25,
+          "share": 0.1577574967405476
+        },
+        {
+          "reason": "Residential / nursing placement",
+          "value": 23.5,
+          "share": 0.12255541069100391
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 14.0,
+          "share": 0.07301173402868318
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 12.25,
+          "share": 0.06388526727509779
         },
         {
           "reason": "Funding / approval",
-          "value": 45776.34,
-          "share": 0.0058618510398466325
+          "value": 11.25,
+          "share": 0.05867014341590613
         },
         {
           "reason": "Hospital process",
-          "value": 35604.4,
-          "share": 0.004559291746852533
+          "value": 9.0,
+          "share": 0.0469361147327249
+        },
+        {
+          "reason": "Cross-system interface",
+          "value": 5.75,
+          "share": 0.02998696219035202
         },
         {
           "reason": "Transport",
-          "value": 35604.4,
-          "share": 0.004559291746852533
+          "value": 1.75,
+          "share": 0.009126466753585397
         }
       ],
       "excess_bed_days_vs_median": 1132.899376099824
@@ -1222,34 +1922,59 @@
       "same_day_discharge_rate": 0.8792,
       "delay_21_plus_rate": 0.0168,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9769431847283493,
+      "dominant_reason": "Care transfer hub",
+      "dominant_reason_share": 0.3934065934065934,
       "ownership_bucket": "Unknown / mixed",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 4059299.459999999,
-          "share": 0.9769431847283493
+          "reason": "Care transfer hub",
+          "value": 44.75,
+          "share": 0.3934065934065934
         },
         {
           "reason": "Hospital process",
-          "value": 68430.67,
-          "share": 0.016469067468822495
+          "value": 20.0,
+          "share": 0.17582417582417584
         },
         {
-          "reason": "Transport",
-          "value": 18248.51,
-          "share": 0.004391831066325699
+          "reason": "Residential / nursing placement",
+          "value": 17.75,
+          "share": 0.15604395604395604
+        },
+        {
+          "reason": "Cross-system interface",
+          "value": 15.0,
+          "share": 0.13186813186813187
+        },
+        {
+          "reason": "Community / rehabilitation",
+          "value": 7.0,
+          "share": 0.06153846153846154
+        },
+        {
+          "reason": "Home care / package of care",
+          "value": 4.25,
+          "share": 0.03736263736263736
         },
         {
           "reason": "Funding / approval",
-          "value": 9124.26,
-          "share": 0.0021959167365024827
+          "value": 2.75,
+          "share": 0.024175824175824177
         },
         {
-          "reason": "Social care assessment",
-          "value": 0.0,
-          "share": 0.0
+          "reason": "Transport",
+          "value": 1.0,
+          "share": 0.008791208791208791
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 0.75,
+          "share": 0.006593406593406593
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 0.5,
+          "share": 0.004395604395604396
         }
       ],
       "excess_bed_days_vs_median": 1036.8218951634403
@@ -1265,32 +1990,57 @@
       "same_day_discharge_rate": 0.785854617,
       "delay_21_plus_rate": 0.013752456,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9643174654517198,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Community / rehabilitation",
+      "dominant_reason_share": 0.6666666666666666,
+      "ownership_bucket": "Cross-system",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 2684099.1599999997,
-          "share": 0.9643174654517198
+          "reason": "Community / rehabilitation",
+          "value": 35.0,
+          "share": 0.6666666666666666
         },
         {
           "reason": "Hospital process",
-          "value": 92698.28,
-          "share": 0.033303751125697556
+          "value": 9.25,
+          "share": 0.1761904761904762
         },
         {
-          "reason": "Social care assessment",
-          "value": 6621.15,
-          "share": 0.0023787834225825156
+          "reason": "Care transfer hub",
+          "value": 4.75,
+          "share": 0.09047619047619047
         },
         {
-          "reason": "Transport",
-          "value": 0.0,
-          "share": 0.0
+          "reason": "Cross-system interface",
+          "value": 1.0,
+          "share": 0.01904761904761905
+        },
+        {
+          "reason": "Home care / package of care",
+          "value": 0.75,
+          "share": 0.014285714285714285
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 0.5,
+          "share": 0.009523809523809525
         },
         {
           "reason": "Funding / approval",
+          "value": 0.5,
+          "share": 0.009523809523809525
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 0.5,
+          "share": 0.009523809523809525
+        },
+        {
+          "reason": "Residential / nursing placement",
+          "value": 0.25,
+          "share": 0.004761904761904762
+        },
+        {
+          "reason": "Transport",
           "value": 0.0,
           "share": 0.0
         }
@@ -1308,34 +2058,59 @@
       "same_day_discharge_rate": 0.852505695,
       "delay_21_plus_rate": 0.012243736,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9631823685876543,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Community / rehabilitation",
+      "dominant_reason_share": 0.1994219653179191,
+      "ownership_bucket": "Cross-system",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 6264079.140000001,
-          "share": 0.9631823685876543
+          "reason": "Community / rehabilitation",
+          "value": 34.5,
+          "share": 0.1994219653179191
         },
         {
           "reason": "Hospital process",
-          "value": 187800.64,
-          "share": 0.02887675286578154
+          "value": 27.5,
+          "share": 0.15895953757225434
+        },
+        {
+          "reason": "Care transfer hub",
+          "value": 25.75,
+          "share": 0.14884393063583815
+        },
+        {
+          "reason": "Cross-system interface",
+          "value": 24.25,
+          "share": 0.14017341040462428
+        },
+        {
+          "reason": "Residential / nursing placement",
+          "value": 24.0,
+          "share": 0.13872832369942195
+        },
+        {
+          "reason": "Home care / package of care",
+          "value": 17.75,
+          "share": 0.10260115606936417
         },
         {
           "reason": "Funding / approval",
-          "value": 18779.66,
-          "share": 0.002887613166405625
+          "value": 8.75,
+          "share": 0.05057803468208093
         },
         {
-          "reason": "Social care assessment",
-          "value": 18779.41,
-          "share": 0.002887574725704803
+          "reason": "Patient / family / safeguarding",
+          "value": 6.75,
+          "share": 0.03901734104046243
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 3.0,
+          "share": 0.017341040462427744
         },
         {
           "reason": "Transport",
-          "value": 14084.62,
-          "share": 0.002165690654453808
+          "value": 0.75,
+          "share": 0.004335260115606936
         }
       ],
       "excess_bed_days_vs_median": 926.0937983256011
@@ -1351,34 +2126,59 @@
       "same_day_discharge_rate": 0.786866547,
       "delay_21_plus_rate": 0.004888382,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.933631094864625,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Home care / package of care",
+      "dominant_reason_share": 0.29620253164556964,
+      "ownership_bucket": "Community / social care / commissioning",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 7425635.94,
-          "share": 0.933631094864625
+          "reason": "Home care / package of care",
+          "value": 54.989999999999995,
+          "share": 0.29620253164556964
         },
         {
           "reason": "Hospital process",
-          "value": 356666.5,
-          "share": 0.04484396186227974
+          "value": 32.31999999999999,
+          "share": 0.1740910315109076
         },
         {
-          "reason": "Social care assessment",
-          "value": 135531.59,
-          "share": 0.017040494279934152
+          "reason": "Community / rehabilitation",
+          "value": 31.01,
+          "share": 0.1670347427955831
+        },
+        {
+          "reason": "Care transfer hub",
+          "value": 19.33,
+          "share": 0.10412065715055212
+        },
+        {
+          "reason": "Cross-system interface",
+          "value": 18.34,
+          "share": 0.09878804201454351
         },
         {
           "reason": "Funding / approval",
-          "value": 28533.66,
-          "share": 0.003587559697451981
+          "value": 10.0,
+          "share": 0.053864799353622414
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 7.33,
+          "share": 0.039482897926205233
+        },
+        {
+          "reason": "Residential / nursing placement",
+          "value": 6.67,
+          "share": 0.03592782116886615
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 5.33,
+          "share": 0.028709938055480746
         },
         {
           "reason": "Transport",
-          "value": 7133.41,
-          "share": 0.0008968892957090305
+          "value": 0.33,
+          "share": 0.0017775383786695397
         }
       ],
       "excess_bed_days_vs_median": 836.9067882472135
@@ -1394,34 +2194,59 @@
       "same_day_discharge_rate": 0.834090417,
       "delay_21_plus_rate": 0.009950249,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9716561900144506,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Residential / nursing placement",
+      "dominant_reason_share": 0.28132387706855794,
+      "ownership_bucket": "Community / social care / commissioning",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 11442499.379999999,
-          "share": 0.9716561900144506
+          "reason": "Residential / nursing placement",
+          "value": 89.25,
+          "share": 0.28132387706855794
+        },
+        {
+          "reason": "Care transfer hub",
+          "value": 60.75,
+          "share": 0.19148936170212766
         },
         {
           "reason": "Hospital process",
-          "value": 157620.37,
-          "share": 0.013384559010818841
+          "value": 56.75,
+          "share": 0.17888100866824272
         },
         {
-          "reason": "Transport",
-          "value": 88081.82,
-          "share": 0.007479593643704322
+          "reason": "Home care / package of care",
+          "value": 35.5,
+          "share": 0.11189913317572892
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 22.25,
+          "share": 0.07013396375098503
+        },
+        {
+          "reason": "Community / rehabilitation",
+          "value": 20.5,
+          "share": 0.06461780929866036
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 10.25,
+          "share": 0.03230890464933018
         },
         {
           "reason": "Funding / approval",
-          "value": 46359.54,
-          "share": 0.0039366866024005435
+          "value": 10.0,
+          "share": 0.03152088258471237
         },
         {
-          "reason": "Social care assessment",
-          "value": 41723.03,
-          "share": 0.003542970728625779
+          "reason": "Cross-system interface",
+          "value": 7.25,
+          "share": 0.022852639873916468
+        },
+        {
+          "reason": "Transport",
+          "value": 4.75,
+          "share": 0.014972419227738377
         }
       ],
       "excess_bed_days_vs_median": 781.4466485362344
@@ -1437,32 +2262,57 @@
       "same_day_discharge_rate": 0.803094984,
       "delay_21_plus_rate": 0.011205977,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9853068758795861,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Community / rehabilitation",
+      "dominant_reason_share": 0.248868778280543,
+      "ownership_bucket": "Cross-system",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 2309195.66,
-          "share": 0.9853068758795861
+          "reason": "Community / rehabilitation",
+          "value": 27.5,
+          "share": 0.248868778280543
+        },
+        {
+          "reason": "Residential / nursing placement",
+          "value": 25.0,
+          "share": 0.22624434389140272
         },
         {
           "reason": "Hospital process",
-          "value": 18541.89,
-          "share": 0.007911608368778477
+          "value": 13.0,
+          "share": 0.11764705882352941
         },
         {
-          "reason": "Social care assessment",
-          "value": 15893.37,
-          "share": 0.006781515751635501
+          "reason": "Home care / package of care",
+          "value": 11.0,
+          "share": 0.09954751131221719
         },
         {
-          "reason": "Transport",
-          "value": 0.0,
-          "share": 0.0
+          "reason": "Cross-system interface",
+          "value": 10.5,
+          "share": 0.09502262443438914
+        },
+        {
+          "reason": "Care transfer hub",
+          "value": 10.0,
+          "share": 0.09049773755656108
         },
         {
           "reason": "Funding / approval",
+          "value": 10.0,
+          "share": 0.09049773755656108
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 2.0,
+          "share": 0.01809954751131222
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 1.5,
+          "share": 0.013574660633484163
+        },
+        {
+          "reason": "Transport",
           "value": 0.0,
           "share": 0.0
         }
@@ -1480,34 +2330,59 @@
       "same_day_discharge_rate": 0.701525054,
       "delay_21_plus_rate": 0.01416122,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9498713391894202,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Residential / nursing placement",
+      "dominant_reason_share": 0.3044982698961938,
+      "ownership_bucket": "Community / social care / commissioning",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 2708050.1799999997,
-          "share": 0.9498713391894202
+          "reason": "Residential / nursing placement",
+          "value": 22.0,
+          "share": 0.3044982698961938
         },
         {
-          "reason": "Social care assessment",
-          "value": 64065.47,
-          "share": 0.022471501537944038
+          "reason": "Community / rehabilitation",
+          "value": 16.0,
+          "share": 0.22145328719723184
+        },
+        {
+          "reason": "Home care / package of care",
+          "value": 15.25,
+          "share": 0.21107266435986158
         },
         {
           "reason": "Hospital process",
-          "value": 54209.549999999996,
-          "share": 0.01901445484121562
+          "value": 6.0,
+          "share": 0.08304498269896193
+        },
+        {
+          "reason": "Care transfer hub",
+          "value": 5.25,
+          "share": 0.0726643598615917
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 3.0,
+          "share": 0.04152249134948097
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 2.75,
+          "share": 0.03806228373702422
         },
         {
           "reason": "Transport",
-          "value": 19711.84,
-          "share": 0.006914093393456831
+          "value": 1.0,
+          "share": 0.01384083044982699
+        },
+        {
+          "reason": "Cross-system interface",
+          "value": 0.75,
+          "share": 0.010380622837370242
         },
         {
           "reason": "Funding / approval",
-          "value": 4928.21,
-          "share": 0.0017286110379633709
+          "value": 0.25,
+          "share": 0.0034602076124567475
         }
       ],
       "excess_bed_days_vs_median": 727.7505999040154
@@ -1523,32 +2398,57 @@
       "same_day_discharge_rate": 0.815293206,
       "delay_21_plus_rate": 0.01084991,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9611058691321749,
+      "dominant_reason": "Patient / family / safeguarding",
+      "dominant_reason_share": 0.2810920121334681,
       "ownership_bucket": "Unknown / mixed",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 8308940.1,
-          "share": 0.9611058691321749
+          "reason": "Patient / family / safeguarding",
+          "value": 69.5,
+          "share": 0.2810920121334681
         },
         {
           "reason": "Hospital process",
-          "value": 292578.4,
-          "share": 0.0338429226877326
+          "value": 63.25,
+          "share": 0.2558139534883721
         },
         {
-          "reason": "Transport",
-          "value": 39301.95,
-          "share": 0.004546107488888899
+          "reason": "Home care / package of care",
+          "value": 52.25,
+          "share": 0.21132457027300303
         },
         {
-          "reason": "Social care assessment",
-          "value": 4366.69,
-          "share": 0.0005051006912037766
+          "reason": "Community / rehabilitation",
+          "value": 32.0,
+          "share": 0.12942366026289182
+        },
+        {
+          "reason": "Residential / nursing placement",
+          "value": 17.25,
+          "share": 0.06976744186046512
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 7.25,
+          "share": 0.029322548028311426
         },
         {
           "reason": "Funding / approval",
+          "value": 2.75,
+          "share": 0.011122345803842264
+        },
+        {
+          "reason": "Transport",
+          "value": 2.25,
+          "share": 0.00910010111223458
+        },
+        {
+          "reason": "Cross-system interface",
+          "value": 0.75,
+          "share": 0.003033367037411527
+        },
+        {
+          "reason": "Care transfer hub",
           "value": 0.0,
           "share": 0.0
         }
@@ -1566,32 +2466,57 @@
       "same_day_discharge_rate": 0.838052658,
       "delay_21_plus_rate": 0.00993542,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9688760609213236,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Community / rehabilitation",
+      "dominant_reason_share": 0.4840255591054313,
+      "ownership_bucket": "Cross-system",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 2698046.1900000004,
-          "share": 0.9688760609213236
+          "reason": "Community / rehabilitation",
+          "value": 75.75,
+          "share": 0.4840255591054313
         },
         {
-          "reason": "Social care assessment",
-          "value": 86671.38,
-          "share": 0.031123939078676475
+          "reason": "Care transfer hub",
+          "value": 17.5,
+          "share": 0.11182108626198083
         },
         {
           "reason": "Hospital process",
-          "value": 0.0,
-          "share": 0.0
+          "value": 16.5,
+          "share": 0.10543130990415335
         },
         {
-          "reason": "Transport",
-          "value": 0.0,
-          "share": 0.0
+          "reason": "Cross-system interface",
+          "value": 16.0,
+          "share": 0.10223642172523961
+        },
+        {
+          "reason": "Home care / package of care",
+          "value": 14.75,
+          "share": 0.09424920127795527
         },
         {
           "reason": "Funding / approval",
+          "value": 10.0,
+          "share": 0.06389776357827476
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 3.0,
+          "share": 0.019169329073482427
+        },
+        {
+          "reason": "Residential / nursing placement",
+          "value": 2.0,
+          "share": 0.012779552715654952
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 1.0,
+          "share": 0.006389776357827476
+        },
+        {
+          "reason": "Transport",
           "value": 0.0,
           "share": 0.0
         }
@@ -1609,29 +2534,54 @@
       "same_day_discharge_rate": 0.790352505,
       "delay_21_plus_rate": 0.009894867,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9601577905518136,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Hospital process",
+      "dominant_reason_share": 0.27611596870685684,
+      "ownership_bucket": "Provider-led / operational",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 4532510.6499999985,
-          "share": 0.9601577905518136
-        },
-        {
           "reason": "Hospital process",
-          "value": 122974.07,
-          "share": 0.026050575600161937
+          "value": 30.0,
+          "share": 0.27611596870685684
         },
         {
-          "reason": "Social care assessment",
-          "value": 57870.76,
-          "share": 0.012259223496618656
+          "reason": "Residential / nursing placement",
+          "value": 26.33,
+          "share": 0.2423377818683847
+        },
+        {
+          "reason": "Care transfer hub",
+          "value": 15.0,
+          "share": 0.13805798435342842
+        },
+        {
+          "reason": "Community / rehabilitation",
+          "value": 13.98,
+          "share": 0.1286700414173953
+        },
+        {
+          "reason": "Home care / package of care",
+          "value": 10.0,
+          "share": 0.09203865623561895
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 4.66,
+          "share": 0.04289001380579843
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 4.01,
+          "share": 0.0369075011504832
+        },
+        {
+          "reason": "Cross-system interface",
+          "value": 3.67,
+          "share": 0.033778186838472155
         },
         {
           "reason": "Funding / approval",
-          "value": 7233.88,
-          "share": 0.0015324103514057835
+          "value": 1.0,
+          "share": 0.009203865623561895
         },
         {
           "reason": "Transport",
@@ -1652,24 +2602,49 @@
       "same_day_discharge_rate": 0.841285297,
       "delay_21_plus_rate": 0.015092502,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9390208597345037,
-      "ownership_bucket": "Unknown / mixed",
+      "dominant_reason": "Hospital process",
+      "dominant_reason_share": 0.6807511737089202,
+      "ownership_bucket": "Provider-led / operational",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 2371767.3,
-          "share": 0.9390208597345037
-        },
-        {
           "reason": "Hospital process",
-          "value": 148096.43,
-          "share": 0.05863376100269649
+          "value": 36.25,
+          "share": 0.6807511737089202
         },
         {
-          "reason": "Social care assessment",
-          "value": 5923.93,
-          "share": 0.002345379262799946
+          "reason": "Patient / family / safeguarding",
+          "value": 4.0,
+          "share": 0.07511737089201878
+        },
+        {
+          "reason": "Community / rehabilitation",
+          "value": 4.0,
+          "share": 0.07511737089201878
+        },
+        {
+          "reason": "Residential / nursing placement",
+          "value": 4.0,
+          "share": 0.07511737089201878
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 2.0,
+          "share": 0.03755868544600939
+        },
+        {
+          "reason": "Care transfer hub",
+          "value": 1.75,
+          "share": 0.03286384976525822
+        },
+        {
+          "reason": "Home care / package of care",
+          "value": 0.75,
+          "share": 0.014084507042253521
+        },
+        {
+          "reason": "Cross-system interface",
+          "value": 0.5,
+          "share": 0.009389671361502348
         },
         {
           "reason": "Transport",
@@ -1695,32 +2670,57 @@
       "same_day_discharge_rate": 0.822134387,
       "delay_21_plus_rate": 0.007905138,
       "match_method": "code",
-      "dominant_reason": "Other / uncategorised",
-      "dominant_reason_share": 0.9817237785260771,
+      "dominant_reason": "Care transfer hub",
+      "dominant_reason_share": 0.36585365853658536,
       "ownership_bucket": "Unknown / mixed",
       "reason_mix": [
         {
-          "reason": "Other / uncategorised",
-          "value": 3290348.4300000006,
-          "share": 0.9817237785260771
+          "reason": "Care transfer hub",
+          "value": 30.0,
+          "share": 0.36585365853658536
+        },
+        {
+          "reason": "Community / rehabilitation",
+          "value": 20.0,
+          "share": 0.24390243902439024
         },
         {
           "reason": "Hospital process",
-          "value": 51045.12,
-          "share": 0.015230061237531923
+          "value": 10.5,
+          "share": 0.12804878048780488
         },
         {
-          "reason": "Social care assessment",
-          "value": 10209.52,
-          "share": 0.0030461602363909992
+          "reason": "Cross-system interface",
+          "value": 8.0,
+          "share": 0.0975609756097561
         },
         {
-          "reason": "Transport",
-          "value": 0.0,
-          "share": 0.0
+          "reason": "Home care / package of care",
+          "value": 6.5,
+          "share": 0.07926829268292683
+        },
+        {
+          "reason": "Residential / nursing placement",
+          "value": 4.0,
+          "share": 0.04878048780487805
         },
         {
           "reason": "Funding / approval",
+          "value": 1.5,
+          "share": 0.018292682926829267
+        },
+        {
+          "reason": "Patient / family / safeguarding",
+          "value": 1.0,
+          "share": 0.012195121951219513
+        },
+        {
+          "reason": "Equipment / housing",
+          "value": 0.5,
+          "share": 0.006097560975609756
+        },
+        {
+          "reason": "Transport",
           "value": 0.0,
           "share": 0.0
         }
@@ -1730,14 +2730,50 @@
   ],
   "dominant_cause_excess_bed_day_screen": [
     {
-      "cause": "Other / uncategorised",
-      "screened_excess_bed_days": 74389.35914253716
+      "cause": "Community / rehabilitation",
+      "screened_excess_bed_days": 46520.1052631579
+    },
+    {
+      "cause": "Hospital process",
+      "screened_excess_bed_days": 11223.925558577292
+    },
+    {
+      "cause": "Residential / nursing placement",
+      "screened_excess_bed_days": 7191.514317709166
+    },
+    {
+      "cause": "Care transfer hub",
+      "screened_excess_bed_days": 6700.350450594571
+    },
+    {
+      "cause": "Home care / package of care",
+      "screened_excess_bed_days": 1970.1470164773632
+    },
+    {
+      "cause": "Patient / family / safeguarding",
+      "screened_excess_bed_days": 720.2762224710708
+    },
+    {
+      "cause": "Cross-system interface",
+      "screened_excess_bed_days": 63.04031354983203
     }
   ],
   "ownership_excess_bed_day_screen": [
     {
+      "owner": "Cross-system",
+      "screened_excess_bed_days": 46520.1052631579
+    },
+    {
+      "owner": "Provider-led / operational",
+      "screened_excess_bed_days": 11223.925558577292
+    },
+    {
+      "owner": "Community / social care / commissioning",
+      "screened_excess_bed_days": 9161.66133418653
+    },
+    {
       "owner": "Unknown / mixed",
-      "screened_excess_bed_days": 74389.35914253716
+      "screened_excess_bed_days": 7483.6669866154725
     }
   ]
 }
