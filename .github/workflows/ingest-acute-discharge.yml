@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "scripts/ingest_acute_discharge.py"
+      - "scripts/join_discharge_causes.py"
       - ".github/workflows/ingest-acute-discharge.yml"
   workflow_dispatch:
   schedule:
@@ -27,14 +28,16 @@ jobs:
           python-version: "3.12"
       - name: Download and analyse acute discharge data
         run: python scripts/ingest_acute_discharge.py
-      - name: Commit generated dataset
+      - name: Join DRD performance to acute discharge causes
+        run: python scripts/join_discharge_causes.py
+      - name: Commit generated datasets
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/generated/acute-discharge-latest.json data/raw/acute-discharge-august-2026.csv
+          git add data/generated/acute-discharge-latest.json data/generated/discharge-bottlenecks.json data/raw/acute-discharge-august-2026.csv
           if git diff --cached --quiet; then
             echo "No data changes"
             exit 0
           fi
-          git commit -m "Update acute discharge cause analysis [skip ci]"
+          git commit -m "Update discharge bottleneck intelligence [skip ci]"
           git push
