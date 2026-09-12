@@ -2,6 +2,7 @@ import Link from "next/link";
 
 const nav = [
   ["Medicines", "/medicines-proposal"],
+  ["Commissioner summary", "/commissioner-summary"],
   ["Business case", "/business-case"],
   ["Dashboard", "/dashboard"],
   ["Benchmarking", "/benchmarking"],
