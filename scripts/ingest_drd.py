@@ -28,7 +28,7 @@ def to_number(value: str):
     if value is None:
         return None
     s = str(value).strip().replace(",", "").replace("%", "")
-    if not s or s in {"-", ".", "..", "n/a", "na", "null", "*"}:
+    if not s or s.lower() in {"-", ".", "..", "n/a", "na", "null", "*", "[z]"}:
         return None
     try:
         x = float(s)
@@ -48,9 +48,9 @@ def choose_column(headers, patterns):
 
 
 def percentile(values, p):
-    if not values:
+    vals = sorted(v for v in values if v is not None)
+    if not vals:
         return None
-    vals = sorted(values)
     if len(vals) == 1:
         return vals[0]
     k = (len(vals) - 1) * p
@@ -89,13 +89,14 @@ def main():
     rows = list(reader)
     headers = reader.fieldnames or []
 
-    geo_type_col = choose_column(headers, ["geography type", "organisation type", "organization type", "org type", "level"])
-    geo_name_col = choose_column(headers, ["geography name", "organisation name", "organization name", "provider name", "org name", "trust name"])
-    geo_code_col = choose_column(headers, ["geography code", "organisation code", "organization code", "provider code", "org code", "trust code"])
-    metric_col = choose_column(headers, ["metric name", "measure name", "indicator name", "metric", "measure", "indicator"])
-    value_col = choose_column(headers, ["metric value", "measure value", "indicator value", "value"])
+    data_type_col = choose_column(headers, ["data type", "geography type", "organisation type", "organization type", "org type", "level"])
+    geo_name_col = choose_column(headers, ["organisation name", "organization name", "provider name", "geography name", "org name", "trust name"])
+    geo_code_col = choose_column(headers, ["organisation code", "organization code", "provider code", "geography code", "org code", "trust code", "code"])
+    metric_col = choose_column(headers, ["measure", "metric name", "measure name", "indicator name", "metric", "indicator"])
+    value_col = choose_column(headers, ["value", "metric value", "measure value", "indicator value"])
+    region_col = choose_column(headers, ["region of provider", "region"])
+    icb_col = choose_column(headers, ["icb of provider", "icb"])
 
-    # Profile categorical columns to make format changes visible rather than silently failing.
     categorical_profile = {}
     for h in headers:
         vals = [str(r.get(h, "")).strip() for r in rows if str(r.get(h, "")).strip()]
@@ -104,89 +105,119 @@ def main():
             categorical_profile[h] = unique.most_common(25)
 
     def is_provider(r):
-        if geo_type_col:
-            t = norm(r.get(geo_type_col, ""))
-            return any(x in t for x in ["provider", "trust", "acute trust"])
-        # Fallback: NHS provider codes are usually short alphanumeric codes; exclude obvious aggregate names.
+        if data_type_col:
+            return norm(r.get(data_type_col, "")) == "provider"
         name = norm(r.get(geo_name_col, "")) if geo_name_col else ""
-        return bool(name) and not any(x in name for x in ["england", "region", "integrated care", "icb", "national"])
+        return bool(name) and not any(x in name for x in ["england", "region", "integrated care", "icb", "national", "utla"])
 
     provider_rows = [r for r in rows if is_provider(r)]
 
-    metrics = {}
-    rankings = []
+    by_metric = defaultdict(list)
+    provider_measure_map = defaultdict(dict)
+    provider_meta = {}
 
-    # Long-format publication: metric/measure in one column and value in another.
     if metric_col and value_col and geo_name_col:
-        by_metric = defaultdict(list)
         for r in provider_rows:
             value = to_number(r.get(value_col, ""))
             if value is None:
                 continue
-            m = str(r.get(metric_col, "")).strip()
-            if not m:
+            metric = str(r.get(metric_col, "")).strip()
+            provider = str(r.get(geo_name_col, "")).strip()
+            if not metric or not provider:
                 continue
-            by_metric[m].append({
-                "provider": str(r.get(geo_name_col, "")).strip(),
+            item = {
+                "provider": provider,
                 "code": str(r.get(geo_code_col, "")).strip() if geo_code_col else "",
+                "region": str(r.get(region_col, "")).strip() if region_col else "",
+                "icb": str(r.get(icb_col, "")).strip() if icb_col else "",
                 "value": value,
-            })
+            }
+            by_metric[metric].append(item)
+            provider_measure_map[provider][metric] = value
+            provider_meta[provider] = {k: item[k] for k in ["provider", "code", "region", "icb"]}
 
-        for metric, items in by_metric.items():
-            metrics[metric] = describe([x["value"] for x in items])
+    metrics = {metric: describe([x["value"] for x in items]) for metric, items in by_metric.items()}
 
-        priority_terms = [
-            "average number of days",
-            "average delay",
-            "total bed days lost",
-            "bed days after discharge ready",
-            "21 days or more",
-            "same as discharge ready date",
-        ]
-        for metric, items in by_metric.items():
+    def find_metric(*terms):
+        for metric in by_metric:
             nm = norm(metric)
-            if any(term in nm for term in priority_terms):
-                ordered = sorted(items, key=lambda x: x["value"], reverse=True)
-                rankings.append({
-                    "metric": metric,
-                    "direction_note": "Higher is not automatically worse for percentage same-day metrics; interpret with metric definition.",
-                    "top": ordered[:15],
-                    "bottom": list(reversed(ordered[-15:])),
-                    "distribution": describe([x["value"] for x in items]),
-                })
+            if all(term in nm for term in terms):
+                return metric
+        return None
 
-    # Wide-format publication fallback: numeric metric columns across provider rows.
-    elif geo_name_col:
-        numeric_columns = []
-        for h in headers:
-            vals = [to_number(r.get(h, "")) for r in provider_rows]
-            vals = [v for v in vals if v is not None]
-            if len(vals) >= max(10, len(provider_rows) // 4):
-                numeric_columns.append(h)
-                metrics[h] = describe(vals)
+    total_discharges_metric = find_metric("number of patients discharged in total")
+    bed_days_metric = find_metric("total bed days lost", "delayed discharge")
+    same_day_metric = find_metric("date of discharge is same", "discharge ready date")
+    delay_21_pct_metric = find_metric("patients discharged", "21 days or more")
+    # Prefer the percentage variant for 21+ day delay if available.
+    for metric in by_metric:
+        nm = norm(metric)
+        if "% of patients discharged" in metric.lower() and "21 days or more" in nm and "between the discharge ready date" in nm:
+            delay_21_pct_metric = metric
+            break
 
-        priority_terms = ["average", "delay", "bed day", "21", "same day", "discharge ready"]
-        for h in numeric_columns:
-            if not any(term in norm(h) for term in priority_terms):
+    provider_summary = []
+    for provider, measures in provider_measure_map.items():
+        discharged = measures.get(total_discharges_metric) if total_discharges_metric else None
+        bed_days = measures.get(bed_days_metric) if bed_days_metric else None
+        same_day = measures.get(same_day_metric) if same_day_metric else None
+        delayed_21_pct = measures.get(delay_21_pct_metric) if delay_21_pct_metric else None
+        avg_delay = (bed_days / discharged) if bed_days is not None and discharged and discharged > 0 else None
+        if not any(v is not None for v in [discharged, bed_days, same_day, delayed_21_pct, avg_delay]):
+            continue
+        provider_summary.append({
+            **provider_meta.get(provider, {"provider": provider, "code": "", "region": "", "icb": ""}),
+            "discharges": discharged,
+            "bed_days_lost": bed_days,
+            "average_delay_days": avg_delay,
+            "same_day_discharge_rate": same_day,
+            "delay_21_plus_rate": delayed_21_pct,
+        })
+
+    # National distributions across true provider-level rows only.
+    derived_distributions = {
+        "discharges": describe([x["discharges"] for x in provider_summary]),
+        "bed_days_lost": describe([x["bed_days_lost"] for x in provider_summary]),
+        "average_delay_days": describe([x["average_delay_days"] for x in provider_summary]),
+        "same_day_discharge_rate": describe([x["same_day_discharge_rate"] for x in provider_summary]),
+        "delay_21_plus_rate": describe([x["delay_21_plus_rate"] for x in provider_summary]),
+    }
+
+    # Flag variation, not "waste". Require at least 100 discharges to reduce tiny-volume distortion.
+    eligible = [x for x in provider_summary if (x.get("discharges") or 0) >= 100]
+    by_avg_delay = sorted(
+        [x for x in eligible if x.get("average_delay_days") is not None],
+        key=lambda x: x["average_delay_days"],
+        reverse=True,
+    )
+    by_bed_days = sorted(
+        [x for x in eligible if x.get("bed_days_lost") is not None],
+        key=lambda x: x["bed_days_lost"],
+        reverse=True,
+    )
+    by_same_day = sorted(
+        [x for x in eligible if x.get("same_day_discharge_rate") is not None],
+        key=lambda x: x["same_day_discharge_rate"],
+    )
+
+    rankings = {
+        "highest_average_delay_days": by_avg_delay[:20],
+        "highest_bed_days_lost": by_bed_days[:20],
+        "lowest_same_day_discharge_rate": by_same_day[:20],
+    }
+
+    # Simple national-median opportunity screen. This is an investigative signal only, not a savings claim.
+    national_median_avg = derived_distributions["average_delay_days"]["median"] if derived_distributions["average_delay_days"] else None
+    opportunity = []
+    if national_median_avg is not None:
+        for x in eligible:
+            avg = x.get("average_delay_days")
+            discharges = x.get("discharges")
+            if avg is None or discharges is None or avg <= national_median_avg:
                 continue
-            items = []
-            for r in provider_rows:
-                v = to_number(r.get(h, ""))
-                if v is None:
-                    continue
-                items.append({
-                    "provider": str(r.get(geo_name_col, "")).strip(),
-                    "code": str(r.get(geo_code_col, "")).strip() if geo_code_col else "",
-                    "value": v,
-                })
-            ordered = sorted(items, key=lambda x: x["value"], reverse=True)
-            rankings.append({
-                "metric": h,
-                "direction_note": "Direction depends on metric definition. Do not label providers good/bad without interpreting the measure.",
-                "top": ordered[:15],
-                "bottom": list(reversed(ordered[-15:])),
-                "distribution": describe([x["value"] for x in items]),
-            })
+            excess = (avg - national_median_avg) * discharges
+            opportunity.append({**x, "excess_bed_days_vs_national_median": excess})
+        opportunity.sort(key=lambda x: x["excess_bed_days_vs_national_median"], reverse=True)
 
     result = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -195,33 +226,49 @@ def main():
         "status": "official statistic",
         "row_count": len(rows),
         "provider_row_count": len(provider_rows),
+        "provider_count": len(provider_summary),
         "headers": headers,
         "detected_columns": {
-            "geography_type": geo_type_col,
+            "data_type": data_type_col,
             "geography_name": geo_name_col,
             "geography_code": geo_code_col,
             "metric": metric_col,
             "value": value_col,
+            "region": region_col,
+            "icb": icb_col,
+        },
+        "detected_metrics": {
+            "total_discharges": total_discharges_metric,
+            "bed_days_lost": bed_days_metric,
+            "same_day_discharge_rate": same_day_metric,
+            "delay_21_plus_rate": delay_21_pct_metric,
         },
         "categorical_profile": categorical_profile,
         "metric_distributions": metrics,
+        "derived_distributions": derived_distributions,
         "rankings": rankings,
+        "median_opportunity_screen": opportunity[:30],
+        "provider_summary": provider_summary,
         "methodology": {
-            "warning": "This output identifies statistical variation, not waste. Outliers require peer-group, case-mix, data-quality and operational review before any causal conclusion.",
-            "ranking_rule": "Only provider rows with numeric values are ranked. Missing/suppressed values are excluded.",
-            "next_step": "Use NHS trust type/peer group and activity denominators before estimating excess bed days above peer benchmark.",
+            "warning": "Variation is not proof of waste or poor performance. Provider outliers require peer-group, case-mix, data-quality and operational review before causal conclusions.",
+            "provider_filter": "Only rows where NHS England Data Type equals Provider are included in provider benchmarking.",
+            "minimum_volume": "Ranking screens require at least 100 discharges in the month.",
+            "average_delay_formula": "Total bed days lost due to delayed discharge divided by total patients discharged. This mirrors the NHS Oversight Framework concept of average days from discharge-ready date to actual discharge including zero-day discharges.",
+            "opportunity_screen": "Excess bed days versus the national provider median is an investigative counterfactual, not a savings estimate. It is used to prioritise review only.",
         },
-        "sample_rows": rows[:5],
     }
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
     print(json.dumps({
         "rows": len(rows),
-        "providers": len(provider_rows),
-        "headers": headers,
-        "detected": result["detected_columns"],
-        "rankings": [r["metric"] for r in rankings],
+        "provider_rows": len(provider_rows),
+        "providers": len(provider_summary),
+        "detected_columns": result["detected_columns"],
+        "detected_metrics": result["detected_metrics"],
+        "national_median_average_delay_days": national_median_avg,
+        "top_average_delay": by_avg_delay[:5],
+        "top_opportunity_screen": opportunity[:5],
     }, indent=2))
 
 
