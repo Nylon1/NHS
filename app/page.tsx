@@ -1,19 +1,68 @@
 import Link from "next/link";
-import { evidence, investigations } from "@/lib/data";
+import { investigations } from "@/lib/data";
+import { headlineEvidenceIds, researchEvidence, researchTimeline } from "@/lib/research";
 
 export default function Home() {
+  const headlineEvidence = headlineEvidenceIds
+    .map((id) => researchEvidence.find((item) => item.id === id))
+    .filter(Boolean);
+
   return (
     <>
       <section className="hero">
         <div className="shell">
           <div className="eyebrow">NHS resource waste observatory</div>
-          <h1>The NHS cannot systematically reduce waste it cannot see.</h1>
+          <h1>The NHS has known where major efficiency opportunities sit for a decade. The missing layer is continuous measurement.</h1>
           <p className="lede">
-            Sitora NHS Resource Intelligence brings together evidence on medicine waste, workforce use, clinical capacity, preventable demand and pathway variation, then asks where a safe intervention can recover real resources.
+            Sitora NHS Resource Intelligence connects historic reviews with current operational data to show where money, medicines, workforce time and clinical capacity are being lost, where an intervention is plausible, and whether anything was genuinely recovered.
           </p>
           <div className="hero-actions">
-            <Link className="button primary" href="/findings">Explore our findings</Link>
-            <Link className="button secondary" href="/methodology">See the methodology</Link>
+            <Link className="button primary" href="/evidence">Explore the evidence</Link>
+            <Link className="button secondary" href="/pilot">See the 90 day pilot</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="shell">
+          <div className="section-head">
+            <div>
+              <div className="eyebrow">The scale of the signal</div>
+              <h2>Four numbers that deserve attention.</h2>
+            </div>
+            <p>These figures measure different things. None should be added together. Together they show why resource intelligence needs to be treated as infrastructure, not an occasional cost-cutting exercise.</p>
+          </div>
+          <div className="metric-grid">
+            {headlineEvidence.map((item) => item && (
+              <div className="metric" key={item.id}>
+                <span className="badge">{item.year}</span>
+                <strong>{item.value}</strong>
+                <h3>{item.title}</h3>
+                <small>{item.caveat}</small>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="shell">
+          <div className="section-head">
+            <div>
+              <div className="eyebrow">Past to present</div>
+              <h2>The same resource problem keeps reappearing in different forms.</h2>
+            </div>
+            <p>Historic reviews identified large opportunities. Current data shows the NHS still needs a system that can continuously detect, explain and verify resource loss.</p>
+          </div>
+          <div className="process">
+            {researchTimeline.map((item, index) => (
+              <div className="process-step" key={item.year}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <h3>{item.year}</h3>
+                <strong>{item.headline}</strong>
+                <p>{item.body}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -39,28 +88,6 @@ export default function Home() {
                 <strong>{value}</strong>
                 <h3>{title}</h3>
                 <small>{body}</small>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="shell">
-          <div className="section-head">
-            <div>
-              <div className="eyebrow">Initial evidence</div>
-              <h2>Signals already exist across the system.</h2>
-            </div>
-            <Link className="button secondary" href="/evidence">Open evidence explorer</Link>
-          </div>
-          <div className="metric-grid">
-            {evidence.slice(0, 4).map((item) => (
-              <div className="metric" key={item.id}>
-                <span className="badge">{item.status}</span>
-                <strong>{item.value}</strong>
-                <h3>{item.title}</h3>
-                <small>{item.caveat}</small>
               </div>
             ))}
           </div>
