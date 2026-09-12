@@ -2,6 +2,7 @@ import Link from "next/link";
 
 const primary = [
   ["Medicines", "/medicines-proposal"],
+  ["Demo", "/demo"],
   ["Commissioner", "/commissioner-summary"],
   ["Evidence", "/evidence"],
   ["Pilot", "/pilot"],
