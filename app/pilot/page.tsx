@@ -6,37 +6,33 @@ export default function PilotPage() {
       <section className="page-head">
         <div className="shell">
           <div className="eyebrow">20-week medicines pilot</div>
-          <h1>Baseline first. Intervene safely. Verify what was actually recovered.</h1>
-          <p className="lede">A focused pilot across repeat supply, resource-intensive medicines pathways and prepared-but-unused doses.</p>
-          <div className="hero-actions"><Link className="button primary" href="/business-case">Read the business case</Link><Link className="button secondary" href="/commissioner-summary">Commissioner summary</Link></div>
+          <h1>Baseline first. Test three workflows. Verify the local effect.</h1>
+          <p className="lede">A controlled evaluation of cross-setting medication reconciliation, repeat oversupply prevention and evidence-backed medicines resource opportunities.</p>
+          <div className="hero-actions"><Link className="button primary" href="/demo">See the demos</Link><Link className="button secondary" href="/technical-implementation">Technical plan</Link></div>
         </div>
       </section>
 
-      <section className="section">
-        <div className="shell">
-          <div className="process">
-            <div className="process-step"><span>Weeks 0-4</span><h3>Mobilise</h3><p>Confirm sponsor, sites, governance, data and safety boundaries.</p></div>
-            <div className="process-step"><span>Weeks 5-8</span><h3>Baseline</h3><p>Measure supply, pathway resource use, unused doses and workload.</p></div>
-            <div className="process-step"><span>Weeks 9-16</span><h3>Intervene</h3><p>Run agreed human-reviewed interventions.</p></div>
-            <div className="process-step"><span>Weeks 17-20</span><h3>Evaluate</h3><p>Compare outcomes and calculate net benefit.</p></div>
-            <div className="process-step"><span>Decision</span><h3>Scale / modify / stop</h3><p>End with a clear commissioning decision.</p></div>
-          </div>
-        </div>
-      </section>
+      <section className="section"><div className="shell"><div className="process">
+        <div className="process-step"><span>Weeks 0-4</span><h3>Mobilise</h3><p>Confirm sites, sponsors, data flows, safety case, IG and intervention boundaries.</p></div>
+        <div className="process-step"><span>Weeks 5-8</span><h3>Baseline</h3><p>Observe discrepancies, oversupply signals, pathway resource use and current workload.</p></div>
+        <div className="process-step"><span>Weeks 9-16</span><h3>Intervene</h3><p>Run approved human-reviewed workflows in a limited cohort.</p></div>
+        <div className="process-step"><span>Weeks 17-20</span><h3>Evaluate</h3><p>Compare outcomes, workload, safety and verified resource effects.</p></div>
+        <div className="process-step"><span>Decision</span><h3>Scale / modify / stop</h3><p>End with a pre-agreed commissioning decision.</p></div>
+      </div></div></section>
 
-      <section className="section">
-        <div className="shell card-grid">
-          <article className="card evidence-card"><span className="badge">A</span><h3>Medicine Loop</h3><p>Validate repeat need, stock accumulation, dose changes, discontinuation and reconciliation before further supply.</p></article>
-          <article className="card evidence-card"><span className="badge">B</span><h3>Medicines Resource Intelligence</h3><p>Optimise route, formulation, preparation location, aseptic burden, nursing time and chair/bed use.</p></article>
-          <article className="card evidence-card"><span className="badge">C</span><h3>Prepared-but-unused doses</h3><p>Record selected unused preparations, classify why they became unused and reduce repeated causes.</p></article>
-        </div>
-      </section>
+      <section className="section"><div className="shell demo-home-grid">
+        <article className="card evidence-card"><span className="badge">Workstream A</span><h3>Medicine Loop</h3><p>Track selected medication changes from the authorising service through downstream GP, pharmacy and care workflows until reconciliation is confirmed.</p><p><strong>Primary measures:</strong> unresolved discrepancy rate, time-to-close, downstream acknowledgement, repeat-list correction, obsolete supply prevented and safety events.</p></article>
+        <article className="card evidence-card"><span className="badge">Workstream B</span><h3>WasteGuard</h3><p>Identify selected repeat items where cumulative supply, stock or medication changes suggest another dispensing may not be required.</p><p><strong>Primary measures:</strong> review yield, items not supplied, intervention workload, patient impact, cost avoidance and missed-essential-medicine safeguards.</p></article>
+        <article className="card evidence-card"><span className="badge">Workstream C</span><h3>Medicines Resource Intelligence</h3><p>Prioritise a small number of evidence-backed route, formulation, preparation or capacity opportunities for local measurement.</p><p><strong>Primary measures:</strong> pharmacy/nursing minutes, chair or bed time, preparation activity, cancellations, patient outcomes and reusable capacity.</p></article>
+      </div></section>
 
-      <section className="section"><div className="shell"><details className="reveal-panel"><summary>What the pilot must prove</summary><div className="reveal-body"><ul className="list-clean"><li>Observed resource loss and the plausibly avoidable component</li><li>Clinically validated intervention opportunity</li><li>Cash-releasing benefit, cost avoidance and capacity release reported separately</li><li>Net resource benefit after intervention cost</li><li>No unacceptable deterioration in safety, access or workload</li><li>A defensible scale / modify / stop recommendation</li></ul></div></details></div></section>
+      <section className="section"><div className="shell two-col"><div><div className="eyebrow">Minimum technical footprint</div><h2>Start with the data needed to answer the pilot questions, not a wholesale system replacement.</h2><ul className="list-clean"><li>Medication list and authorised medication-change events</li><li>Repeat prescribing and dispensing/supply status</li><li>Discharge/reconciliation events for the selected cohort</li><li>Care-home/eMAR or equivalent operational state where included</li><li>Selected pharmacy/aseptic and administration timestamps for resource workstreams</li><li>Role, organisation, acknowledgement, action and closure audit trail</li></ul><div className="hero-actions"><Link className="button secondary" href="/technical-implementation">See technical implementation</Link></div></div><div className="card"><span className="badge">Deployment principle</span><h3 style={{marginTop:12}}>Shadow mode before workflow change.</h3><p>The first live-data phase should detect and record opportunities without changing clinical workflow. Only after data quality, false positives and safety hazards are understood should approved interventions be enabled.</p></div></div></section>
 
-      <section className="section"><div className="shell callout"><strong>Safety boundary</strong><p>No autonomous stopping, prescribing changes or unsupervised clinical decisions. Clinically significant interventions remain within agreed professional review and governance pathways.</p></div></section>
+      <section className="section"><div className="shell"><div className="section-head"><div><div className="eyebrow">What must be proven</div><h2>Each workstream has to survive the same four tests.</h2></div></div><div className="metric-grid"><div className="metric"><span className="badge">Clinical</span><strong>Safe</strong><h3>No unacceptable deterioration</h3><small>Balancing measures defined before intervention.</small></div><div className="metric"><span className="badge">Operational</span><strong>Usable</strong><h3>Fits real workflow</h3><small>Alert burden, acknowledgement and review time measured.</small></div><div className="metric"><span className="badge">Economic</span><strong>Net</strong><h3>Benefit after intervention cost</h3><small>Cash, avoidance and capacity reported separately.</small></div><div className="metric"><span className="badge">Technical</span><strong>Reliable</strong><h3>Data sufficient to reproduce</h3><small>Signals trace back to source and closure can be audited.</small></div></div></div></section>
 
-      <section className="section"><div className="shell quote">A medicine only counts as resource recovery when the baseline, intervention, outcome and net benefit can be shown without worsening safety, access or workload elsewhere.</div></section>
+      <section className="section"><div className="shell callout"><strong>Safety boundary</strong><p>No autonomous stopping, prescribing changes or silent record overwrite. Conflicts are surfaced with provenance and routed to the accountable professional or service for reconciliation.</p></div></section>
+
+      <section className="section pilot-funnel"><div className="shell two-col"><div><div className="eyebrow">Pilot output</div><h2>A measured answer, not an assumed business case.</h2><p className="lede">At week 20 the partner receives the observed baseline, intervention outcomes, safety and workload results, verified benefit classification and a Scale / Modify / Stop recommendation.</p></div><div className="pilot-funnel-actions"><Link className="button primary" href="/commissioner-summary">Commissioner summary</Link><Link className="button secondary" href="/business-case">Detailed business case</Link></div></div></section>
     </>
   );
 }
