@@ -64,15 +64,27 @@ def describe(values):
     }
 
 
+def decode_payload(payload: bytes) -> tuple[str, str]:
+    for encoding in ("utf-8-sig", "cp1252", "latin-1"):
+        try:
+            return payload.decode(encoding), encoding
+        except UnicodeDecodeError:
+            continue
+    return payload.decode("utf-8", errors="replace"), "utf-8-replacement"
+
+
 def classify_reason(metric: str) -> str | None:
     n = norm(metric)
-    if not any(token in n for token in ["delay reason", "reason for delay", "awaiting", "waiting for"]):
+    # The discharge sitrep uses both explicit reasons and pathway/destination labels.
+    if not any(token in n for token in [
+        "delay reason", "reason for delay", "awaiting", "waiting for", "reason", "pathway"
+    ]):
         return None
     groups = [
-        ("Hospital process", ["decision", "assessment", "diagnostic", "pharmacy", "medication", "internal", "medical review"]),
-        ("Home care / package of care", ["package of care", "domiciliary", "home care", "care package"]),
-        ("Residential / nursing placement", ["residential", "nursing home", "care home", "placement"]),
-        ("Community / rehabilitation", ["rehab", "rehabilitation", "community bed", "intermediate care", "community hospital"]),
+        ("Hospital process", ["decision", "assessment", "diagnostic", "pharmacy", "medication", "internal", "medical review", "hospital process"]),
+        ("Home care / package of care", ["package of care", "domiciliary", "home care", "care package", "pathway 1"]),
+        ("Residential / nursing placement", ["residential", "nursing home", "care home", "placement", "pathway 3"]),
+        ("Community / rehabilitation", ["rehab", "rehabilitation", "community bed", "intermediate care", "community hospital", "pathway 2"]),
         ("Social care assessment", ["social care", "social worker", "social services"]),
         ("Equipment / home adaptation", ["equipment", "adaptation", "housing"]),
         ("Transport", ["transport", "ambulance"]),
@@ -93,23 +105,41 @@ def main():
     RAW.parent.mkdir(parents=True, exist_ok=True)
     RAW.write_bytes(payload)
 
-    text = payload.decode("utf-8-sig", errors="replace")
+    text, encoding = decode_payload(payload)
     reader = csv.DictReader(io.StringIO(text))
     rows = list(reader)
     headers = reader.fieldnames or []
 
-    provider_col = choose(headers, ["provider name", "organisation name", "organization name", "trust name"])
-    provider_code_col = choose(headers, ["provider code", "organisation code", "organization code", "trust code"])
+    provider_col = choose(headers, [
+        "provider name", "organisation name", "organization name", "trust name",
+        "provider", "organisation", "organization", "trust"
+    ])
+    provider_code_col = choose(headers, [
+        "provider code", "organisation code", "organization code", "trust code", "org code", "code"
+    ])
     region_col = choose(headers, ["region"])
     icb_col = choose(headers, ["icb", "integrated care board"])
-    metric_col = choose(headers, ["measure", "metric", "indicator"])
-    value_col = choose(headers, ["value", "measure value", "metric value"])
+    metric_col = choose(headers, ["measure", "metric type", "metric", "indicator", "category"])
+    value_col = choose(headers, ["value", "measure value", "metric value", "count"])
     type_col = choose(headers, ["data type", "organisation type", "organization type", "level"])
 
+    categorical_profile = {}
+    for header in headers:
+        values = [str(r.get(header, "")).strip() for r in rows if str(r.get(header, "")).strip()]
+        unique = Counter(values)
+        if len(unique) <= 40:
+            categorical_profile[header] = unique.most_common(40)
+
+    # Accept exact provider/trust level rows, while also handling files where the level is named Provider/Trust level.
     provider_rows = []
+    level_values = Counter()
     for row in rows:
-        if type_col and norm(row.get(type_col, "")) not in {"provider", "trust"}:
-            continue
+        if type_col:
+            level = norm(row.get(type_col, ""))
+            if level:
+                level_values[level] += 1
+            if level and not any(token in level for token in ["provider", "trust"]):
+                continue
         provider = str(row.get(provider_col, "")).strip() if provider_col else ""
         if provider:
             provider_rows.append(row)
@@ -164,10 +194,14 @@ def main():
         "source_url": SOURCE_URL,
         "source_publication": "NHS England Acute Discharge Situation Report, August 2026",
         "status": "management information",
+        "encoding": encoding,
         "methodology_warning": "Delay-reason data are management information and definitions changed from 27 May 2024. Reason categories are grouped by Sitora using source measure labels and must be clinically and operationally validated before causal or financial conclusions.",
         "row_count": len(rows),
         "provider_row_count": len(provider_rows),
         "provider_count_with_reason_signal": len(providers),
+        "headers": headers,
+        "level_values": level_values.most_common(30),
+        "categorical_profile": categorical_profile,
         "detected_columns": {
             "provider": provider_col, "provider_code": provider_code_col, "region": region_col,
             "icb": icb_col, "metric": metric_col, "value": value_col, "type": type_col,
@@ -181,8 +215,13 @@ def main():
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
     print(json.dumps({
+        "encoding": encoding,
+        "headers": headers,
+        "level_values": level_values.most_common(20),
         "rows": len(rows), "provider_rows": len(provider_rows),
         "providers_with_reason_signal": len(providers),
+        "detected_columns": result["detected_columns"],
+        "reason_metrics": result["detected_reason_metrics"][:20],
         "national_reason_mix": national_mix,
         "top_provider_reason_signals": providers[:5],
     }, indent=2))
