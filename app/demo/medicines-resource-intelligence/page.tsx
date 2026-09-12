@@ -1,60 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import DemoEvidence from "@/components/DemoEvidence";
 
 const scenarios = {
-  rta: {
-    label: "Ready-to-administer injectables",
-    source: "National aseptic services review",
-    sourceType: "National NHS modelling",
-    year: "2020 review, still cited by NHS SPS",
-    headline: "~11.5 nursing preparation minutes per injectable unit",
-    secondary: ">4,000 nursing WTE potential",
-    detail: "The national aseptic-services review modelled 46.65 million injectable units requiring preparation and used an average 11.5 minutes of nursing preparation per unit, equivalent to about 8.94 million nursing hours.",
-    proves: "Preparation method can materially change nursing resource use at scale.",
-    limitation: "This is national modelling, not a guarantee that every injectable or local pathway will release 11.5 minutes.",
-    pilotMeasure: "Observed preparation minutes before/after, eligible units, additional pharmacy workload, safety and actual reuse of nursing capacity.",
-    url: "https://www.gov.uk/government/publications/transforming-nhs-pharmacy-aseptic-services-in-england/transforming-nhs-pharmacy-aseptic-services-in-england",
-  },
-  homeSc: {
-    label: "Subcutaneous cancer treatment at home",
-    source: "East and North Hertfordshire Teaching NHS Trust",
-    sourceType: "NHS implementation",
-    year: "Programme reported by NHS England",
-    headline: "2,520 chair-hours released",
-    secondary: "2,520 injections · 196 patients",
-    detail: "NHS England reports that a home subcutaneous cancer-treatment programme delivered 2,520 injections for 196 patients and released 2,520 hospital chair-hours, with no serious safety incidents reported in the programme summary.",
-    proves: "Changing route and location can release real treatment-chair capacity in an NHS service.",
-    limitation: "This is one programme and should not be generalised to every medicine, cancer pathway or patient cohort.",
-    pilotMeasure: "Eligibility, administration location, chair hours avoided, staff time, travel burden, adverse events and whether released slots are actually reused.",
-    url: "https://www.england.nhs.uk/east-of-england/meet-our-east-of-england-regional-champions/",
-  },
-  trastuzumab: {
-    label: "SC vs IV trastuzumab",
-    source: "PrefHer time-and-motion study",
-    sourceType: "Published quantified study",
-    year: "Peer-reviewed study",
-    headline: "~55–57 minutes less chair time per session",
-    secondary: "Approx. 73% reduction in one comparison",
-    detail: "The time-and-motion analysis reported substantially lower chair time for subcutaneous trastuzumab than intravenous administration, including a comparison of about 77.8 minutes versus 20.9 minutes.",
-    proves: "For a defined medicine and eligible patients, route can substantially alter administration and chair-resource use.",
-    limitation: "The result is medicine-, workflow- and setting-specific. It is evidence for the mechanism, not a universal SC conversion factor.",
-    pilotMeasure: "Actual chair time, nursing time, drug acquisition difference, pharmacy handling, adverse events, patient preference and throughput.",
-    url: "https://pubmed.ncbi.nlm.nih.gov/26806010/",
-  },
-  doseBanding: {
-    label: "SACT dose banding",
-    source: "NHS England SACT dose-banding programme",
-    sourceType: "National NHS standardisation",
-    year: "Current NHS programme",
-    headline: "Advance preparation + lower bespoke workload",
-    secondary: "Waste and waiting-time opportunity",
-    detail: "NHS England identifies dose banding as a way to support advance preparation, reduce medicine waste and shorten patient waiting times. National standardisation also creates opportunities for batching and reuse of suitable cancelled doses.",
-    proves: "Standardisation can change the production model around medicines, not just the medicine itself.",
-    limitation: "Published programme guidance supports the mechanism but does not give one universal minutes-or-pounds benefit for every trust.",
-    pilotMeasure: "Bespoke preparations avoided, batch utilisation, cancelled-dose reuse, incomplete-vial waste, pharmacy turnaround and patient wait time.",
-    url: "https://www.england.nhs.uk/commissioning/spec-services/npc-crg/group-b/b02/sact-dose-banding/",
-  },
+  rta: { label: "Ready-to-administer injectables", source: "National aseptic services review", sourceType: "National NHS modelling", year: "2020 review, still cited by NHS SPS", headline: "~11.5 nursing preparation minutes per injectable unit", secondary: ">4,000 nursing WTE potential", detail: "The national aseptic-services review modelled 46.65 million injectable units requiring preparation and used an average 11.5 minutes of nursing preparation per unit, equivalent to about 8.94 million nursing hours.", proves: "Preparation method can materially change nursing resource use at scale.", limitation: "This is national modelling, not a guarantee that every injectable or local pathway will release 11.5 minutes.", pilotMeasure: "Observed preparation minutes before/after, eligible units, additional pharmacy workload, safety and actual reuse of nursing capacity.", url: "https://www.gov.uk/government/publications/transforming-nhs-pharmacy-aseptic-services-in-england/transforming-nhs-pharmacy-aseptic-services-in-england" },
+  homeSc: { label: "Subcutaneous cancer treatment at home", source: "East and North Hertfordshire Teaching NHS Trust", sourceType: "NHS implementation", year: "Programme reported by NHS England", headline: "2,520 chair-hours released", secondary: "2,520 injections · 196 patients", detail: "NHS England reports that a home subcutaneous cancer-treatment programme delivered 2,520 injections for 196 patients and released 2,520 hospital chair-hours, with no serious safety incidents reported in the programme summary.", proves: "Changing route and location can release real treatment-chair capacity in an NHS service.", limitation: "This is one programme and should not be generalised to every medicine, cancer pathway or patient cohort.", pilotMeasure: "Eligibility, administration location, chair hours avoided, staff time, travel burden, adverse events and whether released slots are actually reused.", url: "https://www.england.nhs.uk/east-of-england/meet-our-east-of-england-regional-champions/" },
+  trastuzumab: { label: "SC vs IV trastuzumab", source: "PrefHer time-and-motion study", sourceType: "Published quantified study", year: "Peer-reviewed study", headline: "~55–57 minutes less chair time per session", secondary: "Approx. 73% reduction in one comparison", detail: "The time-and-motion analysis reported substantially lower chair time for subcutaneous trastuzumab than intravenous administration, including a comparison of about 77.8 minutes versus 20.9 minutes.", proves: "For a defined medicine and eligible patients, route can substantially alter administration and chair-resource use.", limitation: "The result is medicine-, workflow- and setting-specific. It is evidence for the mechanism, not a universal SC conversion factor.", pilotMeasure: "Actual chair time, nursing time, drug acquisition difference, pharmacy handling, adverse events, patient preference and throughput.", url: "https://pubmed.ncbi.nlm.nih.gov/26806010/" },
+  doseBanding: { label: "SACT dose banding", source: "NHS England SACT dose-banding programme", sourceType: "National NHS standardisation", year: "Current NHS programme", headline: "Advance preparation + lower bespoke workload", secondary: "Waste and waiting-time opportunity", detail: "NHS England identifies dose banding as a way to support advance preparation, reduce medicine waste and shorten patient waiting times. National standardisation also creates opportunities for batching and reuse of suitable cancelled doses.", proves: "Standardisation can change the production model around medicines, not just the medicine itself.", limitation: "Published programme guidance supports the mechanism but does not give one universal minutes-or-pounds benefit for every trust.", pilotMeasure: "Bespoke preparations avoided, batch utilisation, cancelled-dose reuse, incomplete-vial waste, pharmacy turnaround and patient wait time.", url: "https://www.england.nhs.uk/commissioning/spec-services/npc-crg/group-b/b02/sact-dose-banding/" },
 };
 
 type ScenarioKey = keyof typeof scenarios;
@@ -66,113 +19,27 @@ export default function MedicinesResourceIntelligenceDemoPage() {
 
   return (
     <>
-      <section className="page-head">
-        <div className="shell demo-head-grid">
-          <div>
-            <div className="eyebrow">Prototype 3 · evidence-backed scenarios</div>
-            <h1>Medicines Resource Intelligence</h1>
-            <p className="lede">The NHS has already shown that medicine route, formulation, preparation and delivery model can change nursing, pharmacy, chair and bed resource. Sitora&apos;s job is to find those opportunities systematically and verify the local result.</p>
-          </div>
-          <div className="demo-status-card">
-            <span className="badge">Evidence model</span>
-            <strong>Published evidence ≠ local saving</strong>
-            <span>4 selectable scenarios</span>
-            <span>Local benefit still requires a measured pilot</span>
-          </div>
-        </div>
-      </section>
+      <section className="page-head"><div className="shell demo-head-grid"><div><div className="eyebrow">Prototype 3 · evidence-backed scenarios</div><h1>Medicines Resource Intelligence</h1><p className="lede">The NHS has already shown that medicine route, formulation, preparation and delivery model can change nursing, pharmacy, chair and bed resource. Sitora&apos;s job is to find those opportunities systematically and verify the local result.</p></div><div className="demo-status-card"><span className="badge">Evidence model</span><strong>Published evidence ≠ local saving</strong><span>4 selectable scenarios</span><span>Local benefit still requires a measured pilot</span></div></div></section>
 
-      <section className="section">
-        <div className="shell">
-          <div className="demo-stepper" aria-label="Resource intelligence flow">
-            {[["1","Evidence"],["2","Find"],["3","Approve"],["4","Verify"]].map(([n,t]) => <div className="demo-step" key={n}><span>{n}</span><strong>{t}</strong></div>)}
-          </div>
-        </div>
-      </section>
+      <section className="section"><div className="shell"><div className="demo-stepper" aria-label="Resource intelligence flow">{[["1","Evidence"],["2","Find"],["3","Approve"],["4","Verify"]].map(([n,t]) => <div className="demo-step" key={n}><span>{n}</span><strong>{t}</strong></div>)}</div></div></section>
 
-      <section className="section">
-        <div className="shell demo-workspace">
-          <aside className="demo-sidebar">
-            <div className="eyebrow">Published scenarios</div>
-            <h3>Select the evidence</h3>
-            <div className="demo-list">
-              {(Object.entries(scenarios) as [ScenarioKey, (typeof scenarios)[ScenarioKey]][]).map(([key,item]) => (
-                <button key={key} className={`demo-list-item ${selected === key ? "active" : ""}`} onClick={() => { setSelected(key); setApproved(false); }}>
-                  <span><strong>{item.label}</strong><small>{item.sourceType}</small></span>
-                  <span className="signal-dot ok" />
-                </button>
-              ))}
-            </div>
-          </aside>
+      <section className="section"><div className="shell demo-workspace"><aside className="demo-sidebar"><div className="eyebrow">Published scenarios</div><h3>Select the evidence</h3><div className="demo-list">{(Object.entries(scenarios) as [ScenarioKey, (typeof scenarios)[ScenarioKey]][]).map(([key,item]) => <button key={key} className={`demo-list-item ${selected === key ? "active" : ""}`} onClick={() => { setSelected(key); setApproved(false); }}><span><strong>{item.label}</strong><small>{item.sourceType}</small></span><span className="signal-dot ok" /></button>)}</div></aside><div className="demo-main"><div className="demo-panel"><div className="meta-row"><span className="badge">{scenario.sourceType}</span><span>{scenario.year}</span></div><h2>{scenario.label}</h2><div className="demo-signal-grid"><div><small>Published headline</small><strong>{scenario.headline}</strong><span>{scenario.source}</span></div><div><small>Additional signal</small><strong>{scenario.secondary}</strong><span>Published scenario</span></div><div><small>Sitora status</small><strong>Opportunity</strong><span>Not yet local recovery</span></div></div><div className="demo-flag-box"><span className="badge">What the evidence says</span><p>{scenario.detail}</p><p><strong>What this proves:</strong> {scenario.proves}</p><p><strong>Limitation:</strong> {scenario.limitation}</p><a className="source-link" href={scenario.url} target="_blank" rel="noreferrer">View source ↗</a></div><div className="demo-decision-block"><div><div className="eyebrow">Local implementation</div><h3>Should this opportunity enter a measured pilot?</h3></div><button className={approved ? "button primary" : "button secondary"} onClick={() => setApproved(!approved)}>{approved ? "Selected for pilot ✓" : "Select for measured pilot"}</button></div></div><div className={`demo-outcome-panel ${approved ? "success" : ""}`}><span className="badge">Evidence status</span><h3>{approved ? "Ready for local measurement" : "Published evidence only"}</h3><p>{approved ? "Sitora would now measure this pathway locally rather than importing the published effect as a saving." : "The evidence proves the mechanism is credible. It does not prove that this trust will achieve the same effect."}</p></div></div></div></section>
 
-          <div className="demo-main">
-            <div className="demo-panel">
-              <div className="meta-row"><span className="badge">{scenario.sourceType}</span><span>{scenario.year}</span></div>
-              <h2>{scenario.label}</h2>
+      <section className="section"><div className="shell two-col"><div><div className="eyebrow">Sitora pilot measurement</div><h2>What would have to be observed locally?</h2><p className="lede">{scenario.pilotMeasure}</p></div><div className="card"><span className="badge">Evidence ladder</span><ul className="list-clean" style={{marginTop:12}}><li><strong>1. Established mechanism:</strong> published evidence shows the pathway can change resource use.</li><li><strong>2. Quantified scenario:</strong> a study or NHS programme reports the size of the effect in a defined setting.</li><li><strong>3. Sitora pilot:</strong> the local provider measures its own baseline, intervention and balancing measures.</li><li><strong>4. Verified recovery:</strong> released time/capacity is demonstrably reusable and finance validates any monetary claim.</li></ul></div></div></section>
 
-              <div className="demo-signal-grid">
-                <div><small>Published headline</small><strong>{scenario.headline}</strong><span>{scenario.source}</span></div>
-                <div><small>Additional signal</small><strong>{scenario.secondary}</strong><span>Published scenario</span></div>
-                <div><small>Sitora status</small><strong>Opportunity</strong><span>Not yet local recovery</span></div>
-              </div>
+      <section className="section"><div className="shell"><div className="section-head"><div><div className="eyebrow">Resource Recovery Record</div><h2>No imported savings claims.</h2></div><p>Published evidence can trigger an investigation. Only observed local change can become a Sitora recovery record.</p></div><div className="recovery-record"><div><small>Evidence source</small><strong>{scenario.source}</strong></div><div><small>Opportunity</small><strong>{scenario.label}</strong></div><div><small>Local status</small><strong>{approved ? "Pilot selected" : "Not tested"}</strong></div><div><small>Verified local benefit</small><strong>Not yet established</strong></div></div><details className="reveal-panel" style={{marginTop:18}}><summary>What counts as verified recovery?</summary><div><p>Clinical eligibility confirmed; actual route/formulation/preparation recorded; staff and chair/bed resource measured before and after; safety and patient outcomes monitored; additional workload counted; released capacity shown to be reusable; and any cash claim independently validated by finance.</p></div></details></div></section>
 
-              <div className="demo-flag-box">
-                <span className="badge">What the evidence says</span>
-                <p>{scenario.detail}</p>
-                <p><strong>What this proves:</strong> {scenario.proves}</p>
-                <p><strong>Limitation:</strong> {scenario.limitation}</p>
-                <a className="source-link" href={scenario.url} target="_blank" rel="noreferrer">View source ↗</a>
-              </div>
-
-              <div className="demo-decision-block">
-                <div><div className="eyebrow">Local implementation</div><h3>Should this opportunity enter a measured pilot?</h3></div>
-                <button className={approved ? "button primary" : "button secondary"} onClick={() => setApproved(!approved)}>{approved ? "Selected for pilot ✓" : "Select for measured pilot"}</button>
-              </div>
-            </div>
-
-            <div className={`demo-outcome-panel ${approved ? "success" : ""}`}>
-              <span className="badge">Evidence status</span>
-              <h3>{approved ? "Ready for local measurement" : "Published evidence only"}</h3>
-              <p>{approved ? "Sitora would now measure this pathway locally rather than importing the published effect as a saving." : "The evidence proves the mechanism is credible. It does not prove that this trust will achieve the same effect."}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="shell two-col">
-          <div>
-            <div className="eyebrow">Sitora pilot measurement</div>
-            <h2>What would have to be observed locally?</h2>
-            <p className="lede">{scenario.pilotMeasure}</p>
-          </div>
-          <div className="card">
-            <span className="badge">Evidence ladder</span>
-            <ul className="list-clean" style={{marginTop:12}}>
-              <li><strong>1. Established mechanism:</strong> published evidence shows the pathway can change resource use.</li>
-              <li><strong>2. Quantified scenario:</strong> a study or NHS programme reports the size of the effect in a defined setting.</li>
-              <li><strong>3. Sitora pilot:</strong> the local provider measures its own baseline, intervention and balancing measures.</li>
-              <li><strong>4. Verified recovery:</strong> released time/capacity is demonstrably reusable and finance validates any monetary claim.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="shell">
-          <div className="section-head"><div><div className="eyebrow">Resource Recovery Record</div><h2>No imported savings claims.</h2></div><p>Published evidence can trigger an investigation. Only observed local change can become a Sitora recovery record.</p></div>
-          <div className="recovery-record">
-            <div><small>Evidence source</small><strong>{scenario.source}</strong></div>
-            <div><small>Opportunity</small><strong>{scenario.label}</strong></div>
-            <div><small>Local status</small><strong>{approved ? "Pilot selected" : "Not tested"}</strong></div>
-            <div><small>Verified local benefit</small><strong>Not yet established</strong></div>
-          </div>
-          <details className="reveal-panel" style={{marginTop:18}}>
-            <summary>What counts as verified recovery?</summary>
-            <div><p>Clinical eligibility confirmed; actual route/formulation/preparation recorded; staff and chair/bed resource measured before and after; safety and patient outcomes monitored; additional workload counted; released capacity shown to be reusable; and any cash claim independently validated by finance.</p></div>
-          </details>
-        </div>
-      </section>
+      <DemoEvidence
+        proven="NHS programmes and published studies already show that medicine route, formulation, preparation and delivery model can materially alter nursing preparation time, pharmacy workload and treatment-chair capacity."
+        adds="A systematic intelligence layer that scans for those opportunities across a provider's medicines pathways, links each opportunity to relevant evidence, and routes only clinically eligible candidates into measured implementation."
+        pilot="Whether the same opportunity exists locally; the true before-and-after staff, chair or bed resource; safety and patient outcomes; additional workload created; whether released capacity is actually reused; and whether any monetary effect is cash-releasing, cost avoidance or capacity only."
+        sources={[
+          { label: "National review: Transforming NHS pharmacy aseptic services", href: "https://www.gov.uk/government/publications/transforming-nhs-pharmacy-aseptic-services-in-england/transforming-nhs-pharmacy-aseptic-services-in-england" },
+          { label: "NHS England: East and North Hertfordshire subcutaneous treatment programme", href: "https://www.england.nhs.uk/east-of-england/meet-our-east-of-england-regional-champions/" },
+          { label: "PrefHer time-and-motion study: subcutaneous vs IV trastuzumab", href: "https://pubmed.ncbi.nlm.nih.gov/26806010/" },
+          { label: "NHS England SACT dose-banding programme", href: "https://www.england.nhs.uk/commissioning/spec-services/npc-crg/group-b/b02/sact-dose-banding/" },
+        ]}
+      />
 
       <section className="section"><div className="shell quote">The NHS has already shown that medicine pathways can release resource. Sitora&apos;s role is to find the right opportunities locally, measure them consistently and prove what was actually recovered.</div></section>
     </>
