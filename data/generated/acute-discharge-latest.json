@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-09-12T19:39:57.099472+00:00",
+  "source_url": "https://www.england.nhs.uk/statistics/wp-content/uploads/sites/2/2026/09/Daily-discharge-sitrep-monthly-data-webfile-05-CSV-aug26.csv",
+  "source_publication": "NHS England Acute Discharge Situation Report, August 2026",
+  "status": "management information",
+  "methodology_warning": "Delay-reason data are management information and definitions changed from 27 May 2024. Reason categories are grouped by Sitora using source measure labels and must be clinically and operationally validated before causal or financial conclusions.",
+  "row_count": 36545,
+  "provider_row_count": 0,
+  "provider_count_with_reason_signal": 0,
+  "detected_columns": {
+    "provider": null,
+    "provider_code": null,
+    "region": "Region",
+    "icb": "ICB",
+    "metric": "Metric Type",
+    "value": "Value",
+    "type": "Level"
+  },
+  "detected_reason_metrics": [],
+  "national_reason_mix": [],
+  "reason_total_distribution": null,
+  "providers": [],
+  "top_provider_reason_signals": []
+}
