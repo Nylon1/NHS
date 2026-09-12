@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import RevealMotion from "@/components/RevealMotion";
 
 export const metadata: Metadata = {
-  title: "Sitora NHS Resource Intelligence",
-  description: "A research platform investigating NHS resource waste, evidence, interventions and verified savings.",
+  title: "Sitora | Healthcare Resource Intelligence",
+  description: "Independent research and innovation platform for medicines and healthcare resource intelligence, measurable intervention and verified recovery.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -13,6 +14,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body>
         <Header />
+        <RevealMotion />
         <main>{children}</main>
         <Footer />
       </body>
