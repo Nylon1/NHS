@@ -1,0 +1,2365 @@
+{
+  "generated_at": "2026-09-12T19:29:55.143067+00:00",
+  "source_url": "https://www.england.nhs.uk/statistics/wp-content/uploads/sites/2/2026/09/Discharge-Ready-Date-monthly-data-csv-July-2026.csv",
+  "source_publication": "NHS England Discharge Ready Date, July 2026",
+  "status": "official statistic",
+  "row_count": 186693,
+  "provider_row_count": 180681,
+  "headers": [
+    "Date",
+    "Data Source",
+    "Data Type",
+    "Upper Tier Local Authority Code",
+    "Upper Tier Local Authority",
+    "Region (of Provider)",
+    "ICB (of Provider)",
+    "Code",
+    "Organisation Name",
+    "Measure",
+    "Value"
+  ],
+  "detected_columns": {
+    "geography_type": null,
+    "geography_name": "Organisation Name",
+    "geography_code": null,
+    "metric": "Measure",
+    "value": "Value"
+  },
+  "categorical_profile": {
+    "Date": [
+      [
+        "July 2026",
+        186693
+      ]
+    ],
+    "Data Source": [
+      [
+        "SUS",
+        185005
+      ],
+      [
+        "SUS & HODF",
+        1496
+      ],
+      [
+        "HODF",
+        192
+      ]
+    ],
+    "Data Type": [
+      [
+        "Provider activity mapped to UTLA",
+        176052
+      ],
+      [
+        "UTLA Aggregate",
+        5049
+      ],
+      [
+        "Provider",
+        4096
+      ],
+      [
+        "ICB",
+        1224
+      ],
+      [
+        "Regional",
+        238
+      ],
+      [
+        "National",
+        34
+      ]
+    ],
+    "Region (of Provider)": [
+      [
+        "LONDON",
+        40862
+      ],
+      [
+        "MIDLANDS",
+        30080
+      ],
+      [
+        "SOUTH EAST",
+        25228
+      ],
+      [
+        "NORTH WEST",
+        24060
+      ],
+      [
+        "NORTH EAST AND YORKSHIRE",
+        23146
+      ],
+      [
+        "SOUTH WEST",
+        20444
+      ],
+      [
+        "EAST OF ENGLAND",
+        17552
+      ],
+      [
+        "[z]",
+        5321
+      ]
+    ]
+  },
+  "metric_distributions": {
+    "Number of providers submitting acceptable data": {
+      "n": 6,
+      "min": 12.0,
+      "p25": 17.75,
+      "median": 20.5,
+      "p75": 21.75,
+      "max": 23.0,
+      "mean": 19.166666666666668
+    },
+    "% of providers submitting acceptable data": {
+      "n": 6,
+      "min": 0.944444444,
+      "p25": 0.9529220777499999,
+      "median": 0.9555335970000001,
+      "p75": 0.9891304347500001,
+      "max": 1.0,
+      "mean": 0.9679820983333333
+    },
+    "Number of patients discharged in total": {
+      "n": 131,
+      "min": 41.0,
+      "p25": 1685.5,
+      "median": 2612.0,
+      "p75": 3925.5,
+      "max": 71897.0,
+      "mean": 5075.175572519084
+    },
+    "Total bed days lost due to delayed discharge": {
+      "n": 5326,
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 1.0,
+      "max": 66919.0,
+      "mean": 244.4248967330079
+    },
+    "Date of discharge is same as Discharge Ready Date": {
+      "n": 5326,
+      "min": 0.0,
+      "p25": 0.9200437397500001,
+      "median": 1.0,
+      "p75": 1.0,
+      "max": 1.0,
+      "mean": 0.9144169616244837
+    },
+    "Date of Discharge is 1+ days after Discharge Ready Date": {
+      "n": 5326,
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.07995626025,
+      "max": 1.0,
+      "mean": 0.08558303837551634
+    },
+    "Number of patients discharged where, between the Discharge Ready Date and Discharge Date, there is No delay": {
+      "n": 5326,
+      "min": 0.0,
+      "p25": 1.0,
+      "median": 2.0,
+      "p75": 7.0,
+      "max": 60347.0,
+      "mean": 211.4066841907623
+    },
+    "Number of patients discharged where, between the Discharge Ready Date and Discharge Date, there is a 1 day delay": {
+      "n": 5326,
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0,
+      "max": 4337.0,
+      "mean": 12.701088997371386
+    },
+    "Number of patients discharged where, between the Discharge Ready Date and Discharge Date, there is a 2-3 day delay": {
+      "n": 5326,
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0,
+      "max": 2899.0,
+      "mean": 8.569846038302666
+    },
+    "Number of patients discharged where, between the Discharge Ready Date and Discharge Date, there is a 4-6 day delay": {
+      "n": 5326,
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0,
+      "max": 1813.0,
+      "mean": 6.135373638753285
+    },
+    "Number of patients discharged where, between the Discharge Ready Date and Discharge Date, there is a 7-13 day delay": {
+      "n": 5326,
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0,
+      "max": 1580.0,
+      "mean": 6.211040180247841
+    },
+    "Number of patients discharged where, between the Discharge Ready Date and Discharge Date, there is a 14-20 day delay": {
+      "n": 5326,
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0,
+      "max": 614.0,
+      "mean": 2.2405182125422454
+    },
+    "Number of patients discharged where, between the Discharge Ready Date and Discharge Date, there is a delay of 21 days or more": {
+      "n": 5326,
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0,
+      "max": 772.0,
+      "mean": 2.390161472024033
+    },
+    "% of patients discharged where, between the Discharge Ready Date and Discharge Date, there is No delay": {
+      "n": 5326,
+      "min": 0.0,
+      "p25": 0.9200437397500001,
+      "median": 1.0,
+      "p75": 1.0,
+      "max": 1.0,
+      "mean": 0.9144169616244837
+    },
+    "% of patients discharged where, between the Discharge Ready Date and Discharge Date, there is a 1 day delay": {
+      "n": 5326,
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0,
+      "max": 1.0,
+      "mean": 0.035208714572286894
+    },
+    "% of patients discharged where, between the Discharge Ready Date and Discharge Date, there is a 2-3 day delay": {
+      "n": 5326,
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0,
+      "max": 1.0,
+      "mean": 0.015512986226248592
+    },
+    "% of patients discharged where, between the Discharge Ready Date and Discharge Date, there is a 4-6 day delay": {
+      "n": 5326,
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0,
+      "max": 1.0,
+      "mean": 0.012841542735824258
+    },
+    "% of patients discharged where, between the Discharge Ready Date and Discharge Date, there is a 7-13 day delay": {
+      "n": 5326,
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0,
+      "max": 1.0,
+      "mean": 0.012245014727938415
+    },
+    "% of patients discharged where, between the Discharge Ready Date and Discharge Date, there is a 14-20 day delay": {
+      "n": 5326,
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0,
+      "max": 1.0,
+      "mean": 0.003693972053886594
+    },
+    "% of patients discharged where, between the Discharge Ready Date and Discharge Date, there is a delay of 21 days or more": {
+      "n": 5326,
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0,
+      "max": 1.0,
+      "mean": 0.0060808080655276
+    },
+    "% of patients discharged after their Discharge Ready Date but discharged within 1 day": {
+      "n": 1559,
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.333333333,
+      "p75": 0.5421149305,
+      "max": 1.0,
+      "mean": 0.3924613758729955
+    },
+    "% of patients discharged after their Discharge Ready Date but discharged within 2-3 days": {
+      "n": 1559,
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.169630643,
+      "p75": 0.258460051,
+      "max": 1.0,
+      "mean": 0.20327809575432967
+    },
+    "% of patients discharged after their Discharge Ready Date but discharged within 4-6 days": {
+      "n": 1559,
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.076923077,
+      "p75": 0.17845557,
+      "max": 1.0,
+      "mean": 0.1386743744996793
+    },
+    "% of patients discharged after their Discharge Ready Date but discharged within 7-13 days": {
+      "n": 1559,
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.066666667,
+      "p75": 0.18460837600000002,
+      "max": 1.0,
+      "mean": 0.13924195725721616
+    },
+    "% of patients discharged after their Discharge Ready Date but discharged within 14-20 days": {
+      "n": 1559,
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0559947915,
+      "max": 1.0,
+      "mean": 0.049710470608082105
+    },
+    "% of patients discharged after their Discharge Ready Date but discharged within 21 days or more": {
+      "n": 1559,
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.066666667,
+      "max": 1.0,
+      "mean": 0.07663372602052598
+    },
+    "Total bed days after Discharge Ready Date for patients discharged within 1 day": {
+      "n": 5326,
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0,
+      "max": 4337.0,
+      "mean": 12.701088997371386
+    },
+    "Total bed days after Discharge Ready Date for patients discharged within 2-3 days": {
+      "n": 5326,
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0,
+      "max": 6881.0,
+      "mean": 20.457003379647016
+    },
+    "Total bed days after Discharge Ready Date for patients discharged within 4-6 days": {
+      "n": 5326,
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0,
+      "max": 8771.0,
+      "mean": 29.90067592940293
+    },
+    "Total bed days after Discharge Ready Date for patients discharged within 7-13 days": {
+      "n": 5326,
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0,
+      "max": 14454.0,
+      "mean": 56.96639128802103
+    },
+    "Total bed days after Discharge Ready Date for patients discharged within 14-20 days": {
+      "n": 5326,
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0,
+      "max": 10073.0,
+      "mean": 36.515396169733386
+    },
+    "Total bed days after Discharge Ready Date for patients discharged within 21 days or more": {
+      "n": 5326,
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0,
+      "max": 29671.0,
+      "mean": 87.88434096883215
+    },
+    "Average days from Discharge Ready Date to date of discharge (inc 0 day delays)": {
+      "n": 5326,
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.222222222,
+      "max": 136.0,
+      "mean": 0.6004634298060458
+    },
+    "Average days from Discharge Ready Date to date of discharge (exc 0 day delays)": {
+      "n": 1559,
+      "min": 1.0,
+      "p25": 2.0,
+      "median": 4.840528634,
+      "p75": 7.8144401545,
+      "max": 356.0,
+      "mean": 7.343701824094933
+    },
+    "% of all UTLA discharges that are from acceptable trusts": {
+      "n": 153,
+      "min": 0.045786654,
+      "p25": 0.97044335,
+      "median": 0.995464853,
+      "p75": 0.998614958,
+      "max": 1.0,
+      "mean": 0.9115925709542484
+    },
+    "Total Discharges for UTLA from acceptable trusts": {
+      "n": 5195,
+      "min": 8.0,
+      "p25": 1331.0,
+      "median": 2018.0,
+      "p75": 4169.0,
+      "max": 9080.0,
+      "mean": 2791.158999037536
+    },
+    "% trust contributes to UTLA discharges": {
+      "n": 5042,
+      "min": 0.000110132,
+      "p25": 0.000445831,
+      "median": 0.00087777,
+      "p75": 0.0034748080000000002,
+      "max": 1.0,
+      "mean": 0.030096301800674338
+    },
+    "Total Discharges of UTLA patients from provider": {
+      "n": 5042,
+      "min": 1.0,
+      "p25": 1.0,
+      "median": 2.0,
+      "p75": 5.0,
+      "max": 6873.0,
+      "mean": 65.98135660452202
+    }
+  },
+  "rankings": [
+    {
+      "metric": "Total bed days lost due to delayed discharge",
+      "direction_note": "Higher is not automatically worse for percentage same-day metrics; interpret with metric definition.",
+      "top": [
+        {
+          "provider": "SOUTH EAST",
+          "code": "",
+          "value": 66919.0
+        },
+        {
+          "provider": "MIDLANDS",
+          "code": "",
+          "value": 57032.0
+        },
+        {
+          "provider": "NORTH EAST AND YORKSHIRE",
+          "code": "",
+          "value": 54684.0
+        },
+        {
+          "provider": "NORTH WEST",
+          "code": "",
+          "value": 52219.0
+        },
+        {
+          "provider": "SOUTH WEST",
+          "code": "",
+          "value": 44862.0
+        },
+        {
+          "provider": "LONDON",
+          "code": "",
+          "value": 35451.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 13948.0
+        },
+        {
+          "provider": "UNIVERSITY HOSPITALS SUSSEX NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 12736.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 9106.0
+        },
+        {
+          "provider": "BRISTOL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 8783.0
+        },
+        {
+          "provider": "UNIVERSITY HOSPITALS SUSSEX NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 7434.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 7359.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 7326.0
+        },
+        {
+          "provider": "LEEDS TEACHING HOSPITALS NHS TRUST",
+          "code": "",
+          "value": 7183.0
+        },
+        {
+          "provider": "MERSEY AND WEST LANCASHIRE TEACHING HOSPITALS NHS TRUST",
+          "code": "",
+          "value": 7117.0
+        }
+      ],
+      "bottom": [
+        {
+          "provider": "BRISTOL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "BUCKINGHAMSHIRE HEALTHCARE NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SURREY AND SUSSEX HEALTHCARE NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "STOCKPORT NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "THE CHRISTIE NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "LIVERPOOL UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "AIREDALE NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "DONCASTER AND BASSETLAW TEACHING HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SHEFFIELD TEACHING HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SHEFFIELD CHILDREN'S NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SOUTH TEES HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "NORTHUMBRIA HEALTHCARE NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "HARROGATE AND DISTRICT NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "THE ROBERT JONES AND AGNES HUNT ORTHOPAEDIC HOSPITAL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SHERWOOD FOREST HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        }
+      ],
+      "distribution": {
+        "n": 5326,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 1.0,
+        "max": 66919.0,
+        "mean": 244.4248967330079
+      }
+    },
+    {
+      "metric": "Date of discharge is same as Discharge Ready Date",
+      "direction_note": "Higher is not automatically worse for percentage same-day metrics; interpret with metric definition.",
+      "top": [
+        {
+          "provider": "ALDER HEY CHILDREN'S NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "BIRMINGHAM WOMEN'S AND CHILDREN'S NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "GREAT ORMOND STREET HOSPITAL FOR CHILDREN NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "MOORFIELDS EYE HOSPITAL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "QUEEN VICTORIA HOSPITAL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "ROYAL PAPWORTH HOSPITAL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "SHEFFIELD CHILDREN'S NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "THE CHRISTIE NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "THE ROYAL ORTHOPAEDIC HOSPITAL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "THE WALTON CENTRE NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "ROYAL PAPWORTH HOSPITAL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "WEST HERTFORDSHIRE TEACHING HOSPITALS NHS TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "HOMERTON HEALTHCARE NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "LEWISHAM AND GREENWICH NHS TRUST",
+          "code": "",
+          "value": 1.0
+        }
+      ],
+      "bottom": [
+        {
+          "provider": "UNIVERSITY HOSPITALS OF MORECAMBE BAY NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "BARNSLEY HOSPITAL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "LIVERPOOL UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "LEWISHAM AND GREENWICH NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "GUY'S AND ST THOMAS' NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "DORSET COUNTY HOSPITAL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "HAMPSHIRE HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "UNIVERSITY HOSPITAL SOUTHAMPTON NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "LIVERPOOL WOMEN'S NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "HULL UNIVERSITY TEACHING HOSPITALS NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "UNITED LINCOLNSHIRE TEACHING HOSPITALS NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "UNIVERSITY HOSPITAL SOUTHAMPTON NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "NORTHAMPTON GENERAL HOSPITAL NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "UNIVERSITY HOSPITALS DORSET NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "YORK AND SCARBOROUGH TEACHING HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        }
+      ],
+      "distribution": {
+        "n": 5326,
+        "min": 0.0,
+        "p25": 0.9200437397500001,
+        "median": 1.0,
+        "p75": 1.0,
+        "max": 1.0,
+        "mean": 0.9144169616244837
+      }
+    },
+    {
+      "metric": "Number of patients discharged where, between the Discharge Ready Date and Discharge Date, there is a delay of 21 days or more",
+      "direction_note": "Higher is not automatically worse for percentage same-day metrics; interpret with metric definition.",
+      "top": [
+        {
+          "provider": "SOUTH EAST",
+          "code": "",
+          "value": 772.0
+        },
+        {
+          "provider": "NORTH WEST",
+          "code": "",
+          "value": 567.0
+        },
+        {
+          "provider": "NORTH EAST AND YORKSHIRE",
+          "code": "",
+          "value": 476.0
+        },
+        {
+          "provider": "SOUTH WEST",
+          "code": "",
+          "value": 452.0
+        },
+        {
+          "provider": "MIDLANDS",
+          "code": "",
+          "value": 418.0
+        },
+        {
+          "provider": "LONDON",
+          "code": "",
+          "value": 400.0
+        },
+        {
+          "provider": "UNIVERSITY HOSPITALS SUSSEX NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 199.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 147.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 146.0
+        },
+        {
+          "provider": "UNIVERSITY HOSPITALS SUSSEX NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 124.0
+        },
+        {
+          "provider": "MERSEY AND WEST LANCASHIRE TEACHING HOSPITALS NHS TRUST",
+          "code": "",
+          "value": 99.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 94.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 92.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 91.0
+        },
+        {
+          "provider": "SOMERSET NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 89.0
+        }
+      ],
+      "bottom": [
+        {
+          "provider": "BRISTOL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "BUCKINGHAMSHIRE HEALTHCARE NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SURREY AND SUSSEX HEALTHCARE NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "UNIVERSITY HOSPITALS OF MORECAMBE BAY NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "STOCKPORT NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "THE CHRISTIE NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "LIVERPOOL UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "LEEDS TEACHING HOSPITALS NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "AIREDALE NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "DONCASTER AND BASSETLAW TEACHING HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SHEFFIELD TEACHING HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "BARNSLEY HOSPITAL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SHEFFIELD CHILDREN'S NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SOUTH TEES HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "NORTHUMBRIA HEALTHCARE NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        }
+      ],
+      "distribution": {
+        "n": 5326,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 772.0,
+        "mean": 2.390161472024033
+      }
+    },
+    {
+      "metric": "% of patients discharged where, between the Discharge Ready Date and Discharge Date, there is a delay of 21 days or more",
+      "direction_note": "Higher is not automatically worse for percentage same-day metrics; interpret with metric definition.",
+      "top": [
+        {
+          "provider": "UNIVERSITY HOSPITALS OF MORECAMBE BAY NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "SURREY AND SUSSEX HEALTHCARE NHS TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "UNIVERSITY HOSPITALS SUSSEX NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "SURREY AND SUSSEX HEALTHCARE NHS TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "EAST SUSSEX HEALTHCARE NHS TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "NORFOLK AND NORWICH UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "THE HILLINGDON HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "BEDFORDSHIRE HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "EAST LANCASHIRE HOSPITALS NHS TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "CHESTERFIELD ROYAL HOSPITAL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "CAMBRIDGE UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "LEWISHAM AND GREENWICH NHS TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "UNIVERSITY HOSPITALS DORSET NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.5
+        },
+        {
+          "provider": "SHEFFIELD TEACHING HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.5
+        },
+        {
+          "provider": "CROYDON HEALTH SERVICES NHS TRUST",
+          "code": "",
+          "value": 0.5
+        }
+      ],
+      "bottom": [
+        {
+          "provider": "BRISTOL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "BUCKINGHAMSHIRE HEALTHCARE NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SURREY AND SUSSEX HEALTHCARE NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "UNIVERSITY HOSPITALS OF MORECAMBE BAY NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "STOCKPORT NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "THE CHRISTIE NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "LIVERPOOL UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "LEEDS TEACHING HOSPITALS NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "AIREDALE NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "DONCASTER AND BASSETLAW TEACHING HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SHEFFIELD TEACHING HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "BARNSLEY HOSPITAL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SHEFFIELD CHILDREN'S NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SOUTH TEES HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "NORTHUMBRIA HEALTHCARE NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        }
+      ],
+      "distribution": {
+        "n": 5326,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 1.0,
+        "mean": 0.0060808080655276
+      }
+    },
+    {
+      "metric": "% of patients discharged after their Discharge Ready Date but discharged within 21 days or more",
+      "direction_note": "Higher is not automatically worse for percentage same-day metrics; interpret with metric definition.",
+      "top": [
+        {
+          "provider": "MEDWAY NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "UNIVERSITY HOSPITALS OF MORECAMBE BAY NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "IMPERIAL COLLEGE HEALTHCARE NHS TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "ASHFORD AND ST PETER'S HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "SURREY AND SUSSEX HEALTHCARE NHS TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "CHELSEA AND WESTMINSTER HOSPITAL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "UNIVERSITY HOSPITALS DORSET NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "TORBAY AND SOUTH DEVON NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "SHEFFIELD TEACHING HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "DORSET COUNTY HOSPITAL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "LONDON NORTH WEST UNIVERSITY HEALTHCARE NHS TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "UNIVERSITY HOSPITALS SUSSEX NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "OXFORD UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "WYE VALLEY NHS TRUST",
+          "code": "",
+          "value": 1.0
+        },
+        {
+          "provider": "SURREY AND SUSSEX HEALTHCARE NHS TRUST",
+          "code": "",
+          "value": 1.0
+        }
+      ],
+      "bottom": [
+        {
+          "provider": "UNIVERSITY HOSPITALS OF MORECAMBE BAY NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "LEEDS TEACHING HOSPITALS NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "BARNSLEY HOSPITAL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "HULL UNIVERSITY TEACHING HOSPITALS NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "GLOUCESTERSHIRE HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "ROYAL DEVON UNIVERSITY HEALTHCARE NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "MANCHESTER UNIVERSITY NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "LIVERPOOL UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SHEFFIELD TEACHING HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "WYE VALLEY NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SOUTH WARWICKSHIRE UNIVERSITY NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SANDWELL AND WEST BIRMINGHAM HOSPITALS NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "THE DUDLEY GROUP NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "UNIVERSITY HOSPITALS BIRMINGHAM NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "UNIVERSITY COLLEGE LONDON HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        }
+      ],
+      "distribution": {
+        "n": 1559,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.066666667,
+        "max": 1.0,
+        "mean": 0.07663372602052598
+      }
+    },
+    {
+      "metric": "Total bed days after Discharge Ready Date for patients discharged within 1 day",
+      "direction_note": "Higher is not automatically worse for percentage same-day metrics; interpret with metric definition.",
+      "top": [
+        {
+          "provider": "MIDLANDS",
+          "code": "",
+          "value": 4337.0
+        },
+        {
+          "provider": "NORTH EAST AND YORKSHIRE",
+          "code": "",
+          "value": 3274.0
+        },
+        {
+          "provider": "SOUTH EAST",
+          "code": "",
+          "value": 2301.0
+        },
+        {
+          "provider": "LONDON",
+          "code": "",
+          "value": 2185.0
+        },
+        {
+          "provider": "NORTH WEST",
+          "code": "",
+          "value": 2098.0
+        },
+        {
+          "provider": "SOUTH WEST",
+          "code": "",
+          "value": 1503.0
+        },
+        {
+          "provider": "UNIVERSITY HOSPITALS BIRMINGHAM NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 776.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 581.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 566.0
+        },
+        {
+          "provider": "NOTTINGHAM UNIVERSITY HOSPITALS NHS TRUST",
+          "code": "",
+          "value": 557.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 508.0
+        },
+        {
+          "provider": "UNIVERSITY HOSPITALS BIRMINGHAM NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 505.0
+        },
+        {
+          "provider": "SHEFFIELD TEACHING HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 498.0
+        },
+        {
+          "provider": "CAMBRIDGE UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 471.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 451.0
+        }
+      ],
+      "bottom": [
+        {
+          "provider": "BRISTOL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "BUCKINGHAMSHIRE HEALTHCARE NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SURREY AND SUSSEX HEALTHCARE NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "STOCKPORT NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "THE CHRISTIE NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "LIVERPOOL UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "AIREDALE NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "DONCASTER AND BASSETLAW TEACHING HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SHEFFIELD TEACHING HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SHEFFIELD CHILDREN'S NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SOUTH TEES HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "NORTHUMBRIA HEALTHCARE NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "HARROGATE AND DISTRICT NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "THE ROBERT JONES AND AGNES HUNT ORTHOPAEDIC HOSPITAL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SHERWOOD FOREST HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        }
+      ],
+      "distribution": {
+        "n": 5326,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 4337.0,
+        "mean": 12.701088997371386
+      }
+    },
+    {
+      "metric": "Total bed days after Discharge Ready Date for patients discharged within 2-3 days",
+      "direction_note": "Higher is not automatically worse for percentage same-day metrics; interpret with metric definition.",
+      "top": [
+        {
+          "provider": "MIDLANDS",
+          "code": "",
+          "value": 6881.0
+        },
+        {
+          "provider": "NORTH EAST AND YORKSHIRE",
+          "code": "",
+          "value": 4608.0
+        },
+        {
+          "provider": "SOUTH EAST",
+          "code": "",
+          "value": 4183.0
+        },
+        {
+          "provider": "NORTH WEST",
+          "code": "",
+          "value": 3675.0
+        },
+        {
+          "provider": "LONDON",
+          "code": "",
+          "value": 2962.0
+        },
+        {
+          "provider": "SOUTH WEST",
+          "code": "",
+          "value": 2934.0
+        },
+        {
+          "provider": "MID AND SOUTH ESSEX NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 828.0
+        },
+        {
+          "provider": "UNIVERSITY HOSPITALS OF DERBY AND BURTON NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 782.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 746.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 738.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 728.0
+        },
+        {
+          "provider": "UNIVERSITY HOSPITALS BIRMINGHAM NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 705.0
+        },
+        {
+          "provider": "NOTTINGHAM UNIVERSITY HOSPITALS NHS TRUST",
+          "code": "",
+          "value": 688.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 648.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 647.0
+        }
+      ],
+      "bottom": [
+        {
+          "provider": "BRISTOL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "BUCKINGHAMSHIRE HEALTHCARE NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SURREY AND SUSSEX HEALTHCARE NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "UNIVERSITY HOSPITALS OF MORECAMBE BAY NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "STOCKPORT NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "THE CHRISTIE NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "LIVERPOOL UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "AIREDALE NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "DONCASTER AND BASSETLAW TEACHING HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SHEFFIELD TEACHING HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "BARNSLEY HOSPITAL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SHEFFIELD CHILDREN'S NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SOUTH TEES HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "NORTHUMBRIA HEALTHCARE NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "HULL UNIVERSITY TEACHING HOSPITALS NHS TRUST",
+          "code": "",
+          "value": 0.0
+        }
+      ],
+      "distribution": {
+        "n": 5326,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 6881.0,
+        "mean": 20.457003379647016
+      }
+    },
+    {
+      "metric": "Total bed days after Discharge Ready Date for patients discharged within 4-6 days",
+      "direction_note": "Higher is not automatically worse for percentage same-day metrics; interpret with metric definition.",
+      "top": [
+        {
+          "provider": "MIDLANDS",
+          "code": "",
+          "value": 8771.0
+        },
+        {
+          "provider": "NORTH EAST AND YORKSHIRE",
+          "code": "",
+          "value": 7041.0
+        },
+        {
+          "provider": "SOUTH EAST",
+          "code": "",
+          "value": 6712.0
+        },
+        {
+          "provider": "NORTH WEST",
+          "code": "",
+          "value": 5792.0
+        },
+        {
+          "provider": "SOUTH WEST",
+          "code": "",
+          "value": 5326.0
+        },
+        {
+          "provider": "LONDON",
+          "code": "",
+          "value": 3642.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 1519.0
+        },
+        {
+          "provider": "UNIVERSITY HOSPITALS OF DERBY AND BURTON NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1085.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 1028.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 1021.0
+        },
+        {
+          "provider": "BRISTOL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1016.0
+        },
+        {
+          "provider": "MID AND SOUTH ESSEX NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1014.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 944.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 931.0
+        },
+        {
+          "provider": "SHEFFIELD TEACHING HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 883.0
+        }
+      ],
+      "bottom": [
+        {
+          "provider": "BRISTOL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "BUCKINGHAMSHIRE HEALTHCARE NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SURREY AND SUSSEX HEALTHCARE NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "UNIVERSITY HOSPITALS OF MORECAMBE BAY NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "STOCKPORT NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "THE CHRISTIE NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "LIVERPOOL UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "LEEDS TEACHING HOSPITALS NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "AIREDALE NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "DONCASTER AND BASSETLAW TEACHING HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SHEFFIELD TEACHING HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "BARNSLEY HOSPITAL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SHEFFIELD CHILDREN'S NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SOUTH TEES HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "NORTHUMBRIA HEALTHCARE NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        }
+      ],
+      "distribution": {
+        "n": 5326,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 8771.0,
+        "mean": 29.90067592940293
+      }
+    },
+    {
+      "metric": "Total bed days after Discharge Ready Date for patients discharged within 7-13 days",
+      "direction_note": "Higher is not automatically worse for percentage same-day metrics; interpret with metric definition.",
+      "top": [
+        {
+          "provider": "MIDLANDS",
+          "code": "",
+          "value": 14454.0
+        },
+        {
+          "provider": "SOUTH EAST",
+          "code": "",
+          "value": 13979.0
+        },
+        {
+          "provider": "NORTH EAST AND YORKSHIRE",
+          "code": "",
+          "value": 13870.0
+        },
+        {
+          "provider": "SOUTH WEST",
+          "code": "",
+          "value": 12098.0
+        },
+        {
+          "provider": "NORTH WEST",
+          "code": "",
+          "value": 11505.0
+        },
+        {
+          "provider": "LONDON",
+          "code": "",
+          "value": 6773.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 3115.0
+        },
+        {
+          "provider": "BRISTOL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 2957.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 2193.0
+        },
+        {
+          "provider": "UNIVERSITY HOSPITALS SUSSEX NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1994.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 1887.0
+        },
+        {
+          "provider": "NOTTINGHAM UNIVERSITY HOSPITALS NHS TRUST",
+          "code": "",
+          "value": 1763.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 1694.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 1689.0
+        },
+        {
+          "provider": "PORTSMOUTH HOSPITALS UNIVERSITY NHS TRUST",
+          "code": "",
+          "value": 1674.0
+        }
+      ],
+      "bottom": [
+        {
+          "provider": "BRISTOL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "BUCKINGHAMSHIRE HEALTHCARE NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SURREY AND SUSSEX HEALTHCARE NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "UNIVERSITY HOSPITALS OF MORECAMBE BAY NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "STOCKPORT NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "THE CHRISTIE NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "LIVERPOOL UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "LEEDS TEACHING HOSPITALS NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "AIREDALE NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "DONCASTER AND BASSETLAW TEACHING HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SHEFFIELD TEACHING HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "BARNSLEY HOSPITAL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SHEFFIELD CHILDREN'S NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SOUTH TEES HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "NORTHUMBRIA HEALTHCARE NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        }
+      ],
+      "distribution": {
+        "n": 5326,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 14454.0,
+        "mean": 56.96639128802103
+      }
+    },
+    {
+      "metric": "Total bed days after Discharge Ready Date for patients discharged within 14-20 days",
+      "direction_note": "Higher is not automatically worse for percentage same-day metrics; interpret with metric definition.",
+      "top": [
+        {
+          "provider": "SOUTH EAST",
+          "code": "",
+          "value": 10073.0
+        },
+        {
+          "provider": "NORTH EAST AND YORKSHIRE",
+          "code": "",
+          "value": 8629.0
+        },
+        {
+          "provider": "MIDLANDS",
+          "code": "",
+          "value": 8194.0
+        },
+        {
+          "provider": "NORTH WEST",
+          "code": "",
+          "value": 8156.0
+        },
+        {
+          "provider": "SOUTH WEST",
+          "code": "",
+          "value": 7221.0
+        },
+        {
+          "provider": "LONDON",
+          "code": "",
+          "value": 4371.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 2239.0
+        },
+        {
+          "provider": "UNIVERSITY HOSPITALS SUSSEX NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1809.0
+        },
+        {
+          "provider": "BRISTOL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1725.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 1440.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 1340.0
+        },
+        {
+          "provider": "SOMERSET NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1258.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 1215.0
+        },
+        {
+          "provider": "SOMERSET NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 1193.0
+        },
+        {
+          "provider": "NOTTINGHAM UNIVERSITY HOSPITALS NHS TRUST",
+          "code": "",
+          "value": 1146.0
+        }
+      ],
+      "bottom": [
+        {
+          "provider": "BRISTOL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "BUCKINGHAMSHIRE HEALTHCARE NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SURREY AND SUSSEX HEALTHCARE NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "UNIVERSITY HOSPITALS OF MORECAMBE BAY NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "STOCKPORT NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "THE CHRISTIE NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "LIVERPOOL UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "LEEDS TEACHING HOSPITALS NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "AIREDALE NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "DONCASTER AND BASSETLAW TEACHING HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SHEFFIELD TEACHING HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "BARNSLEY HOSPITAL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SHEFFIELD CHILDREN'S NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SOUTH TEES HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "NORTHUMBRIA HEALTHCARE NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        }
+      ],
+      "distribution": {
+        "n": 5326,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 10073.0,
+        "mean": 36.515396169733386
+      }
+    },
+    {
+      "metric": "Total bed days after Discharge Ready Date for patients discharged within 21 days or more",
+      "direction_note": "Higher is not automatically worse for percentage same-day metrics; interpret with metric definition.",
+      "top": [
+        {
+          "provider": "SOUTH EAST",
+          "code": "",
+          "value": 29671.0
+        },
+        {
+          "provider": "NORTH WEST",
+          "code": "",
+          "value": 20993.0
+        },
+        {
+          "provider": "NORTH EAST AND YORKSHIRE",
+          "code": "",
+          "value": 17262.0
+        },
+        {
+          "provider": "SOUTH WEST",
+          "code": "",
+          "value": 15780.0
+        },
+        {
+          "provider": "LONDON",
+          "code": "",
+          "value": 15518.0
+        },
+        {
+          "provider": "MIDLANDS",
+          "code": "",
+          "value": 14395.0
+        },
+        {
+          "provider": "UNIVERSITY HOSPITALS SUSSEX NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 7926.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 5748.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 5391.0
+        },
+        {
+          "provider": "UNIVERSITY HOSPITALS SUSSEX NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 4521.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 3842.0
+        },
+        {
+          "provider": "MERSEY AND WEST LANCASHIRE TEACHING HOSPITALS NHS TRUST",
+          "code": "",
+          "value": 3725.0
+        },
+        {
+          "provider": "LEEDS TEACHING HOSPITALS NHS TRUST",
+          "code": "",
+          "value": 3616.0
+        },
+        {
+          "provider": "[z]",
+          "code": "",
+          "value": 3609.0
+        },
+        {
+          "provider": "LEEDS TEACHING HOSPITALS NHS TRUST",
+          "code": "",
+          "value": 3427.0
+        }
+      ],
+      "bottom": [
+        {
+          "provider": "BRISTOL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "BUCKINGHAMSHIRE HEALTHCARE NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SURREY AND SUSSEX HEALTHCARE NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "UNIVERSITY HOSPITALS OF MORECAMBE BAY NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "STOCKPORT NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "THE CHRISTIE NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "LIVERPOOL UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "LEEDS TEACHING HOSPITALS NHS TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "AIREDALE NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "DONCASTER AND BASSETLAW TEACHING HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SHEFFIELD TEACHING HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "BARNSLEY HOSPITAL NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SHEFFIELD CHILDREN'S NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "SOUTH TEES HOSPITALS NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        },
+        {
+          "provider": "NORTHUMBRIA HEALTHCARE NHS FOUNDATION TRUST",
+          "code": "",
+          "value": 0.0
+        }
+      ],
+      "distribution": {
+        "n": 5326,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "max": 29671.0,
+        "mean": 87.88434096883215
+      }
+    }
+  ],
+  "methodology": {
+    "warning": "This output identifies statistical variation, not waste. Outliers require peer-group, case-mix, data-quality and operational review before any causal conclusion.",
+    "ranking_rule": "Only provider rows with numeric values are ranked. Missing/suppressed values are excluded.",
+    "next_step": "Use NHS trust type/peer group and activity denominators before estimating excess bed days above peer benchmark."
+  },
+  "sample_rows": [
+    {
+      "Date": "July 2026",
+      "Data Source": "SUS & HODF",
+      "Data Type": "National",
+      "Upper Tier Local Authority Code": "[z]",
+      "Upper Tier Local Authority": "[z]",
+      "Region (of Provider)": "[z]",
+      "ICB (of Provider)": "[z]",
+      "Code": "ENGLAND",
+      "Organisation Name": "ENGLAND",
+      "Measure": "Number of providers submitting acceptable data",
+      "Value": "128"
+    },
+    {
+      "Date": "July 2026",
+      "Data Source": "SUS & HODF",
+      "Data Type": "National",
+      "Upper Tier Local Authority Code": "[z]",
+      "Upper Tier Local Authority": "[z]",
+      "Region (of Provider)": "[z]",
+      "ICB (of Provider)": "[z]",
+      "Code": "ENGLAND",
+      "Organisation Name": "ENGLAND",
+      "Measure": "% of providers submitting acceptable data",
+      "Value": "0.962406015"
+    },
+    {
+      "Date": "July 2026",
+      "Data Source": "SUS & HODF",
+      "Data Type": "National",
+      "Upper Tier Local Authority Code": "[z]",
+      "Upper Tier Local Authority": "[z]",
+      "Region (of Provider)": "[z]",
+      "ICB (of Provider)": "[z]",
+      "Code": "ENGLAND",
+      "Organisation Name": "ENGLAND",
+      "Measure": "Number of patients discharged in total",
+      "Value": "353653"
+    },
+    {
+      "Date": "July 2026",
+      "Data Source": "SUS & HODF",
+      "Data Type": "National",
+      "Upper Tier Local Authority Code": "[z]",
+      "Upper Tier Local Authority": "[z]",
+      "Region (of Provider)": "[z]",
+      "ICB (of Provider)": "[z]",
+      "Code": "ENGLAND",
+      "Organisation Name": "ENGLAND",
+      "Measure": "Total bed days lost due to delayed discharge",
+      "Value": "343243"
+    },
+    {
+      "Date": "July 2026",
+      "Data Source": "SUS & HODF",
+      "Data Type": "National",
+      "Upper Tier Local Authority Code": "[z]",
+      "Upper Tier Local Authority": "[z]",
+      "Region (of Provider)": "[z]",
+      "ICB (of Provider)": "[z]",
+      "Code": "ENGLAND",
+      "Organisation Name": "ENGLAND",
+      "Measure": "Date of discharge is same as Discharge Ready Date",
+      "Value": "0.847310782"
+    }
+  ]
+}
