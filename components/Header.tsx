@@ -1,10 +1,10 @@
 import Link from "next/link";
 
 const nav = [
+  ["Medicines", "/medicines-proposal"],
   ["Dashboard", "/dashboard"],
   ["Benchmarking", "/benchmarking"],
   ["Bottlenecks", "/bottlenecks"],
-  ["Opportunities", "/opportunities"],
   ["Findings", "/findings"],
   ["Loss map", "/loss-map"],
   ["Register", "/register"],
