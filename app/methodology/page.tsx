@@ -1,36 +1,7 @@
-export default function MethodologyPage() {
-  return (
-    <>
-      <section className="page-head">
-        <div className="shell">
-          <div className="eyebrow">Methodology</div>
-          <h1>Observe first. Validate before calling something waste.</h1>
-          <p className="lede">Every finding follows the same chain: evidence, interpretation, governed intervention and verified impact.</p>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="shell">
-          <div className="process">
-            {[
-              ["01", "Observe", "Use existing activity, spend, time and capacity data."],
-              ["02", "Detect", "Find unusual variation, duplication, excess supply or avoidable delay."],
-              ["03", "Validate", "Clinical and operational experts confirm whether the signal is real and safe to act on."],
-              ["04", "Intervene", "Apply the smallest governed change with a named owner."],
-              ["05", "Verify", "Measure what changed and classify the benefit correctly."]
-            ].map(([n, title, body]) => <div className="process-step" key={title}><span>{n}</span><h3>{title}</h3><p>{body}</p></div>)}
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="shell two-col">
-          <article className="card"><div className="eyebrow">Evidence discipline</div><h2>Every number has a label.</h2><ul className="list-clean"><li><strong>Measured:</strong> directly reported activity or outcome data.</li><li><strong>Modelled:</strong> estimate based on assumptions.</li><li><strong>Sitora estimate:</strong> our calculation with assumptions shown.</li><li><strong>Unknown:</strong> important but not adequately measured.</li></ul></article>
-          <article className="card"><div className="eyebrow">Benefit discipline</div><h2>Not every released hour is cash.</h2><ul className="list-clean"><li><strong>Cash-releasing:</strong> expenditure genuinely removed.</li><li><strong>Capacity-releasing:</strong> staff or facilities can do more useful work.</li><li><strong>Cost avoidance:</strong> future spending may be prevented.</li><li><strong>Patient benefit:</strong> time, travel, waiting or unnecessary attendance reduced.</li></ul></article>
-        </div>
-      </section>
-
-      <section className="section"><div className="shell"><details className="reveal-panel"><summary>What Sitora does not claim</summary><div className="reveal-body"><p>We do not claim that the NHS wastes one single headline £ figure, that all released workforce time becomes cash, that every repeat prescription is unnecessary, or that remote care should replace face-to-face care. The purpose of the first stage is to measure the recoverable proportion accurately.</p></div></details></div></section>
-    </>
-  );
-}
+export default function MethodologyPage(){return <>
+<section className="page-head"><div className="shell"><div className="eyebrow">Methodology</div><h1>Prove the problem. Prove the action. Prove the outcome.</h1><p className="lede">Every Sitora product follows the same evidence discipline, but each keeps its own denominator, safety boundary and definition of success.</p></div></section>
+<section className="section"><div className="shell"><div className="process">{[["01","Observe","Use source-system data, timestamps, supply history and pathway activity."],["02","Detect","Identify a medication discrepancy, avoidable-supply signal or resource opportunity."],["03","Validate","Clinical and operational experts confirm that the signal is real and appropriate to act on."],["04","Intervene","Assign the smallest governed action to a named owner."],["05","Verify","Measure closure, dispensing outcome or actual resource recovery and classify the benefit correctly."]].map(([n,t,b])=><div className="process-step" key={t}><span>{n}</span><h3>{t}</h3><p>{b}</p></div>)}</div></div></section>
+<section className="section"><div className="shell"><div className="section-head"><div><div className="eyebrow">Common evidence ladder</div><h2>Existing evidence supports the hypothesis. Local data must prove Sitora's effect.</h2></div></div><div className="evidence-triptych"><article className="card"><span className="badge">1 Proven already</span><h3 style={{marginTop:12}}>Problem or mechanism</h3><p>NHS, UK or peer-reviewed evidence establishes that the underlying discrepancy, oversupply or pathway opportunity can occur.</p></article><article className="card"><span className="badge">2 Sitora adds</span><h3 style={{marginTop:12}}>Operational intelligence</h3><p>Ownership, acknowledgement, prioritisation, reconciliation, pre-dispensing review or whole-pathway measurement.</p></article><article className="card"><span className="badge">3 Pilot must prove</span><h3 style={{marginTop:12}}>Local effect</h3><p>Observed outcome, safety, workload, reusable capacity and any validated financial effect in the participating service.</p></article></div></div></section>
+<section className="section"><div className="shell two-col"><article className="card"><div className="eyebrow">Evidence discipline</div><h2>Every number has a status.</h2><ul className="list-clean"><li><strong>Measured:</strong> directly observed activity or outcome.</li><li><strong>Published:</strong> external NHS/UK/peer-reviewed evidence with setting and limitation.</li><li><strong>Modelled:</strong> calculated scenario based on explicit assumptions.</li><li><strong>Verified Sitora outcome:</strong> locally observed after governed intervention.</li><li><strong>Unknown:</strong> important but not adequately measured.</li></ul></article><article className="card"><div className="eyebrow">Benefit discipline</div><h2>Keep unlike outcomes apart.</h2><ul className="list-clean"><li><strong>Clinical closure:</strong> discrepancy safely reconciled.</li><li><strong>Cost avoidance:</strong> unnecessary future spend prevented.</li><li><strong>Cash-releasing:</strong> expenditure genuinely removed and finance-validated.</li><li><strong>Capacity-releasing:</strong> staff/facility time demonstrably reusable.</li><li><strong>Patient benefit:</strong> time, travel, waiting or unnecessary treatment burden reduced.</li></ul></article></div></section>
+<section className="section"><div className="shell"><details className="reveal-panel"><summary>What Sitora does not claim</summary><div className="reveal-body"><p>We do not claim one national medicines-waste number, that every unresolved discrepancy causes harm, that every repeat prescription is unnecessary, that published resource effects automatically apply locally, or that released workforce time automatically becomes cash. Those questions require local measurement.</p></div></details></div></section>
+</>}
