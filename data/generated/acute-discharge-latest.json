@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-09-12T19:56:45.238903+00:00",
+  "generated_at": "2026-09-12T19:59:10.486784+00:00",
   "source_url": "https://www.england.nhs.uk/statistics/wp-content/uploads/sites/2/2026/09/Daily-discharge-sitrep-monthly-data-webfile-05-CSV-aug26.csv",
   "source_publication": "NHS England Acute Discharge Situation Report, August 2026",
   "status": "management information",
   "encoding": "cp1252",
   "methodology_warning": "Delay-reason data are management information and definitions changed from 27 May 2024. Reason categories are grouped by Sitora using source measure labels and must be clinically and operationally validated before causal or financial conclusions.",
   "row_count": 36545,
-  "provider_row_count": 0,
-  "provider_count_with_reason_signal": 0,
+  "provider_row_count": 26559,
+  "provider_count_with_reason_signal": 117,
   "headers": [
     "Period",
     "Level",
@@ -19,24 +19,6 @@
     "Metric Type",
     "Metric Group",
     "Value"
-  ],
-  "level_values": [
-    [
-      "provider",
-      26559
-    ],
-    [
-      "icb",
-      8170
-    ],
-    [
-      "region",
-      1589
-    ],
-    [
-      "national",
-      227
-    ]
   ],
   "categorical_profile": {
     "Period": [
@@ -413,17 +395,5623 @@
     ]
   },
   "detected_columns": {
-    "provider": null,
+    "provider": "Org Name",
     "provider_code": "Org Code",
     "region": "Region",
     "icb": "ICB",
-    "metric": "Metric Type",
+    "metric": "Metric",
+    "metric_group": "Metric Group",
     "value": "Value",
     "type": "Level"
   },
-  "detected_reason_metrics": [],
-  "national_reason_mix": [],
-  "reason_total_distribution": null,
-  "providers": [],
-  "top_provider_reason_signals": []
+  "detected_reason_metrics": [
+    {
+      "metric": "Delay reason LOS 14+ | Hospital process – Awaiting therapy review of need for supported discharge",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Hospital process - Awaiting medical review of need for supported discharge",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Hospital process – Awaiting referral to care transfer hub for supported discharge",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Hospital process – Awaiting patient transport services",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Hospital process – Awaiting medicines to take home, discharge letter or other discharge documentation",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Hospital process – Remaining in hospital due to infection prevention and control restrictions",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Hospital process – Awaiting formal decision to discharge (inc diagnostic test results)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Wellbeing concerns – Patient /family/carer concerns over discharge readiness",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Wellbeing concerns – Ongoing safeguarding concern",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Wellbeing concerns – Awaiting determination of mental capacity",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Wellbeing concerns - Issues with discharge destination readiness",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Care transfer hub process – Waiting for confirmation of immediate care needs and pathway",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Care transfer hub process– Awaiting necessary referrals by care transfer hub",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Care transfer hub process – Awaiting confirmation of funding eligibility",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Interface process – Home based rehabilitation, reablement or recovery service arrangements still underway (Pathway 1)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Interface process – Other home-based social care service arrangements still underway (Pathway 1)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Interface process – Other home-based community health service arrangements still underway (Pathway 1)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Interface process – Housing provision arrangement for homelessness still underway (Pathway 0 or 1)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Interface process – Bed-based rehabilitation, reablement or recovery service arrangements still underway (Pathway 2)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Interface process – Residential/nursing home care arrangements still underway (Pathway 3)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Interface process – End of life care inc Fast-Track CHC arrangement still underway?(Pathway 1 or 3)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Interface process – Further action requested by agreed provider",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Interface process – Homeless with no recourse to public funds?",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Interface process – Self-funded care package arrangements still underway",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Interface process – Patient/family/carer choice discussions on package still underway",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Interface process – Out of area discharge arrangements requested but not completed",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Capacity – Home-based rehabilitation, reablement or recovery services not yet available (Pathway 1)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Capacity – Other home-based social care service not yet available (Pathway 1)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Capacity – Other home-based community health services not yet available (Pathway 1)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Capacity – Housing provision not yet available (Pathway 0 or 1)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Capacity – Bed-based rehabilitation, reablement or recovery services not yet available (Pathway 2)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Capacity – Mental health admitted patient care not yet available (Pathway 2)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Capacity – Residential/nursing home care not yet available (Pathway 3)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Capacity – End of life care inc Fast-Track CHC not yet available (Pathway 1 or 3)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Capacity – Housing adaptations not yet completed (Pathway 1 or 3)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Capacity – Equipment and associated training not yet delivered (Pathway 1-3)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 14+ | Capacity – Awaiting restart of existing social care arrangements (Pathway 0)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Hospital process – Awaiting therapy review of need for supported discharge",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Hospital process - Awaiting medical review of need for supported discharge",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Hospital process – Awaiting referral to care transfer hub for supported discharge",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Hospital process – Awaiting patient transport services",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Hospital process – Awaiting medicines to take home, discharge letter or other discharge documentation",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Hospital process – Remaining in hospital due to infection prevention and control restrictions",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Hospital process – Awaiting formal decision to discharge (inc diagnostic test results)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Wellbeing concerns – Patient /family/carer concerns over discharge readiness",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Wellbeing concerns – Ongoing safeguarding concern",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Wellbeing concerns – Awaiting determination of mental capacity",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Wellbeing concerns - Issues with discharge destination readiness",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Care transfer hub process – Waiting for confirmation of immediate care needs and pathway",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Care transfer hub process– Awaiting necessary referrals by care transfer hub",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Care transfer hub process – Awaiting confirmation of funding eligibility",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Interface process – Home based rehabilitation, reablement or recovery service arrangements still underway (Pathway 1)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Interface process – Other home-based social care service arrangements still underway (Pathway 1)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Interface process – Other home-based community health service arrangements still underway (Pathway 1)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Interface process – Housing provision arrangement for homelessness still underway (Pathway 0 or 1)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Interface process – Bed-based rehabilitation, reablement or recovery service arrangements still underway (Pathway 2)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Interface process – Residential/nursing home care arrangements still underway (Pathway 3)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Interface process – End of life care inc Fast-Track CHC arrangement still underway?(Pathway 1 or 3)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Interface process – Further action requested by agreed provider",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Interface process – Homeless with no recourse to public funds?",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Interface process – Self-funded care package arrangements still underway",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Interface process – Patient/family/carer choice discussions on package still underway",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Interface process – Out of area discharge arrangements requested but not completed",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Capacity – Home-based rehabilitation, reablement or recovery services not yet available (Pathway 1)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Capacity – Other home-based social care service not yet available (Pathway 1)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Capacity – Other home-based community health services not yet available (Pathway 1)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Capacity – Housing provision not yet available (Pathway 0 or 1)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Capacity – Bed-based rehabilitation, reablement or recovery services not yet available (Pathway 2)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Capacity – Mental health admitted patient care not yet available (Pathway 2)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Capacity – Residential/nursing home care not yet available (Pathway 3)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Capacity – End of life care inc Fast-Track CHC not yet available (Pathway 1 or 3)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Capacity – Housing adaptations not yet completed (Pathway 1 or 3)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Capacity – Equipment and associated training not yet delivered (Pathway 1-3)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ | Capacity – Awaiting restart of existing social care arrangements (Pathway 0)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Hospital process – Awaiting therapy review of need for supported discharge",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Hospital process - Awaiting medical review of need for supported discharge",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Hospital process – Awaiting referral to care transfer hub for supported discharge",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Hospital process – Awaiting patient transport services",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Hospital process – Awaiting medicines to take home, discharge letter or other discharge documentation",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Hospital process – Remaining in hospital due to infection prevention and control restrictions",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Hospital process – Awaiting formal decision to discharge (inc diagnostic test results)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Wellbeing concerns – Patient /family/carer concerns over discharge readiness",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Wellbeing concerns – Ongoing safeguarding concern",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Wellbeing concerns – Awaiting determination of mental capacity",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Wellbeing concerns - Issues with discharge destination readiness",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Care transfer hub process – Waiting for confirmation of immediate care needs and pathway",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Care transfer hub process– Awaiting necessary referrals by care transfer hub",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Care transfer hub process – Awaiting confirmation of funding eligibility",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Interface process – Home based rehabilitation, reablement or recovery service arrangements still underway (Pathway 1)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Interface process – Other home-based social care service arrangements still underway (Pathway 1)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Interface process – Other home-based community health service arrangements still underway (Pathway 1)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Interface process – Housing provision arrangement for homelessness still underway (Pathway 0 or 1)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Interface process – Bed-based rehabilitation, reablement or recovery service arrangements still underway (Pathway 2)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Interface process – Residential/nursing home care arrangements still underway (Pathway 3)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Interface process – End of life care inc Fast-Track CHC arrangement still underway?(Pathway 1 or 3)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Interface process – Further action requested by agreed provider",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Interface process – Homeless with no recourse to public funds?",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Interface process – Self-funded care package arrangements still underway",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Interface process – Patient/family/carer choice discussions on package still underway",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Interface process – Out of area discharge arrangements requested but not completed",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Capacity – Home-based rehabilitation, reablement or recovery services not yet available (Pathway 1)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Capacity – Other home-based social care service not yet available (Pathway 1)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Capacity – Other home-based community health services not yet available (Pathway 1)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Capacity – Housing provision not yet available (Pathway 0 or 1)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Capacity – Bed-based rehabilitation, reablement or recovery services not yet available (Pathway 2)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Capacity – Mental health admitted patient care not yet available (Pathway 2)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Capacity – Residential/nursing home care not yet available (Pathway 3)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Capacity – End of life care inc Fast-Track CHC not yet available (Pathway 1 or 3)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Capacity – Housing adaptations not yet completed (Pathway 1 or 3)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Capacity – Equipment and associated training not yet delivered (Pathway 1-3)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Capacity – Awaiting restart of existing social care arrangements (Pathway 0)",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Daily Average - Number of patients remaining in hospital who no longer meet the criteria to reside",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Total number of delayed bed days in the month",
+      "rows": 117
+    },
+    {
+      "metric": "Delay reason LOS 7+ Costs | Total cost of delayed bed days in the month",
+      "rows": 117
+    }
+  ],
+  "national_reason_mix": [
+    {
+      "reason": "Other / uncategorised",
+      "value": 466638600.1600001,
+      "share": 0.9565331464297107
+    },
+    {
+      "reason": "Hospital process",
+      "value": 12558619.420000002,
+      "share": 0.02574312486045297
+    },
+    {
+      "reason": "Transport",
+      "value": 4278538.55,
+      "share": 0.008770307342661028
+    },
+    {
+      "reason": "Social care assessment",
+      "value": 2349676.1799999997,
+      "share": 0.0048164535655123904
+    },
+    {
+      "reason": "Funding / approval",
+      "value": 2018193.38,
+      "share": 0.004136967801662995
+    }
+  ],
+  "reason_total_distribution": {
+    "n": 117,
+    "min": 375537.27,
+    "p25": 2286346.56,
+    "median": 3514809.0000000005,
+    "p75": 5300253.459999999,
+    "max": 15471025.06,
+    "mean": 4169603.6554700853
+  },
+  "providers": [
+    {
+      "provider": "UNIVERSITY HOSPITALS BRISTOL AND WESTON NHS FOUNDATION TRUST",
+      "code": "RA7",
+      "region": "SOUTH WEST",
+      "icb": "NHS BRISTOL, NORTH SOMERSET AND SOUTH GLOUCESTERSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 15471025.06,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 15086988.98,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 15086988.98,
+          "share": 0.9751770759525872
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 278425.98,
+          "share": 0.017996608428995718
+        },
+        {
+          "reason": "Hospital process",
+          "value": 67206.29,
+          "share": 0.004344010157010242
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 38403.81,
+          "share": 0.0024823054614068344
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "UNIVERSITY HOSPITALS SUSSEX NHS FOUNDATION TRUST",
+      "code": "RYR",
+      "region": "SOUTH EAST",
+      "icb": "NHS SURREY AND SUSSEX INTEGRATED CARE BOARD",
+      "total_reason_signal": 14749907.68,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 14299711.34,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 14299711.34,
+          "share": 0.9694780232007527
+        },
+        {
+          "reason": "Hospital process",
+          "value": 275630.99,
+          "share": 0.018686963741050343
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 82689.02,
+          "share": 0.005606070342536545
+        },
+        {
+          "reason": "Transport",
+          "value": 55125.6,
+          "share": 0.003737352205583432
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 36750.73,
+          "share": 0.00249159051007701
+        }
+      ]
+    },
+    {
+      "provider": "LIVERPOOL UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+      "code": "REM",
+      "region": "NORTH WEST",
+      "icb": "NHS CHESHIRE AND MERSEYSIDE INTEGRATED CARE BOARD",
+      "total_reason_signal": 11776284.139999999,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 11442499.379999999,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 11442499.379999999,
+          "share": 0.9716561900144506
+        },
+        {
+          "reason": "Hospital process",
+          "value": 157620.37,
+          "share": 0.013384559010818841
+        },
+        {
+          "reason": "Transport",
+          "value": 88081.82,
+          "share": 0.007479593643704322
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 46359.54,
+          "share": 0.0039366866024005435
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 41723.03,
+          "share": 0.003542970728625779
+        }
+      ]
+    },
+    {
+      "provider": "PORTSMOUTH HOSPITALS UNIVERSITY NATIONAL HEALTH SERVICE TRUST",
+      "code": "RHU",
+      "region": "SOUTH EAST",
+      "icb": "NHS HAMPSHIRE AND ISLE OF WIGHT INTEGRATED CARE BOARD",
+      "total_reason_signal": 10283256.110000001,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 10057342.05,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 10057342.05,
+          "share": 0.9780308826714615
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 142423.73,
+          "share": 0.013850061544368167
+        },
+        {
+          "reason": "Hospital process",
+          "value": 54022.88,
+          "share": 0.005253479969974217
+        },
+        {
+          "reason": "Transport",
+          "value": 24556.17,
+          "share": 0.0023879761174206517
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 4911.28,
+          "share": 0.00047759969677542137
+        }
+      ]
+    },
+    {
+      "provider": "MANCHESTER UNIVERSITY NHS FOUNDATION TRUST",
+      "code": "R0A",
+      "region": "NORTH WEST",
+      "icb": "NHS GREATER MANCHESTER INTEGRATED CARE BOARD",
+      "total_reason_signal": 10117919.33,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 9078492.91,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 9078492.91,
+          "share": 0.8972687579235721
+        },
+        {
+          "reason": "Hospital process",
+          "value": 942841.9199999999,
+          "share": 0.09318535651934279
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 55191.18,
+          "share": 0.005454795417903376
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 22996.43,
+          "share": 0.002272841801754116
+        },
+        {
+          "reason": "Transport",
+          "value": 18396.89,
+          "share": 0.0018182483374276912
+        }
+      ]
+    },
+    {
+      "provider": "MERSEY AND WEST LANCASHIRE TEACHING HOSPITALS NHS TRUST",
+      "code": "RBN",
+      "region": "NORTH WEST",
+      "icb": "NHS CHESHIRE AND MERSEYSIDE INTEGRATED CARE BOARD",
+      "total_reason_signal": 9666587.14,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 9549811.06,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 9549811.06,
+          "share": 0.9879196164780034
+        },
+        {
+          "reason": "Hospital process",
+          "value": 82430.28,
+          "share": 0.008527340498375727
+        },
+        {
+          "reason": "Transport",
+          "value": 20607.38,
+          "share": 0.002131815469259816
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 13738.42,
+          "share": 0.0014212275543610316
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "UNIVERSITY HOSPITALS BIRMINGHAM NHS FOUNDATION TRUST",
+      "code": "RRK",
+      "region": "MIDLANDS",
+      "icb": "NHS BIRMINGHAM AND SOLIHULL INTEGRATED CARE BOARD",
+      "total_reason_signal": 9198637.49,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 8258083.680000001,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 8258083.680000001,
+          "share": 0.8977507472141942
+        },
+        {
+          "reason": "Hospital process",
+          "value": 795438.58,
+          "share": 0.08647352185198462
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 107493.07,
+          "share": 0.011685759996179608
+        },
+        {
+          "reason": "Transport",
+          "value": 37622.16,
+          "share": 0.004089970937641549
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "LEEDS TEACHING HOSPITALS NHS TRUST",
+      "code": "RR8",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS WEST YORKSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 8866809.24,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 8783145.96,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 8783145.96,
+          "share": 0.990564443450235
+        },
+        {
+          "reason": "Transport",
+          "value": 46479.32,
+          "share": 0.005241944282541032
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 18592.23,
+          "share": 0.002096834328647404
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 18591.73,
+          "share": 0.0020967779385766957
+        },
+        {
+          "reason": "Hospital process",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "LONDON NORTH WEST UNIVERSITY HEALTHCARE NHS TRUST",
+      "code": "R1K",
+      "region": "LONDON",
+      "icb": "NHS WEST AND NORTH LONDON INTEGRATED CARE BOARD",
+      "total_reason_signal": 8645187.139999999,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 8308940.1,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 8308940.1,
+          "share": 0.9611058691321749
+        },
+        {
+          "reason": "Hospital process",
+          "value": 292578.4,
+          "share": 0.0338429226877326
+        },
+        {
+          "reason": "Transport",
+          "value": 39301.95,
+          "share": 0.004546107488888899
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 4366.69,
+          "share": 0.0005051006912037766
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "UNIVERSITY HOSPITAL SOUTHAMPTON NHS FOUNDATION TRUST",
+      "code": "RHM",
+      "region": "SOUTH EAST",
+      "icb": "NHS HAMPSHIRE AND ISLE OF WIGHT INTEGRATED CARE BOARD",
+      "total_reason_signal": 8085941.58,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 7795060.16,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 7795060.16,
+          "share": 0.9640262773206927
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 115254.39,
+          "share": 0.014253675822377139
+        },
+        {
+          "reason": "Hospital process",
+          "value": 109766.48999999999,
+          "share": 0.013574979353239402
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 65860.54,
+          "share": 0.008145067503690769
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "UNIVERSITY HOSPITALS DORSET NHS FOUNDATION TRUST",
+      "code": "R0D",
+      "region": "SOUTH WEST",
+      "icb": "NHS DORSET INTEGRATED CARE BOARD",
+      "total_reason_signal": 8045456.95,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 7599433.25,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 7599433.25,
+          "share": 0.944562042557446
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 180415.55,
+          "share": 0.022424524936399043
+        },
+        {
+          "reason": "Transport",
+          "value": 175402.0,
+          "share": 0.02180137201529616
+        },
+        {
+          "reason": "Hospital process",
+          "value": 65148.9,
+          "share": 0.00809760096970005
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 25057.25,
+          "share": 0.003114459521158708
+        }
+      ]
+    },
+    {
+      "provider": "NOTTINGHAM UNIVERSITY HOSPITALS NHS TRUST",
+      "code": "RX1",
+      "region": "MIDLANDS",
+      "icb": "NHS NOTTINGHAM AND NOTTINGHAMSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 7953501.100000001,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 7425635.94,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 7425635.94,
+          "share": 0.933631094864625
+        },
+        {
+          "reason": "Hospital process",
+          "value": 356666.5,
+          "share": 0.04484396186227974
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 135531.59,
+          "share": 0.017040494279934152
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 28533.66,
+          "share": 0.003587559697451981
+        },
+        {
+          "reason": "Transport",
+          "value": 7133.41,
+          "share": 0.0008968892957090305
+        }
+      ]
+    },
+    {
+      "provider": "SOUTH TYNESIDE AND SUNDERLAND NHS FOUNDATION TRUST",
+      "code": "R0B",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS NORTH EAST AND NORTH CUMBRIA INTEGRATED CARE BOARD",
+      "total_reason_signal": 7809195.369999998,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 7534536.079999998,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 7534536.079999998,
+          "share": 0.9648287336932128
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 157674.15,
+          "share": 0.020190831773235562
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 45776.34,
+          "share": 0.0058618510398466325
+        },
+        {
+          "reason": "Hospital process",
+          "value": 35604.4,
+          "share": 0.004559291746852533
+        },
+        {
+          "reason": "Transport",
+          "value": 35604.4,
+          "share": 0.004559291746852533
+        }
+      ]
+    },
+    {
+      "provider": "ROYAL FREE LONDON NHS FOUNDATION TRUST",
+      "code": "RAL",
+      "region": "LONDON",
+      "icb": "NHS WEST AND NORTH LONDON INTEGRATED CARE BOARD",
+      "total_reason_signal": 7355841.139999998,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 7103314.499999998,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 7103314.499999998,
+          "share": 0.9656699165746258
+        },
+        {
+          "reason": "Hospital process",
+          "value": 213341.12,
+          "share": 0.029002953698915805
+        },
+        {
+          "reason": "Transport",
+          "value": 21770.01,
+          "share": 0.002959554126531885
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 13061.76,
+          "share": 0.0017756990331088097
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 4353.75,
+          "share": 0.000591876566817755
+        }
+      ]
+    },
+    {
+      "provider": "UNIVERSITY HOSPITALS OF LEICESTER NHS TRUST",
+      "code": "RWE",
+      "region": "MIDLANDS",
+      "icb": "NHS LEICESTER, LEICESTERSHIRE AND RUTLAND INTEGRATED CARE BOARD",
+      "total_reason_signal": 7113899.74,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 6632751.83,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 6632751.83,
+          "share": 0.9323650982463804
+        },
+        {
+          "reason": "Hospital process",
+          "value": 309649.82999999996,
+          "share": 0.04352743801812421
+        },
+        {
+          "reason": "Transport",
+          "value": 123859.18,
+          "share": 0.017410869498703394
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 38111.52,
+          "share": 0.005357331617383744
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 9527.38,
+          "share": 0.0013392626194082401
+        }
+      ]
+    },
+    {
+      "provider": "FRIMLEY HEALTH NHS FOUNDATION TRUST",
+      "code": "RDU",
+      "region": "SOUTH EAST",
+      "icb": "NHS THAMES VALLEY INTEGRATED CARE BOARD",
+      "total_reason_signal": 6783108.239999999,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 6599941.249999999,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 6599941.249999999,
+          "share": 0.9729965992699535
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 118520.38,
+          "share": 0.01747287169930227
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 53872.01,
+          "share": 0.007942083200488632
+        },
+        {
+          "reason": "Hospital process",
+          "value": 10774.6,
+          "share": 0.001588445830255541
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "SHEFFIELD TEACHING HOSPITALS NHS FOUNDATION TRUST",
+      "code": "RHQ",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS SOUTH YORKSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 6715637.059999999,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 6438023.249999999,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 6438023.249999999,
+          "share": 0.9586615822862828
+        },
+        {
+          "reason": "Hospital process",
+          "value": 197623.38,
+          "share": 0.029427346688684818
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 70579.67,
+          "share": 0.010509750507571356
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 9410.76,
+          "share": 0.0014013205174610794
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "HAMPSHIRE HOSPITALS NHS FOUNDATION TRUST",
+      "code": "RN5",
+      "region": "SOUTH EAST",
+      "icb": "NHS HAMPSHIRE AND ISLE OF WIGHT INTEGRATED CARE BOARD",
+      "total_reason_signal": 6519810.419999998,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 6315182.589999998,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 6315182.589999998,
+          "share": 0.9686144509091416
+        },
+        {
+          "reason": "Hospital process",
+          "value": 136418.3,
+          "share": 0.020923660537970065
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 28420.76,
+          "share": 0.004359139019260012
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 22736.26,
+          "share": 0.0034872578396228896
+        },
+        {
+          "reason": "Transport",
+          "value": 17052.51,
+          "share": 0.0026154916940054223
+        }
+      ]
+    },
+    {
+      "provider": "MID YORKSHIRE HOSPITALS NHS TRUST",
+      "code": "RXF",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS WEST YORKSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 6503523.470000001,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 6264079.140000001,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 6264079.140000001,
+          "share": 0.9631823685876543
+        },
+        {
+          "reason": "Hospital process",
+          "value": 187800.64,
+          "share": 0.02887675286578154
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 18779.66,
+          "share": 0.002887613166405625
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 18779.41,
+          "share": 0.002887574725704803
+        },
+        {
+          "reason": "Transport",
+          "value": 14084.62,
+          "share": 0.002165690654453808
+        }
+      ]
+    },
+    {
+      "provider": "ROYAL DEVON UNIVERSITY HEALTHCARE NHS FOUNDATION TRUST",
+      "code": "RH8",
+      "region": "SOUTH WEST",
+      "icb": "NHS DEVON INTEGRATED CARE BOARD",
+      "total_reason_signal": 6459092.16,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 6289772.12,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 6289772.12,
+          "share": 0.9737857835426829
+        },
+        {
+          "reason": "Hospital process",
+          "value": 82241.4,
+          "share": 0.012732656225174529
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 82241.15,
+          "share": 0.012732617520044797
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 4837.49,
+          "share": 0.0007489427120977942
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "UNITED LINCOLNSHIRE HOSPITALS NHS TRUST",
+      "code": "RWD",
+      "region": "MIDLANDS",
+      "icb": "NHS LINCOLNSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 6361237.109999999,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 5571193.369999999,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 5571193.369999999,
+          "share": 0.875803444151133
+        },
+        {
+          "reason": "Hospital process",
+          "value": 631151.34,
+          "share": 0.09921833270572743
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 79446.45,
+          "share": 0.012489150872101356
+        },
+        {
+          "reason": "Transport",
+          "value": 52964.38,
+          "share": 0.008326113157571013
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 26481.57,
+          "share": 0.00416295911346716
+        }
+      ]
+    },
+    {
+      "provider": "SOMERSET NHS FOUNDATION TRUST",
+      "code": "RH5",
+      "region": "SOUTH WEST",
+      "icb": "NHS SOMERSET INTEGRATED CARE BOARD",
+      "total_reason_signal": 6291458.41,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 6144724.03,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 6144724.03,
+          "share": 0.9766772073440441
+        },
+        {
+          "reason": "Hospital process",
+          "value": 71000.82,
+          "share": 0.011285272090036753
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 71000.07,
+          "share": 0.011285152880792865
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 4733.49,
+          "share": 0.0007523676851262853
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "BARTS HEALTH NHS TRUST",
+      "code": "R1H",
+      "region": "LONDON",
+      "icb": "NHS NORTH EAST LONDON INTEGRATED CARE BOARD",
+      "total_reason_signal": 6249860.96,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 5251458.58,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 5251458.58,
+          "share": 0.8402520653835474
+        },
+        {
+          "reason": "Hospital process",
+          "value": 595542.53,
+          "share": 0.09528892463553301
+        },
+        {
+          "reason": "Transport",
+          "value": 385343.88,
+          "share": 0.06165639243276862
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 17515.97,
+          "share": 0.0028026175481510236
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "NORTHAMPTON GENERAL HOSPITAL NHS TRUST",
+      "code": "RNS",
+      "region": "MIDLANDS",
+      "icb": "NHS NORTHAMPTONSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 6111463.71,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 5992096.24,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 5992096.24,
+          "share": 0.9804682682145879
+        },
+        {
+          "reason": "Hospital process",
+          "value": 59683.979999999996,
+          "share": 0.009765905981302146
+        },
+        {
+          "reason": "Transport",
+          "value": 32137.57,
+          "share": 0.005258571681840192
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 13773.21,
+          "share": 0.0022536679678655898
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 13772.71,
+          "share": 0.0022535861544042447
+        }
+      ]
+    },
+    {
+      "provider": "UNIVERSITY HOSPITALS COVENTRY AND WARWICKSHIRE NHS TRUST",
+      "code": "RKB",
+      "region": "MIDLANDS",
+      "icb": "NHS COVENTRY AND WARWICKSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 5889780.61,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 5757005.96,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 5757005.96,
+          "share": 0.9774567749137263
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 53109.46,
+          "share": 0.009017222120265019
+        },
+        {
+          "reason": "Hospital process",
+          "value": 47798.61,
+          "share": 0.008115516207657181
+        },
+        {
+          "reason": "Transport",
+          "value": 26555.48,
+          "share": 0.00450873839934082
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 5311.1,
+          "share": 0.0009017483590106084
+        }
+      ]
+    },
+    {
+      "provider": "EAST SUSSEX HEALTHCARE NHS TRUST",
+      "code": "RXC",
+      "region": "SOUTH EAST",
+      "icb": "NHS SURREY AND SUSSEX INTEGRATED CARE BOARD",
+      "total_reason_signal": 5798667.27,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 5479022.67,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 5479022.67,
+          "share": 0.9448761956641807
+        },
+        {
+          "reason": "Transport",
+          "value": 229744.47,
+          "share": 0.03962021949226275
+        },
+        {
+          "reason": "Hospital process",
+          "value": 79911.28,
+          "share": 0.013780973502899401
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 9988.85,
+          "share": 0.0017226113406572474
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "UNIVERSITY HOSPITALS PLYMOUTH NHS TRUST",
+      "code": "RK9",
+      "region": "SOUTH WEST",
+      "icb": "NHS DEVON INTEGRATED CARE BOARD",
+      "total_reason_signal": 5383534.35,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 5347373.4399999995,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 5347373.4399999995,
+          "share": 0.9932830539104853
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 36160.91,
+          "share": 0.006716946089514597
+        },
+        {
+          "reason": "Hospital process",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "EAST KENT HOSPITALS UNIVERSITY NHS FOUNDATION TRUST",
+      "code": "RVV",
+      "region": "SOUTH EAST",
+      "icb": "NHS KENT AND MEDWAY INTEGRATED CARE BOARD",
+      "total_reason_signal": 5348629.579999999,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 5293998.52,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 5293998.52,
+          "share": 0.9897859705588362
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 24832.12,
+          "share": 0.004642707001594229
+        },
+        {
+          "reason": "Transport",
+          "value": 14899.47,
+          "share": 0.0027856612197848262
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 14899.47,
+          "share": 0.0027856612197848262
+        },
+        {
+          "reason": "Hospital process",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "CALDERDALE AND HUDDERSFIELD NHS FOUNDATION TRUST",
+      "code": "RWY",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS WEST YORKSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 5347529.85,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 5150889.029999999,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 5150889.029999999,
+          "share": 0.9632277284062285
+        },
+        {
+          "reason": "Hospital process",
+          "value": 163068.15,
+          "share": 0.030494107480297655
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 28776.75,
+          "share": 0.00538131638479774
+        },
+        {
+          "reason": "Transport",
+          "value": 4795.92,
+          "share": 0.0008968477286760728
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "UNIVERSITY HOSPITALS OF DERBY AND BURTON NHS FOUNDATION TRUST",
+      "code": "RTG",
+      "region": "MIDLANDS",
+      "icb": "NHS DERBY AND DERBYSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 5300253.459999999,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 5202728.879999999,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 5202728.879999999,
+          "share": 0.9816000157849055
+        },
+        {
+          "reason": "Hospital process",
+          "value": 48761.92,
+          "share": 0.009199922299564898
+        },
+        {
+          "reason": "Transport",
+          "value": 43886.32,
+          "share": 0.008280041762380173
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 4876.34,
+          "share": 0.0009200201531494309
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "HULL UNIVERSITY TEACHING HOSPITALS NHS TRUST",
+      "code": "RWA",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS HUMBER AND NORTH YORKSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 5292329.250000001,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 5228775.7700000005,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 5228775.7700000005,
+          "share": 0.9879913971716706
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 31776.87,
+          "share": 0.00600432597801809
+        },
+        {
+          "reason": "Hospital process",
+          "value": 19066.27,
+          "share": 0.0036026235518132202
+        },
+        {
+          "reason": "Transport",
+          "value": 6355.17,
+          "share": 0.001200826649249005
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 6355.17,
+          "share": 0.001200826649249005
+        }
+      ]
+    },
+    {
+      "provider": "CAMBRIDGE UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+      "code": "RGT",
+      "region": "EAST OF ENGLAND",
+      "icb": "NHS CENTRAL EAST INTEGRATED CARE BOARD",
+      "total_reason_signal": 5280056.879999999,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 4674537.859999999,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 4674537.859999999,
+          "share": 0.8853196028448845
+        },
+        {
+          "reason": "Hospital process",
+          "value": 447918.58,
+          "share": 0.0848321505203179
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 124420.77,
+          "share": 0.023564285921101675
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 33179.67,
+          "share": 0.006283960713695949
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "LEWISHAM AND GREENWICH NHS TRUST",
+      "code": "RJ2",
+      "region": "LONDON",
+      "icb": "NHS SOUTH EAST LONDON INTEGRATED CARE BOARD",
+      "total_reason_signal": 5222660.7299999995,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 5140985.079999999,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 5140985.079999999,
+          "share": 0.98436129509029
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 40837.95,
+          "share": 0.007819376389015413
+        },
+        {
+          "reason": "Transport",
+          "value": 27225.3,
+          "share": 0.005212917592676942
+        },
+        {
+          "reason": "Hospital process",
+          "value": 13612.4,
+          "share": 0.0026064109280175283
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "UNIVERSITY HOSPITALS OF MORECAMBE BAY NHS FOUNDATION TRUST",
+      "code": "RTX",
+      "region": "NORTH WEST",
+      "icb": "NHS LANCASHIRE AND SOUTH CUMBRIA INTEGRATED CARE BOARD",
+      "total_reason_signal": 5032490.2700000005,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 4988124.890000001,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 4988124.890000001,
+          "share": 0.9911842094828333
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 14788.71,
+          "share": 0.002938646516250492
+        },
+        {
+          "reason": "Transport",
+          "value": 14788.46,
+          "share": 0.002938596839055587
+        },
+        {
+          "reason": "Hospital process",
+          "value": 9858.64,
+          "share": 0.001958998323110518
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 4929.57,
+          "share": 0.000979548838750164
+        }
+      ]
+    },
+    {
+      "provider": "IMPERIAL COLLEGE HEALTHCARE NHS TRUST",
+      "code": "RYJ",
+      "region": "LONDON",
+      "icb": "NHS WEST AND NORTH LONDON INTEGRATED CARE BOARD",
+      "total_reason_signal": 5004465.5,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 4673469.48,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 4673469.48,
+          "share": 0.9338598657538952
+        },
+        {
+          "reason": "Hospital process",
+          "value": 218314.8,
+          "share": 0.04362399940613038
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 77468.6,
+          "share": 0.015479894905859578
+        },
+        {
+          "reason": "Transport",
+          "value": 17606.31,
+          "share": 0.0035181199670574212
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 17606.31,
+          "share": 0.0035181199670574212
+        }
+      ]
+    },
+    {
+      "provider": "YORK AND SCARBOROUGH TEACHING HOSPITALS NHS FOUNDATION TRUST",
+      "code": "RCB",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS HUMBER AND NORTH YORKSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 4991978.600000001,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 4931154.99,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 4931154.99,
+          "share": 0.9878157310209622
+        },
+        {
+          "reason": "Hospital process",
+          "value": 50686.049999999996,
+          "share": 0.010153499055464699
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 5068.78,
+          "share": 0.0010153849617864947
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 5068.78,
+          "share": 0.0010153849617864947
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "GUY'S AND ST THOMAS' NHS FOUNDATION TRUST",
+      "code": "RJ1",
+      "region": "LONDON",
+      "icb": "NHS SOUTH EAST LONDON INTEGRATED CARE BOARD",
+      "total_reason_signal": 4969401.5,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 4130950.3,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 4130950.3,
+          "share": 0.831277227247587
+        },
+        {
+          "reason": "Hospital process",
+          "value": 838451.2,
+          "share": 0.16872277275241293
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "EPSOM AND ST HELIER UNIVERSITY HOSPITALS NHS TRUST",
+      "code": "RVR",
+      "region": "LONDON",
+      "icb": "NHS SOUTH WEST LONDON INTEGRATED CARE BOARD",
+      "total_reason_signal": 4720589.3599999985,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 4532510.6499999985,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 4532510.6499999985,
+          "share": 0.9601577905518136
+        },
+        {
+          "reason": "Hospital process",
+          "value": 122974.07,
+          "share": 0.026050575600161937
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 57870.76,
+          "share": 0.012259223496618656
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 7233.88,
+          "share": 0.0015324103514057835
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "SHREWSBURY AND TELFORD HOSPITAL NHS TRUST",
+      "code": "RXW",
+      "region": "MIDLANDS",
+      "icb": "NHS SHROPSHIRE, TELFORD AND WREKIN INTEGRATED CARE BOARD",
+      "total_reason_signal": 4714077.16,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 4661860.25,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 4661860.25,
+          "share": 0.9889231957331814
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 31330.45,
+          "share": 0.0066461470477924885
+        },
+        {
+          "reason": "Hospital process",
+          "value": 20886.46,
+          "share": 0.004430657219026088
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "GLOUCESTERSHIRE HOSPITALS NHS FOUNDATION TRUST",
+      "code": "RTE",
+      "region": "SOUTH WEST",
+      "icb": "NHS GLOUCESTERSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 4688252.68,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 4571358.449999999,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 4571358.449999999,
+          "share": 0.9750665678710815
+        },
+        {
+          "reason": "Hospital process",
+          "value": 58447.24,
+          "share": 0.012466742726844664
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 58446.99,
+          "share": 0.012466689402073782
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "COUNTESS OF CHESTER HOSPITAL NHS FOUNDATION TRUST",
+      "code": "RJR",
+      "region": "NORTH WEST",
+      "icb": "NHS CHESHIRE AND MERSEYSIDE INTEGRATED CARE BOARD",
+      "total_reason_signal": 4331582.409999999,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 4289879.949999999,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 4289879.949999999,
+          "share": 0.9903724652903464
+        },
+        {
+          "reason": "Hospital process",
+          "value": 13900.82,
+          "share": 0.0032091782365512014
+        },
+        {
+          "reason": "Transport",
+          "value": 13900.82,
+          "share": 0.0032091782365512014
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 13900.82,
+          "share": 0.0032091782365512014
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "UNIVERSITY HOSPITALS OF NORTH MIDLANDS NHS TRUST",
+      "code": "RJE",
+      "region": "MIDLANDS",
+      "icb": "NHS STAFFORDSHIRE AND STOKE-ON-TRENT INTEGRATED CARE BOARD",
+      "total_reason_signal": 4223563.11,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 3827670.71,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 3827670.71,
+          "share": 0.9062657785170397
+        },
+        {
+          "reason": "Transport",
+          "value": 260929.0,
+          "share": 0.061779353878294474
+        },
+        {
+          "reason": "Hospital process",
+          "value": 80978.14,
+          "share": 0.019172944239490716
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 40489.32,
+          "share": 0.009586531311473643
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 13495.94,
+          "share": 0.0031953920537013117
+        }
+      ]
+    },
+    {
+      "provider": "CHELSEA AND WESTMINSTER HOSPITAL NHS FOUNDATION TRUST",
+      "code": "RQM",
+      "region": "LONDON",
+      "icb": "NHS WEST AND NORTH LONDON INTEGRATED CARE BOARD",
+      "total_reason_signal": 4171810.86,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 4108361.96,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 4108361.96,
+          "share": 0.9847910410780224
+        },
+        {
+          "reason": "Hospital process",
+          "value": 43926.12,
+          "share": 0.010529269296738924
+        },
+        {
+          "reason": "Transport",
+          "value": 9761.39,
+          "share": 0.002339844812619333
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 9761.39,
+          "share": 0.002339844812619333
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "WORCESTERSHIRE ACUTE HOSPITALS NHS TRUST",
+      "code": "RWP",
+      "region": "MIDLANDS",
+      "icb": "NHS HEREFORDSHIRE AND WORCESTERSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 4161661.8099999996,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 3731713.3099999996,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 3731713.3099999996,
+          "share": 0.8966882654984404
+        },
+        {
+          "reason": "Hospital process",
+          "value": 321102.07,
+          "share": 0.07715717534481738
+        },
+        {
+          "reason": "Transport",
+          "value": 87077.0,
+          "share": 0.02092361272383159
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 16326.95,
+          "share": 0.003923180389326254
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 5442.48,
+          "share": 0.0013077660435844016
+        }
+      ]
+    },
+    {
+      "provider": "WIRRAL UNIVERSITY TEACHING HOSPITAL NHS FOUNDATION TRUST",
+      "code": "RBL",
+      "region": "NORTH WEST",
+      "icb": "NHS CHESHIRE AND MERSEYSIDE INTEGRATED CARE BOARD",
+      "total_reason_signal": 4155102.899999999,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 4059299.459999999,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 4059299.459999999,
+          "share": 0.9769431847283493
+        },
+        {
+          "reason": "Hospital process",
+          "value": 68430.67,
+          "share": 0.016469067468822495
+        },
+        {
+          "reason": "Transport",
+          "value": 18248.51,
+          "share": 0.004391831066325699
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 9124.26,
+          "share": 0.0021959167365024827
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "DONCASTER AND BASSETLAW TEACHING HOSPITALS NHS FOUNDATION TRUST",
+      "code": "RP5",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS SOUTH YORKSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 4099739.3,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 4014107.15,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 4014107.15,
+          "share": 0.9791127816346762
+        },
+        {
+          "reason": "Hospital process",
+          "value": 57088.35,
+          "share": 0.013924873223036401
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 21407.66,
+          "share": 0.005221712512305356
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 7136.14,
+          "share": 0.0017406326299821066
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "MEDWAY NHS FOUNDATION TRUST",
+      "code": "RPA",
+      "region": "SOUTH EAST",
+      "icb": "NHS KENT AND MEDWAY INTEGRATED CARE BOARD",
+      "total_reason_signal": 4075056.33,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 3909624.29,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 3909624.29,
+          "share": 0.9594037415428807
+        },
+        {
+          "reason": "Transport",
+          "value": 105693.66,
+          "share": 0.025936735946911437
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 59738.38,
+          "share": 0.014659522510207851
+        },
+        {
+          "reason": "Hospital process",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "EAST SUFFOLK AND NORTH ESSEX NHS FOUNDATION TRUST",
+      "code": "RDE",
+      "region": "EAST OF ENGLAND",
+      "icb": "NHS NORFOLK AND SUFFOLK INTEGRATED CARE BOARD",
+      "total_reason_signal": 4075055.0600000005,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 3775962.9000000004,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 3775962.9000000004,
+          "share": 0.9266041426198546
+        },
+        {
+          "reason": "Transport",
+          "value": 159194.68,
+          "share": 0.03906565129944526
+        },
+        {
+          "reason": "Hospital process",
+          "value": 125425.15,
+          "share": 0.03077876204205201
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 14472.33,
+          "share": 0.0035514440386481545
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "SURREY AND SUSSEX HEALTHCARE NHS TRUST",
+      "code": "RTP",
+      "region": "SOUTH EAST",
+      "icb": "NHS SURREY AND SUSSEX INTEGRATED CARE BOARD",
+      "total_reason_signal": 4012107.54,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 3538215.33,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 3538215.33,
+          "share": 0.8818844696271526
+        },
+        {
+          "reason": "Hospital process",
+          "value": 388435.92000000004,
+          "share": 0.09681592931579297
+        },
+        {
+          "reason": "Transport",
+          "value": 54381.34,
+          "share": 0.013554307669430016
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 23306.4,
+          "share": 0.00580901677426124
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 7768.55,
+          "share": 0.0019362766133631602
+        }
+      ]
+    },
+    {
+      "provider": "KING'S COLLEGE HOSPITAL NHS FOUNDATION TRUST",
+      "code": "RJZ",
+      "region": "LONDON",
+      "icb": "NHS SOUTH EAST LONDON INTEGRATED CARE BOARD",
+      "total_reason_signal": 3940127.9599999995,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 3895470.4299999997,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 3895470.4299999997,
+          "share": 0.9886659696199309
+        },
+        {
+          "reason": "Hospital process",
+          "value": 27481.67,
+          "share": 0.006974816624991033
+        },
+        {
+          "reason": "Transport",
+          "value": 17175.86,
+          "share": 0.004359213755078148
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "BARKING, HAVERING AND REDBRIDGE UNIVERSITY HOSPITALS NHS TRUST",
+      "code": "RF4",
+      "region": "LONDON",
+      "icb": "NHS NORTH EAST LONDON INTEGRATED CARE BOARD",
+      "total_reason_signal": 3917596.05,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 3569422.25,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 3569422.25,
+          "share": 0.911125650639759
+        },
+        {
+          "reason": "Transport",
+          "value": 274874.51,
+          "share": 0.07016407676845601
+        },
+        {
+          "reason": "Hospital process",
+          "value": 73299.29,
+          "share": 0.018710272591784954
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "SHERWOOD FOREST HOSPITALS NHS FOUNDATION TRUST",
+      "code": "RK5",
+      "region": "MIDLANDS",
+      "icb": "NHS NOTTINGHAM AND NOTTINGHAMSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 3776865.0399999996,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 3710131.2199999997,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 3710131.2199999997,
+          "share": 0.9823308963139441
+        },
+        {
+          "reason": "Hospital process",
+          "value": 42466.93,
+          "share": 0.011243962797251554
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 24266.89,
+          "share": 0.0064251408888044365
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "ROYAL UNITED HOSPITALS BATH NHS FOUNDATION TRUST",
+      "code": "RD1",
+      "region": "SOUTH WEST",
+      "icb": "NHS BATH AND NORTH EAST SOMERSET, SWINDON AND WILTSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 3650881.3799999994,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 3594527.4199999995,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 3594527.4199999995,
+          "share": 0.9845642862272342
+        },
+        {
+          "reason": "Hospital process",
+          "value": 46107.770000000004,
+          "share": 0.012629216126435751
+        },
+        {
+          "reason": "Transport",
+          "value": 5123.22,
+          "share": 0.0014032830614726796
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 5122.97,
+          "share": 0.001403214584857315
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "GREAT WESTERN HOSPITALS NHS FOUNDATION TRUST",
+      "code": "RN3",
+      "region": "SOUTH WEST",
+      "icb": "NHS BATH AND NORTH EAST SOMERSET, SWINDON AND WILTSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 3634024.93,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 3514701.0700000003,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 3514701.0700000003,
+          "share": 0.9671648207432634
+        },
+        {
+          "reason": "Hospital process",
+          "value": 89492.90000000001,
+          "share": 0.024626385818437412
+        },
+        {
+          "reason": "Transport",
+          "value": 17046.44,
+          "share": 0.004690787853235778
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 8523.1,
+          "share": 0.00234536090538047
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 4261.42,
+          "share": 0.0011726446796830312
+        }
+      ]
+    },
+    {
+      "provider": "BOLTON NHS FOUNDATION TRUST",
+      "code": "RMC",
+      "region": "NORTH WEST",
+      "icb": "NHS GREATER MANCHESTER INTEGRATED CARE BOARD",
+      "total_reason_signal": 3599124.6800000006,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 3335490.3100000005,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 3335490.3100000005,
+          "share": 0.9267504203272002
+        },
+        {
+          "reason": "Hospital process",
+          "value": 189816.33000000002,
+          "share": 0.05273958166961862
+        },
+        {
+          "reason": "Transport",
+          "value": 42182.02,
+          "share": 0.011720077449498078
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 15818.26,
+          "share": 0.004395029738175116
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 15817.76,
+          "share": 0.004394890815507952
+        }
+      ]
+    },
+    {
+      "provider": "NORTHERN CARE ALLIANCE NHS FOUNDATION TRUST",
+      "code": "RM3",
+      "region": "NORTH WEST",
+      "icb": "NHS GREATER MANCHESTER INTEGRATED CARE BOARD",
+      "total_reason_signal": 3580030.9199999995,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 3552374.2899999996,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 3552374.2899999996,
+          "share": 0.9922747510795242
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 13828.44,
+          "share": 0.003862659376137456
+        },
+        {
+          "reason": "Transport",
+          "value": 9218.96,
+          "share": 0.0025751062507583036
+        },
+        {
+          "reason": "Hospital process",
+          "value": 4609.23,
+          "share": 0.0012874832935800455
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "MILTON KEYNES UNIVERSITY HOSPITAL NHS FOUNDATION TRUST",
+      "code": "RD8",
+      "region": "EAST OF ENGLAND",
+      "icb": "NHS CENTRAL EAST INTEGRATED CARE BOARD",
+      "total_reason_signal": 3529594.45,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 3423375.98,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 3423375.98,
+          "share": 0.9699063245070548
+        },
+        {
+          "reason": "Hospital process",
+          "value": 74353.36,
+          "share": 0.021065694955407693
+        },
+        {
+          "reason": "Transport",
+          "value": 15932.68,
+          "share": 0.004514025683602262
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 15932.43,
+          "share": 0.0045139548539351315
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "ST GEORGE'S UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+      "code": "RJ7",
+      "region": "LONDON",
+      "icb": "NHS SOUTH WEST LONDON INTEGRATED CARE BOARD",
+      "total_reason_signal": 3526005.6,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 3414588.31,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 3414588.31,
+          "share": 0.9684012725334299
+        },
+        {
+          "reason": "Hospital process",
+          "value": 68972.38,
+          "share": 0.01956105231370024
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 31833.62,
+          "share": 0.009028238639212597
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 10611.29,
+          "share": 0.003009436513657267
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "MID AND SOUTH ESSEX NHS FOUNDATION TRUST",
+      "code": "RAJ",
+      "region": "EAST OF ENGLAND",
+      "icb": "NHS ESSEX INTEGRATED CARE BOARD",
+      "total_reason_signal": 3514809.0000000005,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 3494588.1900000004,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 3494588.1900000004,
+          "share": 0.9942469676161635
+        },
+        {
+          "reason": "Hospital process",
+          "value": 16850.72,
+          "share": 0.004794206456168741
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 3370.09,
+          "share": 0.0009588259276677622
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "SOUTH TEES HOSPITALS NHS FOUNDATION TRUST",
+      "code": "RTR",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS NORTH EAST AND NORTH CUMBRIA INTEGRATED CARE BOARD",
+      "total_reason_signal": 3480974.04,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 3362022.66,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 3362022.66,
+          "share": 0.9658281335531017
+        },
+        {
+          "reason": "Hospital process",
+          "value": 79301.84,
+          "share": 0.02278150859177335
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 28321.17,
+          "share": 0.008135990005831815
+        },
+        {
+          "reason": "Transport",
+          "value": 11328.37,
+          "share": 0.003254367849293125
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "BLACKPOOL TEACHING HOSPITALS NHS FOUNDATION TRUST",
+      "code": "RXL",
+      "region": "NORTH WEST",
+      "icb": "NHS LANCASHIRE AND SOUTH CUMBRIA INTEGRATED CARE BOARD",
+      "total_reason_signal": 3429249.06,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 3414480.5300000003,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 3414480.5300000003,
+          "share": 0.9956933632577857
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 9845.69,
+          "share": 0.002871092133506337
+        },
+        {
+          "reason": "Transport",
+          "value": 4922.84,
+          "share": 0.0014355446087080067
+        },
+        {
+          "reason": "Hospital process",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "NORTH CHESHIRE AND MERSEY NHS FOUNDATION TRUST",
+      "code": "RWW",
+      "region": "NORTH WEST",
+      "icb": "NHS CHESHIRE AND MERSEYSIDE INTEGRATED CARE BOARD",
+      "total_reason_signal": 3418018.4999999995,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 3302103.1799999997,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 3302103.1799999997,
+          "share": 0.9660869828527845
+        },
+        {
+          "reason": "Hospital process",
+          "value": 102540.26999999999,
+          "share": 0.029999916618356513
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 8916.7,
+          "share": 0.0026087336859060306
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 4458.35,
+          "share": 0.0013043668429530153
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "THE ROTHERHAM NHS FOUNDATION TRUST",
+      "code": "RFR",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS SOUTH YORKSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 3351603.0700000008,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 3290348.4300000006,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 3290348.4300000006,
+          "share": 0.9817237785260771
+        },
+        {
+          "reason": "Hospital process",
+          "value": 51045.12,
+          "share": 0.015230061237531923
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 10209.52,
+          "share": 0.0030461602363909992
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "ROYAL CORNWALL HOSPITALS NHS TRUST",
+      "code": "REF",
+      "region": "SOUTH WEST",
+      "icb": "NHS CORNWALL AND THE ISLES OF SCILLY INTEGRATED CARE BOARD",
+      "total_reason_signal": 3302115.4,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 3053404.84,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 3053404.84,
+          "share": 0.924681445112427
+        },
+        {
+          "reason": "Hospital process",
+          "value": 208104.98,
+          "share": 0.06302171632160403
+        },
+        {
+          "reason": "Transport",
+          "value": 30454.0,
+          "share": 0.009222572899784181
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 10151.58,
+          "share": 0.0030742656661847736
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "NORTH CUMBRIA INTEGRATED CARE NHS FOUNDATION TRUST",
+      "code": "RNN",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS NORTH EAST AND NORTH CUMBRIA INTEGRATED CARE BOARD",
+      "total_reason_signal": 3271743.07,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 3186663.63,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 3186663.63,
+          "share": 0.9739956842026718
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 76123.4,
+          "share": 0.02326692480776004
+        },
+        {
+          "reason": "Hospital process",
+          "value": 4478.02,
+          "share": 0.0013686954947840695
+        },
+        {
+          "reason": "Transport",
+          "value": 4478.02,
+          "share": 0.0013686954947840695
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "MID CHESHIRE HOSPITALS NHS FOUNDATION TRUST",
+      "code": "RBT",
+      "region": "NORTH WEST",
+      "icb": "NHS CHESHIRE AND MERSEYSIDE INTEGRATED CARE BOARD",
+      "total_reason_signal": 3260490.48,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 3191805.62,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 3191805.62,
+          "share": 0.9789341939743986
+        },
+        {
+          "reason": "Hospital process",
+          "value": 58872.56,
+          "share": 0.018056350834675647
+        },
+        {
+          "reason": "Transport",
+          "value": 9812.3,
+          "share": 0.003009455190925753
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "ROYAL BERKSHIRE NHS FOUNDATION TRUST",
+      "code": "RHW",
+      "region": "SOUTH EAST",
+      "icb": "NHS THAMES VALLEY INTEGRATED CARE BOARD",
+      "total_reason_signal": 3196577.78,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 2531232.61,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 2531232.61,
+          "share": 0.7918570371843103
+        },
+        {
+          "reason": "Transport",
+          "value": 399207.1,
+          "share": 0.12488577706374472
+        },
+        {
+          "reason": "Hospital process",
+          "value": 266138.07,
+          "share": 0.08325718575194502
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "WRIGHTINGTON, WIGAN AND LEIGH NHS FOUNDATION TRUST",
+      "code": "RRF",
+      "region": "NORTH WEST",
+      "icb": "NHS GREATER MANCHESTER INTEGRATED CARE BOARD",
+      "total_reason_signal": 3181676.98,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 3157715.89,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 3157715.89,
+          "share": 0.992469037507384
+        },
+        {
+          "reason": "Transport",
+          "value": 23961.09,
+          "share": 0.007530962492616079
+        },
+        {
+          "reason": "Hospital process",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "ROYAL SURREY COUNTY HOSPITAL NHS FOUNDATION TRUST",
+      "code": "RA2",
+      "region": "SOUTH EAST",
+      "icb": "NHS SURREY AND SUSSEX INTEGRATED CARE BOARD",
+      "total_reason_signal": 3109610.66,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 3075090.87,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 3075090.87,
+          "share": 0.9888989993364635
+        },
+        {
+          "reason": "Transport",
+          "value": 34519.79,
+          "share": 0.011101000663536444
+        },
+        {
+          "reason": "Hospital process",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "LANCASHIRE TEACHING HOSPITALS NHS FOUNDATION TRUST",
+      "code": "RXN",
+      "region": "NORTH WEST",
+      "icb": "NHS LANCASHIRE AND SOUTH CUMBRIA INTEGRATED CARE BOARD",
+      "total_reason_signal": 3068088.7199999997,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 2870811.2199999997,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 2870811.2199999997,
+          "share": 0.9357001970920841
+        },
+        {
+          "reason": "Transport",
+          "value": 141635.25,
+          "share": 0.04616400075940438
+        },
+        {
+          "reason": "Hospital process",
+          "value": 55642.25,
+          "share": 0.018135802148511536
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "NORTHERN LINCOLNSHIRE AND GOOLE NHS FOUNDATION TRUST",
+      "code": "RJL",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS HUMBER AND NORTH YORKSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 2858786.7600000007,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 2816782.5600000005,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 2816782.5600000005,
+          "share": 0.9853069838619233
+        },
+        {
+          "reason": "Transport",
+          "value": 15751.76,
+          "share": 0.005509945764545236
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 15751.76,
+          "share": 0.005509945764545236
+        },
+        {
+          "reason": "Hospital process",
+          "value": 5250.34,
+          "share": 0.0018365623044931127
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 5250.34,
+          "share": 0.0018365623044931127
+        }
+      ]
+    },
+    {
+      "provider": "BRADFORD TEACHING HOSPITALS NHS FOUNDATION TRUST",
+      "code": "RAE",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS WEST YORKSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 2853199.0999999996,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 2783800.03,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 2783800.03,
+          "share": 0.9756767517555995
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 42706.83,
+          "share": 0.014968051125489282
+        },
+        {
+          "reason": "Hospital process",
+          "value": 26692.24,
+          "share": 0.009355197118911193
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "ISLE OF WIGHT NHS TRUST",
+      "code": "R1F",
+      "region": "SOUTH EAST",
+      "icb": "NHS HAMPSHIRE AND ISLE OF WIGHT INTEGRATED CARE BOARD",
+      "total_reason_signal": 2850965.2499999995,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 2708050.1799999997,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 2708050.1799999997,
+          "share": 0.9498713391894202
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 64065.47,
+          "share": 0.022471501537944038
+        },
+        {
+          "reason": "Hospital process",
+          "value": 54209.549999999996,
+          "share": 0.01901445484121562
+        },
+        {
+          "reason": "Transport",
+          "value": 19711.84,
+          "share": 0.006914093393456831
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 4928.21,
+          "share": 0.0017286110379633709
+        }
+      ]
+    },
+    {
+      "provider": "NORTH WEST ANGLIA NHS FOUNDATION TRUST",
+      "code": "RGN",
+      "region": "EAST OF ENGLAND",
+      "icb": "NHS CENTRAL EAST INTEGRATED CARE BOARD",
+      "total_reason_signal": 2844268.82,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 2770717.09,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 2770717.09,
+          "share": 0.9741403732717501
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 73551.73,
+          "share": 0.025859626728249967
+        },
+        {
+          "reason": "Hospital process",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "BEDFORDSHIRE HOSPITALS NHS FOUNDATION TRUST",
+      "code": "RC9",
+      "region": "EAST OF ENGLAND",
+      "icb": "NHS CENTRAL EAST INTEGRATED CARE BOARD",
+      "total_reason_signal": 2784717.5700000003,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 2698046.1900000004,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 2698046.1900000004,
+          "share": 0.9688760609213236
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 86671.38,
+          "share": 0.031123939078676475
+        },
+        {
+          "reason": "Hospital process",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "GEORGE ELIOT HOSPITAL NHS TRUST",
+      "code": "RLT",
+      "region": "MIDLANDS",
+      "icb": "NHS COVENTRY AND WARWICKSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 2783418.59,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 2684099.1599999997,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 2684099.1599999997,
+          "share": 0.9643174654517198
+        },
+        {
+          "reason": "Hospital process",
+          "value": 92698.28,
+          "share": 0.033303751125697556
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 6621.15,
+          "share": 0.0023787834225825156
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "OXFORD UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+      "code": "RTH",
+      "region": "SOUTH EAST",
+      "icb": "NHS THAMES VALLEY INTEGRATED CARE BOARD",
+      "total_reason_signal": 2763465.5,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 2656146.26,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 2656146.26,
+          "share": 0.9611649792624514
+        },
+        {
+          "reason": "Hospital process",
+          "value": 87806.74,
+          "share": 0.03177414011501139
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 9756.0,
+          "share": 0.0035303498451491433
+        },
+        {
+          "reason": "Transport",
+          "value": 4878.25,
+          "share": 0.0017652653886940147
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 4878.25,
+          "share": 0.0017652653886940147
+        }
+      ]
+    },
+    {
+      "provider": "CHESTERFIELD ROYAL HOSPITAL NHS FOUNDATION TRUST",
+      "code": "RFS",
+      "region": "MIDLANDS",
+      "icb": "NHS DERBY AND DERBYSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 2682174.1599999997,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 2659464.05,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 2659464.05,
+          "share": 0.9915329472863165
+        },
+        {
+          "reason": "Hospital process",
+          "value": 22710.11,
+          "share": 0.00846705271368359
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "THE ROYAL WOLVERHAMPTON NHS TRUST",
+      "code": "RL4",
+      "region": "MIDLANDS",
+      "icb": "NHS BLACK COUNTRY INTEGRATED CARE BOARD",
+      "total_reason_signal": 2611302.61,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 2522239.3,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 2522239.3,
+          "share": 0.965893148630522
+        },
+        {
+          "reason": "Transport",
+          "value": 47151.06,
+          "share": 0.018056528500157244
+        },
+        {
+          "reason": "Hospital process",
+          "value": 41912.25,
+          "share": 0.016050322869320763
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "THE PRINCESS ALEXANDRA HOSPITAL NHS TRUST",
+      "code": "RQW",
+      "region": "EAST OF ENGLAND",
+      "icb": "NHS ESSEX INTEGRATED CARE BOARD",
+      "total_reason_signal": 2538164.7800000003,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 2416351.74,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 2416351.74,
+          "share": 0.9520074342848616
+        },
+        {
+          "reason": "Transport",
+          "value": 88591.69,
+          "share": 0.03490383709445373
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 27684.29,
+          "share": 0.010907207529686075
+        },
+        {
+          "reason": "Hospital process",
+          "value": 5537.06,
+          "share": 0.00218152109099867
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "DARTFORD AND GRAVESHAM NHS TRUST",
+      "code": "RN7",
+      "region": "SOUTH EAST",
+      "icb": "NHS KENT AND MEDWAY INTEGRATED CARE BOARD",
+      "total_reason_signal": 2525787.6599999997,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 2371767.3,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 2371767.3,
+          "share": 0.9390208597345037
+        },
+        {
+          "reason": "Hospital process",
+          "value": 148096.43,
+          "share": 0.05863376100269649
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 5923.93,
+          "share": 0.002345379262799946
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "JAMES PAGET UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+      "code": "RGP",
+      "region": "EAST OF ENGLAND",
+      "icb": "NHS NORFOLK AND SUFFOLK INTEGRATED CARE BOARD",
+      "total_reason_signal": 2521368.79,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 2451034.36,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 2451034.36,
+          "share": 0.9721046638322194
+        },
+        {
+          "reason": "Hospital process",
+          "value": 31970.28,
+          "share": 0.012679731789652239
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 15985.27,
+          "share": 0.006339917454122211
+        },
+        {
+          "reason": "Transport",
+          "value": 15984.77,
+          "share": 0.006339719149137243
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 6394.11,
+          "share": 0.002535967774868824
+        }
+      ]
+    },
+    {
+      "provider": "SALISBURY NHS FOUNDATION TRUST",
+      "code": "RNZ",
+      "region": "SOUTH WEST",
+      "icb": "NHS BATH AND NORTH EAST SOMERSET, SWINDON AND WILTSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 2490948.17,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 2482059.54,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 2482059.54,
+          "share": 0.9964316278808805
+        },
+        {
+          "reason": "Hospital process",
+          "value": 8888.63,
+          "share": 0.003568372119119604
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "NORTHUMBRIA HEALTHCARE NHS FOUNDATION TRUST",
+      "code": "RTF",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS NORTH EAST AND NORTH CUMBRIA INTEGRATED CARE BOARD",
+      "total_reason_signal": 2427924.12,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 2365724.45,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 2365724.45,
+          "share": 0.9743815428630447
+        },
+        {
+          "reason": "Hospital process",
+          "value": 36282.97,
+          "share": 0.014944029634665847
+        },
+        {
+          "reason": "Transport",
+          "value": 15549.92,
+          "share": 0.00640461531392505
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 10366.78,
+          "share": 0.004269812188364437
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "KETTERING GENERAL HOSPITAL NHS FOUNDATION TRUST",
+      "code": "RNQ",
+      "region": "MIDLANDS",
+      "icb": "NHS NORTHAMPTONSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 2343630.92,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 2309195.66,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 2309195.66,
+          "share": 0.9853068758795861
+        },
+        {
+          "reason": "Hospital process",
+          "value": 18541.89,
+          "share": 0.007911608368778477
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 15893.37,
+          "share": 0.006781515751635501
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "AIREDALE NHS FOUNDATION TRUST",
+      "code": "RCF",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS WEST YORKSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 2326670.45,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 2263449.18,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 2263449.18,
+          "share": 0.9728275785683357
+        },
+        {
+          "reason": "Hospital process",
+          "value": 58358.19,
+          "share": 0.025082275833262075
+        },
+        {
+          "reason": "Transport",
+          "value": 4863.08,
+          "share": 0.0020901455984022143
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "TORBAY AND SOUTH DEVON NHS FOUNDATION TRUST",
+      "code": "RA9",
+      "region": "SOUTH WEST",
+      "icb": "NHS DEVON INTEGRATED CARE BOARD",
+      "total_reason_signal": 2289533.3899999997,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 2238012.4699999997,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 2238012.4699999997,
+          "share": 0.9774971964920766
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 41216.58,
+          "share": 0.018002174670184657
+        },
+        {
+          "reason": "Hospital process",
+          "value": 5152.17,
+          "share": 0.0022503144188694276
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 5152.17,
+          "share": 0.0022503144188694276
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "NORFOLK AND NORWICH UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+      "code": "RM1",
+      "region": "EAST OF ENGLAND",
+      "icb": "NHS NORFOLK AND SUFFOLK INTEGRATED CARE BOARD",
+      "total_reason_signal": 2286346.56,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 2128188.69,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 2128188.69,
+          "share": 0.9308250670449539
+        },
+        {
+          "reason": "Hospital process",
+          "value": 130041.48999999999,
+          "share": 0.05687741844351015
+        },
+        {
+          "reason": "Transport",
+          "value": 28116.38,
+          "share": 0.01229751451153582
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "WEST HERTFORDSHIRE TEACHING HOSPITALS NHS TRUST",
+      "code": "RWG",
+      "region": "EAST OF ENGLAND",
+      "icb": "NHS CENTRAL EAST INTEGRATED CARE BOARD",
+      "total_reason_signal": 2272670.92,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 2243806.38,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 2243806.38,
+          "share": 0.987299287483293
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 19243.11,
+          "share": 0.00846717834538051
+        },
+        {
+          "reason": "Hospital process",
+          "value": 4810.84,
+          "share": 0.0021168220870270123
+        },
+        {
+          "reason": "Transport",
+          "value": 4810.59,
+          "share": 0.0021167120842994725
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "EAST LANCASHIRE HOSPITALS NHS TRUST",
+      "code": "RXR",
+      "region": "NORTH WEST",
+      "icb": "NHS LANCASHIRE AND SOUTH CUMBRIA INTEGRATED CARE BOARD",
+      "total_reason_signal": 2262499.6,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 2089249.7700000003,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 2089249.7700000003,
+          "share": 0.9234254759647251
+        },
+        {
+          "reason": "Hospital process",
+          "value": 123749.81,
+          "share": 0.05469605828880588
+        },
+        {
+          "reason": "Transport",
+          "value": 24750.01,
+          "share": 0.01093923287323454
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 24750.01,
+          "share": 0.01093923287323454
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "WEST SUFFOLK NHS FOUNDATION TRUST",
+      "code": "RGR",
+      "region": "EAST OF ENGLAND",
+      "icb": "NHS NORFOLK AND SUFFOLK INTEGRATED CARE BOARD",
+      "total_reason_signal": 2253525.35,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 2146817.2600000002,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 2146817.2600000002,
+          "share": 0.9526483738024071
+        },
+        {
+          "reason": "Hospital process",
+          "value": 80030.57,
+          "share": 0.0355134988829835
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 21342.02,
+          "share": 0.009470503626684296
+        },
+        {
+          "reason": "Transport",
+          "value": 5335.5,
+          "share": 0.002367623687925232
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "STOCKPORT NHS FOUNDATION TRUST",
+      "code": "RWJ",
+      "region": "NORTH WEST",
+      "icb": "NHS GREATER MANCHESTER INTEGRATED CARE BOARD",
+      "total_reason_signal": 2166908.15,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 2082492.37,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 2082492.37,
+          "share": 0.9610432126530145
+        },
+        {
+          "reason": "Hospital process",
+          "value": 39724.54,
+          "share": 0.01833235986490706
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 29794.16,
+          "share": 0.013749618321385704
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 14897.08,
+          "share": 0.006874809160692852
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "MAIDSTONE AND TUNBRIDGE WELLS NHS TRUST",
+      "code": "RWF",
+      "region": "SOUTH EAST",
+      "icb": "NHS KENT AND MEDWAY INTEGRATED CARE BOARD",
+      "total_reason_signal": 2110690.0300000003,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 1985587.4100000001,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 1985587.4100000001,
+          "share": 0.9407290420564501
+        },
+        {
+          "reason": "Hospital process",
+          "value": 71486.28,
+          "share": 0.033868677533858436
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 46467.71,
+          "share": 0.022015411708748156
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 7148.63,
+          "share": 0.0033868687009432643
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "EAST AND NORTH HERTFORDSHIRE NHS TRUST",
+      "code": "RWH",
+      "region": "EAST OF ENGLAND",
+      "icb": "NHS CENTRAL EAST INTEGRATED CARE BOARD",
+      "total_reason_signal": 1989440.7800000003,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 1858178.8400000003,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 1858178.8400000003,
+          "share": 0.9340206849484608
+        },
+        {
+          "reason": "Hospital process",
+          "value": 121886.0,
+          "share": 0.06126646303088247
+        },
+        {
+          "reason": "Transport",
+          "value": 9375.94,
+          "share": 0.004712852020656779
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "DORSET COUNTY HOSPITAL NHS FOUNDATION TRUST",
+      "code": "RBD",
+      "region": "SOUTH WEST",
+      "icb": "NHS DORSET INTEGRATED CARE BOARD",
+      "total_reason_signal": 1984638.9099999997,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 1979161.4899999998,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 1979161.4899999998,
+          "share": 0.9972400924055248
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 5477.42,
+          "share": 0.002759907594475209
+        },
+        {
+          "reason": "Hospital process",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "KINGSTON HOSPITAL NHS FOUNDATION TRUST",
+      "code": "RAX",
+      "region": "LONDON",
+      "icb": "NHS SOUTH WEST LONDON INTEGRATED CARE BOARD",
+      "total_reason_signal": 1980147.52,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 1946533.65,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 1946533.65,
+          "share": 0.9830245627356087
+        },
+        {
+          "reason": "Hospital process",
+          "value": 33613.87,
+          "share": 0.016975437264391293
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "EAST CHESHIRE NHS TRUST",
+      "code": "RJN",
+      "region": "NORTH WEST",
+      "icb": "NHS CHESHIRE AND MERSEYSIDE INTEGRATED CARE BOARD",
+      "total_reason_signal": 1977541.4699999997,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 1971367.0499999998,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 1971367.0499999998,
+          "share": 0.9968777291937145
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 6174.42,
+          "share": 0.0031222708062855443
+        },
+        {
+          "reason": "Hospital process",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "WHITTINGTON HEALTH NHS TRUST",
+      "code": "RKE",
+      "region": "LONDON",
+      "icb": "NHS WEST AND NORTH LONDON INTEGRATED CARE BOARD",
+      "total_reason_signal": 1973600.0699999998,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 1862067.4,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 1862067.4,
+          "share": 0.9434877046797024
+        },
+        {
+          "reason": "Hospital process",
+          "value": 57997.13,
+          "share": 0.029386465313613414
+        },
+        {
+          "reason": "Transport",
+          "value": 53535.54,
+          "share": 0.027125830006684185
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "ASHFORD AND ST PETER'S HOSPITALS NHS FOUNDATION TRUST",
+      "code": "RTK",
+      "region": "SOUTH EAST",
+      "icb": "NHS SURREY AND SUSSEX INTEGRATED CARE BOARD",
+      "total_reason_signal": 1933981.9899999998,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 1933981.9899999998,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 1933981.9899999998,
+          "share": 1.0
+        },
+        {
+          "reason": "Hospital process",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "THE QUEEN ELIZABETH HOSPITAL, KING'S LYNN, NHS FOUNDATION TRUST",
+      "code": "RCX",
+      "region": "EAST OF ENGLAND",
+      "icb": "NHS NORFOLK AND SUFFOLK INTEGRATED CARE BOARD",
+      "total_reason_signal": 1839802.3399999999,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 1810154.8399999999,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 1810154.8399999999,
+          "share": 0.9838854971779196
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 29647.5,
+          "share": 0.016114502822080334
+        },
+        {
+          "reason": "Hospital process",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "UNIVERSITY COLLEGE LONDON HOSPITALS NHS FOUNDATION TRUST",
+      "code": "RRV",
+      "region": "LONDON",
+      "icb": "NHS WEST AND NORTH LONDON INTEGRATED CARE BOARD",
+      "total_reason_signal": 1811327.69,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 1811327.69,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 1811327.69,
+          "share": 1.0
+        },
+        {
+          "reason": "Hospital process",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "COUNTY DURHAM AND DARLINGTON NHS FOUNDATION TRUST",
+      "code": "RXP",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS NORTH EAST AND NORTH CUMBRIA INTEGRATED CARE BOARD",
+      "total_reason_signal": 1794455.2,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 1677530.77,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 1677530.77,
+          "share": 0.9348412654715482
+        },
+        {
+          "reason": "Transport",
+          "value": 116924.43,
+          "share": 0.06515873452845186
+        },
+        {
+          "reason": "Hospital process",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "NORTH TEES AND HARTLEPOOL NHS FOUNDATION TRUST",
+      "code": "RVW",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS NORTH EAST AND NORTH CUMBRIA INTEGRATED CARE BOARD",
+      "total_reason_signal": 1664010.21,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 1505087.71,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 1505087.71,
+          "share": 0.904494275909521
+        },
+        {
+          "reason": "Hospital process",
+          "value": 118173.0,
+          "share": 0.07101699213732589
+        },
+        {
+          "reason": "Transport",
+          "value": 20374.5,
+          "share": 0.012244215737113777
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 12225.0,
+          "share": 0.007346709729623594
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 8150.0,
+          "share": 0.004897806486415729
+        }
+      ]
+    },
+    {
+      "provider": "WALSALL HEALTHCARE NHS TRUST",
+      "code": "RBK",
+      "region": "MIDLANDS",
+      "icb": "NHS BLACK COUNTRY INTEGRATED CARE BOARD",
+      "total_reason_signal": 1642549.85,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 1232288.6,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 1232288.6,
+          "share": 0.7502290417548058
+        },
+        {
+          "reason": "Transport",
+          "value": 410261.25,
+          "share": 0.24977095824519419
+        },
+        {
+          "reason": "Hospital process",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "GATESHEAD HEALTH NHS FOUNDATION TRUST",
+      "code": "RR7",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS NORTH EAST AND NORTH CUMBRIA INTEGRATED CARE BOARD",
+      "total_reason_signal": 1606614.81,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 1530176.81,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 1530176.81,
+          "share": 0.952422945733956
+        },
+        {
+          "reason": "Hospital process",
+          "value": 57328.75,
+          "share": 0.035682946306215116
+        },
+        {
+          "reason": "Transport",
+          "value": 14332.0,
+          "share": 0.008920619871542202
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 4777.25,
+          "share": 0.0029734880882867003
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "BUCKINGHAMSHIRE HEALTHCARE NHS TRUST",
+      "code": "RXQ",
+      "region": "SOUTH EAST",
+      "icb": "NHS THAMES VALLEY INTEGRATED CARE BOARD",
+      "total_reason_signal": 1584608.9400000002,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 1584608.9400000002,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 1584608.9400000002,
+          "share": 1.0
+        },
+        {
+          "reason": "Hospital process",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "TAMESIDE AND GLOSSOP INTEGRATED CARE NHS FOUNDATION TRUST",
+      "code": "RMP",
+      "region": "NORTH WEST",
+      "icb": "NHS GREATER MANCHESTER INTEGRATED CARE BOARD",
+      "total_reason_signal": 1321980.64,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 1321980.64,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 1321980.64,
+          "share": 1.0
+        },
+        {
+          "reason": "Hospital process",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "THE HILLINGDON HOSPITALS NHS FOUNDATION TRUST",
+      "code": "RAS",
+      "region": "LONDON",
+      "icb": "NHS WEST AND NORTH LONDON INTEGRATED CARE BOARD",
+      "total_reason_signal": 1306220.96,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 1169870.19,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 1169870.19,
+          "share": 0.8956143147480959
+        },
+        {
+          "reason": "Hospital process",
+          "value": 131481.0,
+          "share": 0.10065754878102706
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 4869.77,
+          "share": 0.0037281364708770257
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "BARNSLEY HOSPITAL NHS FOUNDATION TRUST",
+      "code": "RFF",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS SOUTH YORKSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 1258978.8499999999,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 1105577.72,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 1105577.72,
+          "share": 0.878154323243794
+        },
+        {
+          "reason": "Hospital process",
+          "value": 107380.15999999999,
+          "share": 0.08529147252950278
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 30680.98,
+          "share": 0.02436973424930848
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 11504.87,
+          "share": 0.009138255181967514
+        },
+        {
+          "reason": "Transport",
+          "value": 3835.12,
+          "share": 0.0030462147954272625
+        }
+      ]
+    },
+    {
+      "provider": "HOMERTON UNIVERSITY HOSPITAL NHS FOUNDATION TRUST",
+      "code": "RQX",
+      "region": "LONDON",
+      "icb": "NHS NORTH EAST LONDON INTEGRATED CARE BOARD",
+      "total_reason_signal": 1091332.3,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 1091332.3,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 1091332.3,
+          "share": 1.0
+        },
+        {
+          "reason": "Hospital process",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "SANDWELL AND WEST BIRMINGHAM HOSPITALS NHS TRUST",
+      "code": "RXK",
+      "region": "MIDLANDS",
+      "icb": "NHS BLACK COUNTRY INTEGRATED CARE BOARD",
+      "total_reason_signal": 1055330.01,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 984758.8200000001,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 984758.8200000001,
+          "share": 0.933128794470651
+        },
+        {
+          "reason": "Hospital process",
+          "value": 33210.18,
+          "share": 0.03146899991975022
+        },
+        {
+          "reason": "Transport",
+          "value": 33209.93,
+          "share": 0.03146876302702697
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 4151.08,
+          "share": 0.003933442582571872
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "WYE VALLEY NHS TRUST",
+      "code": "RLQ",
+      "region": "MIDLANDS",
+      "icb": "NHS HEREFORDSHIRE AND WORCESTERSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 1046323.95,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 959207.46,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 959207.46,
+          "share": 0.916740422504904
+        },
+        {
+          "reason": "Hospital process",
+          "value": 77437.11,
+          "share": 0.07400873314617333
+        },
+        {
+          "reason": "Transport",
+          "value": 4839.69,
+          "share": 0.004625422174461361
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 4839.69,
+          "share": 0.004625422174461361
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "THE DUDLEY GROUP NHS FOUNDATION TRUST",
+      "code": "RNA",
+      "region": "MIDLANDS",
+      "icb": "NHS BLACK COUNTRY INTEGRATED CARE BOARD",
+      "total_reason_signal": 823118.07,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 619474.88,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 619474.88,
+          "share": 0.752595408335526
+        },
+        {
+          "reason": "Hospital process",
+          "value": 191894.78999999998,
+          "share": 0.23313154818724852
+        },
+        {
+          "reason": "Transport",
+          "value": 3916.3,
+          "share": 0.0047578836411646275
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 3916.05,
+          "share": 0.0047575799180304724
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 3916.05,
+          "share": 0.0047575799180304724
+        }
+      ]
+    },
+    {
+      "provider": "HARROGATE AND DISTRICT NHS FOUNDATION TRUST",
+      "code": "RCD",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS HUMBER AND NORTH YORKSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 779691.35,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 755090.75,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 755090.75,
+          "share": 0.9684482840549662
+        },
+        {
+          "reason": "Hospital process",
+          "value": 16400.57,
+          "share": 0.021034695331684776
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 8200.03,
+          "share": 0.010517020613349116
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "THE NEWCASTLE UPON TYNE HOSPITALS NHS FOUNDATION TRUST",
+      "code": "RTD",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS NORTH EAST AND NORTH CUMBRIA INTEGRATED CARE BOARD",
+      "total_reason_signal": 528791.4199999999,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 519185.57999999996,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 519185.57999999996,
+          "share": 0.9818343497328305
+        },
+        {
+          "reason": "Hospital process",
+          "value": 9605.84,
+          "share": 0.018165650267169618
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "CROYDON HEALTH SERVICES NHS TRUST",
+      "code": "RJ6",
+      "region": "LONDON",
+      "icb": "NHS SOUTH WEST LONDON INTEGRATED CARE BOARD",
+      "total_reason_signal": 460410.95,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 380951.13,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 380951.13,
+          "share": 0.8274154426605188
+        },
+        {
+          "reason": "Hospital process",
+          "value": 79459.82,
+          "share": 0.1725845573394812
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "SOUTH WARWICKSHIRE NHS FOUNDATION TRUST",
+      "code": "RJC",
+      "region": "MIDLANDS",
+      "icb": "NHS COVENTRY AND WARWICKSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 375537.27,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 373475.49,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 373475.49,
+          "share": 0.9945097859394887
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 2061.78,
+          "share": 0.005490214060511225
+        },
+        {
+          "reason": "Hospital process",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    }
+  ],
+  "top_provider_reason_signals": [
+    {
+      "provider": "UNIVERSITY HOSPITALS BRISTOL AND WESTON NHS FOUNDATION TRUST",
+      "code": "RA7",
+      "region": "SOUTH WEST",
+      "icb": "NHS BRISTOL, NORTH SOMERSET AND SOUTH GLOUCESTERSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 15471025.06,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 15086988.98,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 15086988.98,
+          "share": 0.9751770759525872
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 278425.98,
+          "share": 0.017996608428995718
+        },
+        {
+          "reason": "Hospital process",
+          "value": 67206.29,
+          "share": 0.004344010157010242
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 38403.81,
+          "share": 0.0024823054614068344
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "UNIVERSITY HOSPITALS SUSSEX NHS FOUNDATION TRUST",
+      "code": "RYR",
+      "region": "SOUTH EAST",
+      "icb": "NHS SURREY AND SUSSEX INTEGRATED CARE BOARD",
+      "total_reason_signal": 14749907.68,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 14299711.34,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 14299711.34,
+          "share": 0.9694780232007527
+        },
+        {
+          "reason": "Hospital process",
+          "value": 275630.99,
+          "share": 0.018686963741050343
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 82689.02,
+          "share": 0.005606070342536545
+        },
+        {
+          "reason": "Transport",
+          "value": 55125.6,
+          "share": 0.003737352205583432
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 36750.73,
+          "share": 0.00249159051007701
+        }
+      ]
+    },
+    {
+      "provider": "LIVERPOOL UNIVERSITY HOSPITALS NHS FOUNDATION TRUST",
+      "code": "REM",
+      "region": "NORTH WEST",
+      "icb": "NHS CHESHIRE AND MERSEYSIDE INTEGRATED CARE BOARD",
+      "total_reason_signal": 11776284.139999999,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 11442499.379999999,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 11442499.379999999,
+          "share": 0.9716561900144506
+        },
+        {
+          "reason": "Hospital process",
+          "value": 157620.37,
+          "share": 0.013384559010818841
+        },
+        {
+          "reason": "Transport",
+          "value": 88081.82,
+          "share": 0.007479593643704322
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 46359.54,
+          "share": 0.0039366866024005435
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 41723.03,
+          "share": 0.003542970728625779
+        }
+      ]
+    },
+    {
+      "provider": "PORTSMOUTH HOSPITALS UNIVERSITY NATIONAL HEALTH SERVICE TRUST",
+      "code": "RHU",
+      "region": "SOUTH EAST",
+      "icb": "NHS HAMPSHIRE AND ISLE OF WIGHT INTEGRATED CARE BOARD",
+      "total_reason_signal": 10283256.110000001,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 10057342.05,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 10057342.05,
+          "share": 0.9780308826714615
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 142423.73,
+          "share": 0.013850061544368167
+        },
+        {
+          "reason": "Hospital process",
+          "value": 54022.88,
+          "share": 0.005253479969974217
+        },
+        {
+          "reason": "Transport",
+          "value": 24556.17,
+          "share": 0.0023879761174206517
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 4911.28,
+          "share": 0.00047759969677542137
+        }
+      ]
+    },
+    {
+      "provider": "MANCHESTER UNIVERSITY NHS FOUNDATION TRUST",
+      "code": "R0A",
+      "region": "NORTH WEST",
+      "icb": "NHS GREATER MANCHESTER INTEGRATED CARE BOARD",
+      "total_reason_signal": 10117919.33,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 9078492.91,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 9078492.91,
+          "share": 0.8972687579235721
+        },
+        {
+          "reason": "Hospital process",
+          "value": 942841.9199999999,
+          "share": 0.09318535651934279
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 55191.18,
+          "share": 0.005454795417903376
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 22996.43,
+          "share": 0.002272841801754116
+        },
+        {
+          "reason": "Transport",
+          "value": 18396.89,
+          "share": 0.0018182483374276912
+        }
+      ]
+    },
+    {
+      "provider": "MERSEY AND WEST LANCASHIRE TEACHING HOSPITALS NHS TRUST",
+      "code": "RBN",
+      "region": "NORTH WEST",
+      "icb": "NHS CHESHIRE AND MERSEYSIDE INTEGRATED CARE BOARD",
+      "total_reason_signal": 9666587.14,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 9549811.06,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 9549811.06,
+          "share": 0.9879196164780034
+        },
+        {
+          "reason": "Hospital process",
+          "value": 82430.28,
+          "share": 0.008527340498375727
+        },
+        {
+          "reason": "Transport",
+          "value": 20607.38,
+          "share": 0.002131815469259816
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 13738.42,
+          "share": 0.0014212275543610316
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "UNIVERSITY HOSPITALS BIRMINGHAM NHS FOUNDATION TRUST",
+      "code": "RRK",
+      "region": "MIDLANDS",
+      "icb": "NHS BIRMINGHAM AND SOLIHULL INTEGRATED CARE BOARD",
+      "total_reason_signal": 9198637.49,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 8258083.680000001,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 8258083.680000001,
+          "share": 0.8977507472141942
+        },
+        {
+          "reason": "Hospital process",
+          "value": 795438.58,
+          "share": 0.08647352185198462
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 107493.07,
+          "share": 0.011685759996179608
+        },
+        {
+          "reason": "Transport",
+          "value": 37622.16,
+          "share": 0.004089970937641549
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "LEEDS TEACHING HOSPITALS NHS TRUST",
+      "code": "RR8",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS WEST YORKSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 8866809.24,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 8783145.96,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 8783145.96,
+          "share": 0.990564443450235
+        },
+        {
+          "reason": "Transport",
+          "value": 46479.32,
+          "share": 0.005241944282541032
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 18592.23,
+          "share": 0.002096834328647404
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 18591.73,
+          "share": 0.0020967779385766957
+        },
+        {
+          "reason": "Hospital process",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "LONDON NORTH WEST UNIVERSITY HEALTHCARE NHS TRUST",
+      "code": "R1K",
+      "region": "LONDON",
+      "icb": "NHS WEST AND NORTH LONDON INTEGRATED CARE BOARD",
+      "total_reason_signal": 8645187.139999999,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 8308940.1,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 8308940.1,
+          "share": 0.9611058691321749
+        },
+        {
+          "reason": "Hospital process",
+          "value": 292578.4,
+          "share": 0.0338429226877326
+        },
+        {
+          "reason": "Transport",
+          "value": 39301.95,
+          "share": 0.004546107488888899
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 4366.69,
+          "share": 0.0005051006912037766
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "UNIVERSITY HOSPITAL SOUTHAMPTON NHS FOUNDATION TRUST",
+      "code": "RHM",
+      "region": "SOUTH EAST",
+      "icb": "NHS HAMPSHIRE AND ISLE OF WIGHT INTEGRATED CARE BOARD",
+      "total_reason_signal": 8085941.58,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 7795060.16,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 7795060.16,
+          "share": 0.9640262773206927
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 115254.39,
+          "share": 0.014253675822377139
+        },
+        {
+          "reason": "Hospital process",
+          "value": 109766.48999999999,
+          "share": 0.013574979353239402
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 65860.54,
+          "share": 0.008145067503690769
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "UNIVERSITY HOSPITALS DORSET NHS FOUNDATION TRUST",
+      "code": "R0D",
+      "region": "SOUTH WEST",
+      "icb": "NHS DORSET INTEGRATED CARE BOARD",
+      "total_reason_signal": 8045456.95,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 7599433.25,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 7599433.25,
+          "share": 0.944562042557446
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 180415.55,
+          "share": 0.022424524936399043
+        },
+        {
+          "reason": "Transport",
+          "value": 175402.0,
+          "share": 0.02180137201529616
+        },
+        {
+          "reason": "Hospital process",
+          "value": 65148.9,
+          "share": 0.00809760096970005
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 25057.25,
+          "share": 0.003114459521158708
+        }
+      ]
+    },
+    {
+      "provider": "NOTTINGHAM UNIVERSITY HOSPITALS NHS TRUST",
+      "code": "RX1",
+      "region": "MIDLANDS",
+      "icb": "NHS NOTTINGHAM AND NOTTINGHAMSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 7953501.100000001,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 7425635.94,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 7425635.94,
+          "share": 0.933631094864625
+        },
+        {
+          "reason": "Hospital process",
+          "value": 356666.5,
+          "share": 0.04484396186227974
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 135531.59,
+          "share": 0.017040494279934152
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 28533.66,
+          "share": 0.003587559697451981
+        },
+        {
+          "reason": "Transport",
+          "value": 7133.41,
+          "share": 0.0008968892957090305
+        }
+      ]
+    },
+    {
+      "provider": "SOUTH TYNESIDE AND SUNDERLAND NHS FOUNDATION TRUST",
+      "code": "R0B",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS NORTH EAST AND NORTH CUMBRIA INTEGRATED CARE BOARD",
+      "total_reason_signal": 7809195.369999998,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 7534536.079999998,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 7534536.079999998,
+          "share": 0.9648287336932128
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 157674.15,
+          "share": 0.020190831773235562
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 45776.34,
+          "share": 0.0058618510398466325
+        },
+        {
+          "reason": "Hospital process",
+          "value": 35604.4,
+          "share": 0.004559291746852533
+        },
+        {
+          "reason": "Transport",
+          "value": 35604.4,
+          "share": 0.004559291746852533
+        }
+      ]
+    },
+    {
+      "provider": "ROYAL FREE LONDON NHS FOUNDATION TRUST",
+      "code": "RAL",
+      "region": "LONDON",
+      "icb": "NHS WEST AND NORTH LONDON INTEGRATED CARE BOARD",
+      "total_reason_signal": 7355841.139999998,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 7103314.499999998,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 7103314.499999998,
+          "share": 0.9656699165746258
+        },
+        {
+          "reason": "Hospital process",
+          "value": 213341.12,
+          "share": 0.029002953698915805
+        },
+        {
+          "reason": "Transport",
+          "value": 21770.01,
+          "share": 0.002959554126531885
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 13061.76,
+          "share": 0.0017756990331088097
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 4353.75,
+          "share": 0.000591876566817755
+        }
+      ]
+    },
+    {
+      "provider": "UNIVERSITY HOSPITALS OF LEICESTER NHS TRUST",
+      "code": "RWE",
+      "region": "MIDLANDS",
+      "icb": "NHS LEICESTER, LEICESTERSHIRE AND RUTLAND INTEGRATED CARE BOARD",
+      "total_reason_signal": 7113899.74,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 6632751.83,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 6632751.83,
+          "share": 0.9323650982463804
+        },
+        {
+          "reason": "Hospital process",
+          "value": 309649.82999999996,
+          "share": 0.04352743801812421
+        },
+        {
+          "reason": "Transport",
+          "value": 123859.18,
+          "share": 0.017410869498703394
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 38111.52,
+          "share": 0.005357331617383744
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 9527.38,
+          "share": 0.0013392626194082401
+        }
+      ]
+    },
+    {
+      "provider": "FRIMLEY HEALTH NHS FOUNDATION TRUST",
+      "code": "RDU",
+      "region": "SOUTH EAST",
+      "icb": "NHS THAMES VALLEY INTEGRATED CARE BOARD",
+      "total_reason_signal": 6783108.239999999,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 6599941.249999999,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 6599941.249999999,
+          "share": 0.9729965992699535
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 118520.38,
+          "share": 0.01747287169930227
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 53872.01,
+          "share": 0.007942083200488632
+        },
+        {
+          "reason": "Hospital process",
+          "value": 10774.6,
+          "share": 0.001588445830255541
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "SHEFFIELD TEACHING HOSPITALS NHS FOUNDATION TRUST",
+      "code": "RHQ",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS SOUTH YORKSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 6715637.059999999,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 6438023.249999999,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 6438023.249999999,
+          "share": 0.9586615822862828
+        },
+        {
+          "reason": "Hospital process",
+          "value": 197623.38,
+          "share": 0.029427346688684818
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 70579.67,
+          "share": 0.010509750507571356
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 9410.76,
+          "share": 0.0014013205174610794
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "HAMPSHIRE HOSPITALS NHS FOUNDATION TRUST",
+      "code": "RN5",
+      "region": "SOUTH EAST",
+      "icb": "NHS HAMPSHIRE AND ISLE OF WIGHT INTEGRATED CARE BOARD",
+      "total_reason_signal": 6519810.419999998,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 6315182.589999998,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 6315182.589999998,
+          "share": 0.9686144509091416
+        },
+        {
+          "reason": "Hospital process",
+          "value": 136418.3,
+          "share": 0.020923660537970065
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 28420.76,
+          "share": 0.004359139019260012
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 22736.26,
+          "share": 0.0034872578396228896
+        },
+        {
+          "reason": "Transport",
+          "value": 17052.51,
+          "share": 0.0026154916940054223
+        }
+      ]
+    },
+    {
+      "provider": "MID YORKSHIRE HOSPITALS NHS TRUST",
+      "code": "RXF",
+      "region": "NORTH EAST AND YORKSHIRE",
+      "icb": "NHS WEST YORKSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 6503523.470000001,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 6264079.140000001,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 6264079.140000001,
+          "share": 0.9631823685876543
+        },
+        {
+          "reason": "Hospital process",
+          "value": 187800.64,
+          "share": 0.02887675286578154
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 18779.66,
+          "share": 0.002887613166405625
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 18779.41,
+          "share": 0.002887574725704803
+        },
+        {
+          "reason": "Transport",
+          "value": 14084.62,
+          "share": 0.002165690654453808
+        }
+      ]
+    },
+    {
+      "provider": "ROYAL DEVON UNIVERSITY HEALTHCARE NHS FOUNDATION TRUST",
+      "code": "RH8",
+      "region": "SOUTH WEST",
+      "icb": "NHS DEVON INTEGRATED CARE BOARD",
+      "total_reason_signal": 6459092.16,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 6289772.12,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 6289772.12,
+          "share": 0.9737857835426829
+        },
+        {
+          "reason": "Hospital process",
+          "value": 82241.4,
+          "share": 0.012732656225174529
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 82241.15,
+          "share": 0.012732617520044797
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 4837.49,
+          "share": 0.0007489427120977942
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "UNITED LINCOLNSHIRE HOSPITALS NHS TRUST",
+      "code": "RWD",
+      "region": "MIDLANDS",
+      "icb": "NHS LINCOLNSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 6361237.109999999,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 5571193.369999999,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 5571193.369999999,
+          "share": 0.875803444151133
+        },
+        {
+          "reason": "Hospital process",
+          "value": 631151.34,
+          "share": 0.09921833270572743
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 79446.45,
+          "share": 0.012489150872101356
+        },
+        {
+          "reason": "Transport",
+          "value": 52964.38,
+          "share": 0.008326113157571013
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 26481.57,
+          "share": 0.00416295911346716
+        }
+      ]
+    },
+    {
+      "provider": "SOMERSET NHS FOUNDATION TRUST",
+      "code": "RH5",
+      "region": "SOUTH WEST",
+      "icb": "NHS SOMERSET INTEGRATED CARE BOARD",
+      "total_reason_signal": 6291458.41,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 6144724.03,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 6144724.03,
+          "share": 0.9766772073440441
+        },
+        {
+          "reason": "Hospital process",
+          "value": 71000.82,
+          "share": 0.011285272090036753
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 71000.07,
+          "share": 0.011285152880792865
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 4733.49,
+          "share": 0.0007523676851262853
+        },
+        {
+          "reason": "Transport",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "BARTS HEALTH NHS TRUST",
+      "code": "R1H",
+      "region": "LONDON",
+      "icb": "NHS NORTH EAST LONDON INTEGRATED CARE BOARD",
+      "total_reason_signal": 6249860.96,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 5251458.58,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 5251458.58,
+          "share": 0.8402520653835474
+        },
+        {
+          "reason": "Hospital process",
+          "value": 595542.53,
+          "share": 0.09528892463553301
+        },
+        {
+          "reason": "Transport",
+          "value": 385343.88,
+          "share": 0.06165639243276862
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 17515.97,
+          "share": 0.0028026175481510236
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 0.0,
+          "share": 0.0
+        }
+      ]
+    },
+    {
+      "provider": "NORTHAMPTON GENERAL HOSPITAL NHS TRUST",
+      "code": "RNS",
+      "region": "MIDLANDS",
+      "icb": "NHS NORTHAMPTONSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 6111463.71,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 5992096.24,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 5992096.24,
+          "share": 0.9804682682145879
+        },
+        {
+          "reason": "Hospital process",
+          "value": 59683.979999999996,
+          "share": 0.009765905981302146
+        },
+        {
+          "reason": "Transport",
+          "value": 32137.57,
+          "share": 0.005258571681840192
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 13773.21,
+          "share": 0.0022536679678655898
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 13772.71,
+          "share": 0.0022535861544042447
+        }
+      ]
+    },
+    {
+      "provider": "UNIVERSITY HOSPITALS COVENTRY AND WARWICKSHIRE NHS TRUST",
+      "code": "RKB",
+      "region": "MIDLANDS",
+      "icb": "NHS COVENTRY AND WARWICKSHIRE INTEGRATED CARE BOARD",
+      "total_reason_signal": 5889780.61,
+      "dominant_reason": "Other / uncategorised",
+      "dominant_reason_value": 5757005.96,
+      "reason_mix": [
+        {
+          "reason": "Other / uncategorised",
+          "value": 5757005.96,
+          "share": 0.9774567749137263
+        },
+        {
+          "reason": "Social care assessment",
+          "value": 53109.46,
+          "share": 0.009017222120265019
+        },
+        {
+          "reason": "Hospital process",
+          "value": 47798.61,
+          "share": 0.008115516207657181
+        },
+        {
+          "reason": "Transport",
+          "value": 26555.48,
+          "share": 0.00450873839934082
+        },
+        {
+          "reason": "Funding / approval",
+          "value": 5311.1,
+          "share": 0.0009017483590106084
+        }
+      ]
+    }
+  ]
 }
