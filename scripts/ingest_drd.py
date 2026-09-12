@@ -7,17 +7,60 @@ import math
 import os
 import re
 import statistics
+import urllib.parse
 import urllib.request
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
+from html.parser import HTMLParser
 from pathlib import Path
 
-SOURCE_URL = os.environ.get(
-    "DRD_SOURCE_URL",
-    "https://www.england.nhs.uk/statistics/wp-content/uploads/sites/2/2026/09/Discharge-Ready-Date-monthly-data-csv-July-2026.csv",
+PUBLICATION_URL = os.environ.get(
+    "DRD_PUBLICATION_URL",
+    "https://www.england.nhs.uk/statistics/statistical-work-areas/discharge-delays/discharge-ready-date/",
 )
+SOURCE_OVERRIDE = os.environ.get("DRD_SOURCE_URL")
+BACKFILL_MONTHS = max(1, int(os.environ.get("DRD_BACKFILL_MONTHS", "12")))
 OUT = Path("data/generated/drd-latest.json")
-RAW = Path("data/raw/drd-july-2026.csv")
+HISTORY_DIR = Path("data/generated/drd-history")
+INDEX_OUT = Path("data/generated/drd-history.json")
+
+MONTHS = {
+    "jan": 1, "january": 1,
+    "feb": 2, "february": 2,
+    "mar": 3, "march": 3,
+    "apr": 4, "april": 4,
+    "may": 5,
+    "jun": 6, "june": 6,
+    "jul": 7, "july": 7,
+    "aug": 8, "august": 8,
+    "sep": 9, "sept": 9, "september": 9,
+    "oct": 10, "october": 10,
+    "nov": 11, "november": 11,
+    "dec": 12, "december": 12,
+}
+
+
+class LinkParser(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.links = []
+        self._href = None
+        self._text = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag.lower() == "a":
+            self._href = dict(attrs).get("href")
+            self._text = []
+
+    def handle_data(self, data):
+        if self._href is not None:
+            self._text.append(data)
+
+    def handle_endtag(self, tag):
+        if tag.lower() == "a" and self._href is not None:
+            self.links.append((" ".join(self._text).strip(), self._href))
+            self._href = None
+            self._text = []
 
 
 def norm(s: str) -> str:
@@ -76,14 +119,56 @@ def describe(values):
     }
 
 
-def main():
-    req = urllib.request.Request(SOURCE_URL, headers={"User-Agent": "Sitora-NHS-Resource-Intelligence/1.0"})
+def month_key_from_text(text: str):
+    t = norm(text)
+    years = re.findall(r"\b(20\d{2})\b", t)
+    if not years:
+        return None
+    year = int(years[-1])
+    for token, month in MONTHS.items():
+        if re.search(rf"\b{re.escape(token)}\b", t):
+            return f"{year:04d}-{month:02d}"
+    return None
+
+
+def discover_csv_sources():
+    if SOURCE_OVERRIDE:
+        key = month_key_from_text(SOURCE_OVERRIDE) or datetime.now(timezone.utc).strftime("%Y-%m")
+        return [(key, SOURCE_OVERRIDE)]
+
+    req = urllib.request.Request(PUBLICATION_URL, headers={"User-Agent": "Sitora-NHS-Resource-Intelligence/2.0"})
     with urllib.request.urlopen(req, timeout=60) as response:
-        payload = response.read()
+        html = response.read().decode("utf-8", errors="replace")
 
-    RAW.parent.mkdir(parents=True, exist_ok=True)
-    RAW.write_bytes(payload)
+    parser = LinkParser()
+    parser.feed(html)
+    found = {}
+    for text, href in parser.links:
+        blob = f"{text} {href}"
+        nb = norm(blob)
+        if "discharge ready date monthly data csv" not in nb:
+            continue
+        key = month_key_from_text(blob)
+        if not key:
+            continue
+        url = urllib.parse.urljoin(PUBLICATION_URL, href)
+        existing = found.get(key)
+        # Prefer revised files when NHS England exposes both original and revised links.
+        if existing is None or ("revised" in nb and "revised" not in norm(existing)):
+            found[key] = url
 
+    if not found:
+        raise RuntimeError("No monthly DRD CSV links discovered from NHS England publication page")
+    return sorted(found.items(), key=lambda x: x[0])
+
+
+def download(url: str) -> bytes:
+    req = urllib.request.Request(url, headers={"User-Agent": "Sitora-NHS-Resource-Intelligence/2.0"})
+    with urllib.request.urlopen(req, timeout=120) as response:
+        return response.read()
+
+
+def analyse(payload: bytes, source_url: str, period: str):
     text = payload.decode("utf-8-sig", errors="replace")
     reader = csv.DictReader(io.StringIO(text))
     rows = list(reader)
@@ -111,7 +196,6 @@ def main():
         return bool(name) and not any(x in name for x in ["england", "region", "integrated care", "icb", "national", "utla"])
 
     provider_rows = [r for r in rows if is_provider(r)]
-
     by_metric = defaultdict(list)
     provider_measure_map = defaultdict(dict)
     provider_meta = {}
@@ -204,10 +288,11 @@ def main():
             opportunity.append({**x, "excess_bed_days_vs_national_median": excess})
         opportunity.sort(key=lambda x: x["excess_bed_days_vs_national_median"], reverse=True)
 
-    result = {
+    return {
+        "period": period,
         "generated_at": datetime.now(timezone.utc).isoformat(),
-        "source_url": SOURCE_URL,
-        "source_publication": "NHS England Discharge Ready Date, July 2026",
+        "source_url": source_url,
+        "source_publication": f"NHS England Discharge Ready Date, {period}",
         "status": "official statistic",
         "row_count": len(rows),
         "provider_row_count": len(provider_rows),
@@ -238,22 +323,130 @@ def main():
             "warning": "Variation is not proof of waste or poor performance. Provider outliers require peer-group, case-mix, data-quality and operational review before causal conclusions.",
             "provider_filter": "Only rows where NHS England Data Type equals Provider are included in provider benchmarking.",
             "minimum_volume": "Ranking screens require at least 100 discharges in the month.",
-            "average_delay_formula": "Total bed days lost due to delayed discharge divided by total patients discharged. This mirrors the NHS Oversight Framework concept of average days from discharge-ready date to actual discharge including zero-day discharges.",
-            "opportunity_screen": "Excess bed days versus the national provider median is an investigative counterfactual, not a savings estimate. It is used to prioritise review only.",
+            "average_delay_formula": "Total bed days lost due to delayed discharge divided by total patients discharged.",
+            "opportunity_screen": "Excess bed days versus the national provider median is an investigative counterfactual, not a savings estimate.",
         },
     }
 
+
+def compact_month(result):
+    return {
+        "period": result["period"],
+        "source_url": result["source_url"],
+        "provider_count": result["provider_count"],
+        "derived_distributions": result["derived_distributions"],
+        "provider_summary": result["provider_summary"],
+    }
+
+
+def build_trends(months):
+    by_code = defaultdict(list)
+    for month in months:
+        for p in month.get("provider_summary", []):
+            key = p.get("code") or p.get("provider")
+            by_code[key].append({"period": month["period"], **p})
+
+    trends = []
+    for _, series in by_code.items():
+        series.sort(key=lambda x: x["period"])
+        latest = series[-1]
+        item = {
+            "provider": latest.get("provider"),
+            "code": latest.get("code"),
+            "region": latest.get("region"),
+            "icb": latest.get("icb"),
+            "months_available": len(series),
+            "latest_period": latest.get("period"),
+            "latest_average_delay_days": latest.get("average_delay_days"),
+            "latest_bed_days_lost": latest.get("bed_days_lost"),
+            "latest_same_day_discharge_rate": latest.get("same_day_discharge_rate"),
+        }
+        for window in (3, 6, 12):
+            subset = series[-window:]
+            vals = [x.get("average_delay_days") for x in subset if x.get("average_delay_days") is not None]
+            beds = [x.get("bed_days_lost") for x in subset if x.get("bed_days_lost") is not None]
+            if vals:
+                item[f"avg_delay_{window}m"] = statistics.fmean(vals)
+                if len(vals) >= 2:
+                    item[f"avg_delay_change_{window}m"] = vals[-1] - vals[0]
+            if beds:
+                item[f"bed_days_{window}m_total"] = sum(beds)
+        trends.append(item)
+
+    def change_key(x):
+        v = x.get("avg_delay_change_3m")
+        return v if v is not None else -999
+
+    return {
+        "providers": trends,
+        "persistent_high_delay": sorted(
+            [x for x in trends if x.get("avg_delay_3m") is not None],
+            key=lambda x: x["avg_delay_3m"], reverse=True
+        )[:20],
+        "fastest_deteriorating_3m": sorted(
+            [x for x in trends if x.get("avg_delay_change_3m") is not None],
+            key=change_key, reverse=True
+        )[:20],
+        "fastest_improving_3m": sorted(
+            [x for x in trends if x.get("avg_delay_change_3m") is not None],
+            key=lambda x: x["avg_delay_change_3m"]
+        )[:20],
+    }
+
+
+def main():
+    sources = discover_csv_sources()
+    selected = sources[-BACKFILL_MONTHS:]
+    HISTORY_DIR.mkdir(parents=True, exist_ok=True)
+
+    months = []
+    for period, url in selected:
+        path = HISTORY_DIR / f"{period}.json"
+        if path.exists():
+            try:
+                existing = json.loads(path.read_text(encoding="utf-8"))
+                if existing.get("source_url") == url:
+                    months.append(existing)
+                    print(f"Reusing {period}")
+                    continue
+            except Exception:
+                pass
+        print(f"Downloading {period}: {url}")
+        result = analyse(download(url), url, period)
+        compact = compact_month(result)
+        path.write_text(json.dumps(compact, indent=2, ensure_ascii=False), encoding="utf-8")
+        months.append(compact)
+
+    months.sort(key=lambda x: x["period"])
+    latest_period, latest_url = selected[-1]
+    latest = analyse(download(latest_url), latest_url, latest_period)
+    trends = build_trends(months)
+    latest["history"] = {
+        "months_available": [x["period"] for x in months],
+        "months_count": len(months),
+        "rolling_windows": [3, 6, 12],
+        "trends": trends,
+    }
+
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
+    OUT.write_text(json.dumps(latest, indent=2, ensure_ascii=False), encoding="utf-8")
+    INDEX_OUT.write_text(json.dumps({
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "publication_url": PUBLICATION_URL,
+        "latest_period": latest_period,
+        "months": [{"period": x["period"], "source_url": x["source_url"]} for x in months],
+        "trend_summary": {
+            "persistent_high_delay": trends["persistent_high_delay"],
+            "fastest_deteriorating_3m": trends["fastest_deteriorating_3m"],
+            "fastest_improving_3m": trends["fastest_improving_3m"],
+        },
+    }, indent=2, ensure_ascii=False), encoding="utf-8")
+
     print(json.dumps({
-        "rows": len(rows),
-        "provider_rows": len(provider_rows),
-        "providers": len(provider_summary),
-        "detected_columns": result["detected_columns"],
-        "detected_metrics": result["detected_metrics"],
-        "national_median_average_delay_days": national_median_avg,
-        "top_average_delay": by_avg_delay[:5],
-        "top_opportunity_screen": opportunity[:5],
+        "latest_period": latest_period,
+        "months_ingested": [x["period"] for x in months],
+        "providers": latest["provider_count"],
+        "median_average_delay_days": latest["derived_distributions"]["average_delay_days"]["median"],
     }, indent=2))
 
 
