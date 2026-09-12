@@ -1,15 +1,420 @@
 {
-  "generated_at": "2026-09-12T19:39:57.099472+00:00",
+  "generated_at": "2026-09-12T19:56:45.238903+00:00",
   "source_url": "https://www.england.nhs.uk/statistics/wp-content/uploads/sites/2/2026/09/Daily-discharge-sitrep-monthly-data-webfile-05-CSV-aug26.csv",
   "source_publication": "NHS England Acute Discharge Situation Report, August 2026",
   "status": "management information",
+  "encoding": "cp1252",
   "methodology_warning": "Delay-reason data are management information and definitions changed from 27 May 2024. Reason categories are grouped by Sitora using source measure labels and must be clinically and operationally validated before causal or financial conclusions.",
   "row_count": 36545,
   "provider_row_count": 0,
   "provider_count_with_reason_signal": 0,
+  "headers": [
+    "Period",
+    "Level",
+    "Region",
+    "ICB",
+    "Org Code",
+    "Org Name",
+    "Metric",
+    "Metric Type",
+    "Metric Group",
+    "Value"
+  ],
+  "level_values": [
+    [
+      "provider",
+      26559
+    ],
+    [
+      "icb",
+      8170
+    ],
+    [
+      "region",
+      1589
+    ],
+    [
+      "national",
+      227
+    ]
+  ],
+  "categorical_profile": {
+    "Period": [
+      [
+        "01/08/2026",
+        20123
+      ],
+      [
+        "03/08/2026",
+        966
+      ],
+      [
+        "10/08/2026",
+        966
+      ],
+      [
+        "17/08/2026",
+        966
+      ],
+      [
+        "24/08/2026",
+        966
+      ],
+      [
+        "02/08/2026",
+        483
+      ],
+      [
+        "04/08/2026",
+        483
+      ],
+      [
+        "05/08/2026",
+        483
+      ],
+      [
+        "06/08/2026",
+        483
+      ],
+      [
+        "07/08/2026",
+        483
+      ],
+      [
+        "08/08/2026",
+        483
+      ],
+      [
+        "09/08/2026",
+        483
+      ],
+      [
+        "11/08/2026",
+        483
+      ],
+      [
+        "12/08/2026",
+        483
+      ],
+      [
+        "13/08/2026",
+        483
+      ],
+      [
+        "14/08/2026",
+        483
+      ],
+      [
+        "15/08/2026",
+        483
+      ],
+      [
+        "16/08/2026",
+        483
+      ],
+      [
+        "18/08/2026",
+        483
+      ],
+      [
+        "19/08/2026",
+        483
+      ],
+      [
+        "20/08/2026",
+        483
+      ],
+      [
+        "21/08/2026",
+        483
+      ],
+      [
+        "22/08/2026",
+        483
+      ],
+      [
+        "23/08/2026",
+        483
+      ],
+      [
+        "25/08/2026",
+        483
+      ],
+      [
+        "26/08/2026",
+        483
+      ],
+      [
+        "27/08/2026",
+        483
+      ],
+      [
+        "28/08/2026",
+        483
+      ],
+      [
+        "29/08/2026",
+        483
+      ],
+      [
+        "30/08/2026",
+        483
+      ],
+      [
+        "31/08/2026",
+        483
+      ]
+    ],
+    "Level": [
+      [
+        "PROVIDER",
+        26559
+      ],
+      [
+        "ICB",
+        8170
+      ],
+      [
+        "Region",
+        1589
+      ],
+      [
+        "National",
+        227
+      ]
+    ],
+    "Region": [
+      [
+        "MIDLANDS",
+        7264
+      ],
+      [
+        "NORTH EAST AND YORKSHIRE",
+        5902
+      ],
+      [
+        "LONDON",
+        4994
+      ],
+      [
+        "SOUTH EAST",
+        4992
+      ],
+      [
+        "NORTH WEST",
+        4767
+      ],
+      [
+        "SOUTH WEST",
+        4540
+      ],
+      [
+        "EAST OF ENGLAND",
+        3859
+      ],
+      [
+        "[z]",
+        227
+      ]
+    ],
+    "ICB": [
+      [
+        "NHS NORTH EAST AND NORTH CUMBRIA INTEGRATED CARE BOARD",
+        2043
+      ],
+      [
+        "[z]",
+        1816
+      ],
+      [
+        "NHS WEST AND NORTH LONDON INTEGRATED CARE BOARD",
+        1816
+      ],
+      [
+        "NHS CHESHIRE AND MERSEYSIDE INTEGRATED CARE BOARD",
+        1816
+      ],
+      [
+        "NHS CENTRAL EAST INTEGRATED CARE BOARD",
+        1589
+      ],
+      [
+        "NHS GREATER MANCHESTER INTEGRATED CARE BOARD",
+        1589
+      ],
+      [
+        "NHS NORFOLK AND SUFFOLK INTEGRATED CARE BOARD",
+        1362
+      ],
+      [
+        "NHS WEST YORKSHIRE INTEGRATED CARE BOARD",
+        1362
+      ],
+      [
+        "NHS SURREY AND SUSSEX INTEGRATED CARE BOARD",
+        1362
+      ],
+      [
+        "NHS SOUTH WEST LONDON INTEGRATED CARE BOARD",
+        1135
+      ],
+      [
+        "NHS BLACK COUNTRY INTEGRATED CARE BOARD",
+        1135
+      ],
+      [
+        "NHS SOUTH YORKSHIRE INTEGRATED CARE BOARD",
+        1135
+      ],
+      [
+        "NHS HUMBER AND NORTH YORKSHIRE INTEGRATED CARE BOARD",
+        1135
+      ],
+      [
+        "NHS LANCASHIRE AND SOUTH CUMBRIA INTEGRATED CARE BOARD",
+        1135
+      ],
+      [
+        "NHS KENT AND MEDWAY INTEGRATED CARE BOARD",
+        1135
+      ],
+      [
+        "NHS HAMPSHIRE AND ISLE OF WIGHT INTEGRATED CARE BOARD",
+        1135
+      ],
+      [
+        "NHS THAMES VALLEY INTEGRATED CARE BOARD",
+        1133
+      ],
+      [
+        "NHS SOUTH EAST LONDON INTEGRATED CARE BOARD",
+        908
+      ],
+      [
+        "NHS NORTH EAST LONDON INTEGRATED CARE BOARD",
+        908
+      ],
+      [
+        "NHS COVENTRY AND WARWICKSHIRE INTEGRATED CARE BOARD",
+        908
+      ],
+      [
+        "NHS DEVON INTEGRATED CARE BOARD",
+        908
+      ],
+      [
+        "NHS BATH AND NORTH EAST SOMERSET, SWINDON AND WILTSHIRE INTEGRATED CARE BOARD",
+        908
+      ],
+      [
+        "NHS ESSEX INTEGRATED CARE BOARD",
+        681
+      ],
+      [
+        "NHS HEREFORDSHIRE AND WORCESTERSHIRE INTEGRATED CARE BOARD",
+        681
+      ],
+      [
+        "NHS DERBY AND DERBYSHIRE INTEGRATED CARE BOARD",
+        681
+      ],
+      [
+        "NHS NORTHAMPTONSHIRE INTEGRATED CARE BOARD",
+        681
+      ],
+      [
+        "NHS NOTTINGHAM AND NOTTINGHAMSHIRE INTEGRATED CARE BOARD",
+        681
+      ],
+      [
+        "NHS DORSET INTEGRATED CARE BOARD",
+        681
+      ],
+      [
+        "NHS BIRMINGHAM AND SOLIHULL INTEGRATED CARE BOARD",
+        454
+      ],
+      [
+        "NHS LINCOLNSHIRE INTEGRATED CARE BOARD",
+        454
+      ],
+      [
+        "NHS LEICESTER, LEICESTERSHIRE AND RUTLAND INTEGRATED CARE BOARD",
+        454
+      ],
+      [
+        "NHS STAFFORDSHIRE AND STOKE-ON-TRENT INTEGRATED CARE BOARD",
+        454
+      ],
+      [
+        "NHS SHROPSHIRE, TELFORD AND WREKIN INTEGRATED CARE BOARD",
+        454
+      ],
+      [
+        "NHS GLOUCESTERSHIRE INTEGRATED CARE BOARD",
+        454
+      ],
+      [
+        "NHS SOMERSET INTEGRATED CARE BOARD",
+        454
+      ],
+      [
+        "NHS CORNWALL AND THE ISLES OF SCILLY INTEGRATED CARE BOARD",
+        454
+      ],
+      [
+        "NHS BRISTOL, NORTH SOMERSET AND SOUTH GLOUCESTERSHIRE INTEGRATED CARE BOARD",
+        454
+      ]
+    ],
+    "Metric Type": [
+      [
+        "Weekly snapshot metric",
+        20286
+      ],
+      [
+        "Daily metric",
+        16259
+      ]
+    ],
+    "Metric Group": [
+      [
+        "Delay reason LOS 7+ Costs",
+        6440
+      ],
+      [
+        "Delay reason LOS 14+",
+        5957
+      ],
+      [
+        "Delay reason LOS 7+",
+        5957
+      ],
+      [
+        "NCTR",
+        4991
+      ],
+      [
+        "Discharges",
+        4991
+      ],
+      [
+        "NCTR not discharged",
+        4991
+      ],
+      [
+        "Additional bed days lost",
+        1932
+      ],
+      [
+        "Discharge destination",
+        1286
+      ]
+    ]
+  },
   "detected_columns": {
     "provider": null,
-    "provider_code": null,
+    "provider_code": "Org Code",
     "region": "Region",
     "icb": "ICB",
     "metric": "Metric Type",
