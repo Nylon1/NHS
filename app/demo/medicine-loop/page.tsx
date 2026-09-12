@@ -19,11 +19,11 @@ export default function MedicineLoopDemoPage() {
     const expectedRemaining = Math.max(0, m.qty - expectedUsed);
     const early = m.lastSupplyDaysAgo < m.days - 3;
     const changed = m.change !== "None";
-    const stockMismatch = m.stock > expectedRemaining + 4;
-    const status = changed ? "Clinical review" : early || stockMismatch ? "Check need" : "Routine";
+    const mismatch = m.stock > expectedRemaining + 4;
+    const status = changed ? "Clinical review" : early || mismatch ? "Check need" : "Routine";
     const reasons = [
-      ...(early ? [`Requested ${m.days - m.lastSupplyDaysAgo} days before expected cycle end`] : []),
-      ...(stockMismatch ? [`Patient-reported stock is ${m.stock - expectedRemaining} above expected remaining`] : []),
+      ...(early ? [`Requested ${m.days - m.lastSupplyDaysAgo} days before the expected cycle end.`] : []),
+      ...(mismatch ? [`Patient-reported stock (${m.stock}) is higher than the modelled remainder (${expectedRemaining}).`] : []),
       ...(changed ? [m.change] : []),
     ];
     return { ...m, expectedRemaining, status, reasons };
@@ -32,25 +32,25 @@ export default function MedicineLoopDemoPage() {
   const current = rows.find((m) => m.name === active) || rows[0];
   const avoided = rows.filter((m) => confirmed[m.name] === "enough");
   const reviews = rows.filter((m) => confirmed[m.name] === "review");
-  const completed = rows.filter((m) => confirmed[m.name]).length;
+  const completed = Object.keys(confirmed).length;
   const avoidedValue = avoided.reduce((sum, m) => sum + m.value, 0);
-
-  const decisionCopy = confirmed[current.name] === "need"
-    ? { title: "Supply remains required", body: "The request continues through the normal governed prescribing and dispensing pathway." }
-    : confirmed[current.name] === "enough"
-      ? { title: "Supply deferred this cycle", body: "The patient has confirmed enough stock. No automatic medicine stop has occurred; only this repeat supply event is deferred." }
-      : confirmed[current.name] === "review"
-        ? { title: "Professional review required", body: "The signal is escalated because a clinically meaningful change or discrepancy needs pharmacist or prescriber review." }
-        : { title: "Decision pending", body: "Review the signal, then record the smallest appropriate action." };
+  const decision = confirmed[current.name];
+  const decisionCopy = !decision
+    ? { title: "Awaiting a human decision", body: "Sitora has identified the signal. Nothing changes until the patient response or authorised professional decision is recorded." }
+    : decision === "need"
+      ? { title: "Supply remains required", body: "The repeat continues through the normal pathway. No resource recovery is claimed." }
+      : decision === "enough"
+        ? { title: "Supply deferred this cycle", body: "The patient confirms sufficient stock. The avoided item can enter the Resource Recovery Record after the dispensing outcome is verified." }
+        : { title: "Professional review required", body: "The case is escalated to a pharmacist or prescriber. Sitora does not make the clinical change." };
 
   return (
     <>
-      <section className="page-head">
+      <section className="page-head demo-head">
         <div className="shell demo-head-grid">
           <div>
-            <div className="eyebrow">Interactive prototype · fictional data</div>
+            <div className="eyebrow">Prototype 1 · fictional data</div>
             <h1>Medicine Loop</h1>
-            <p className="lede">See how a repeat request moves from raw supply history to a simple, auditable decision without autonomously changing medication.</p>
+            <p className="lede">Before another repeat is supplied, connect the previous supply, expected use, patient-held stock and medication changes. Routine requests flow through. Exceptions get the smallest safe intervention.</p>
           </div>
           <div className="demo-status-card">
             <span className="badge">Demo patient</span>
@@ -61,78 +61,73 @@ export default function MedicineLoopDemoPage() {
         </div>
       </section>
 
-      <section className="section"><div className="shell">
-        <div className="demo-stepper" aria-label="Demo flow">
-          {[["1","Detect"],["2","Explain"],["3","Decide"],["4","Record"]].map(([n,t]) => <div className="demo-step" key={n}><span>{n}</span><strong>{t}</strong></div>)}
-        </div>
-      </div></section>
-
-      <section className="section"><div className="shell demo-workspace">
-        <aside className="demo-sidebar">
-          <div className="eyebrow">Repeat request</div>
-          <h3>Choose a medicine</h3>
-          <div className="demo-list">
-            {rows.map((m) => (
-              <button key={m.name} className={`demo-list-item ${active === m.name ? "active" : ""}`} onClick={() => setActive(m.name)}>
-                <span><strong>{m.name}</strong><small>{m.status}</small></span>
-                <span className={`signal-dot ${m.status === "Routine" ? "ok" : m.status === "Clinical review" ? "danger" : "warn"}`} />
-              </button>
-            ))}
+      <section className="section">
+        <div className="shell">
+          <div className="demo-stepper" aria-label="Demo flow">
+            {[["1","Detect"],["2","Explain"],["3","Decide"],["4","Record"]].map(([n,t]) => <div className="demo-step" key={n}><span>{n}</span><strong>{t}</strong></div>)}
           </div>
-        </aside>
+        </div>
+      </section>
 
-        <div className="demo-main">
-          <div className="demo-panel">
-            <div className="meta-row"><span className="badge">{current.status}</span><span>Last supplied {current.lastSupplyDaysAgo} days ago</span></div>
-            <h2>{current.name}</h2>
-
-            <div className="demo-signal-grid">
-              <div><small>Last quantity</small><strong>{current.qty}</strong><span>tablets</span></div>
-              <div><small>Expected remaining</small><strong>{current.expectedRemaining}</strong><span>estimated</span></div>
-              <div><small>Patient reports</small><strong>{current.stock}</strong><span>remaining</span></div>
+      <section className="section">
+        <div className="shell demo-workspace">
+          <aside className="demo-sidebar">
+            <div className="eyebrow">Repeat request</div>
+            <h3>Choose a medicine</h3>
+            <div className="demo-list">
+              {rows.map((m) => (
+                <button key={m.name} className={`demo-list-item ${active === m.name ? "active" : ""}`} onClick={() => setActive(m.name)}>
+                  <span><strong>{m.name}</strong><small>{m.status}</small></span>
+                  <span className={`signal-dot ${m.status === "Routine" ? "ok" : m.status === "Clinical review" ? "danger" : "warn"}`} />
+                </button>
+              ))}
             </div>
+          </aside>
 
-            <div className="demo-flag-box">
-              <span className="badge">Why Sitora flagged this</span>
-              {current.reasons.length ? (
-                <ul className="list-clean">{current.reasons.map((r) => <li key={r}>{r}</li>)}</ul>
-              ) : <p>No exceptional signal. Routine supply can continue with minimal friction.</p>}
-            </div>
-
-            <div className="demo-decision-block">
-              <div><div className="eyebrow">Human decision</div><h3>What should happen next?</h3></div>
-              <div className="demo-choice-grid">
-                <button className={confirmed[current.name] === "need" ? "demo-choice selected" : "demo-choice"} onClick={() => setConfirmed(s => ({...s,[current.name]:"need"}))}><strong>Supply required</strong><span>Continue normal pathway</span></button>
-                <button className={confirmed[current.name] === "enough" ? "demo-choice selected" : "demo-choice"} onClick={() => setConfirmed(s => ({...s,[current.name]:"enough"}))}><strong>Enough stock</strong><span>Defer this repeat cycle</span></button>
-                <button className={confirmed[current.name] === "review" ? "demo-choice selected" : "demo-choice"} onClick={() => setConfirmed(s => ({...s,[current.name]:"review"}))}><strong>Send for review</strong><span>Pharmacist/prescriber check</span></button>
+          <div className="demo-main">
+            <div className="demo-panel">
+              <div className="meta-row"><span className="badge">{current.status}</span><span>Last supplied {current.lastSupplyDaysAgo} days ago</span></div>
+              <h2>{current.name}</h2>
+              <div className="demo-signal-grid">
+                <div><small>Last quantity</small><strong>{current.qty}</strong><span>tablets</span></div>
+                <div><small>Expected remaining</small><strong>{current.expectedRemaining}</strong><span>estimated</span></div>
+                <div><small>Patient reports</small><strong>{current.stock}</strong><span>remaining</span></div>
+              </div>
+              <div className="demo-flag-box">
+                <span className="badge">Why Sitora flagged this</span>
+                {current.reasons.length ? <ul className="list-clean">{current.reasons.map((r) => <li key={r}>{r}</li>)}</ul> : <p>No exceptional signal. Routine supply can continue with minimal friction.</p>}
+              </div>
+              <div className="demo-decision-block">
+                <div><div className="eyebrow">Human decision</div><h3>What should happen next?</h3></div>
+                <div className="demo-choice-grid">
+                  <button className={decision === "need" ? "demo-choice selected" : "demo-choice"} onClick={() => setConfirmed(s => ({...s,[current.name]:"need"}))}><strong>Supply required</strong><span>Continue normal pathway</span></button>
+                  <button className={decision === "enough" ? "demo-choice selected" : "demo-choice"} onClick={() => setConfirmed(s => ({...s,[current.name]:"enough"}))}><strong>Enough stock</strong><span>Defer this repeat cycle</span></button>
+                  <button className={decision === "review" ? "demo-choice selected" : "demo-choice"} onClick={() => setConfirmed(s => ({...s,[current.name]:"review"}))}><strong>Send for review</strong><span>Pharmacist/prescriber check</span></button>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div className="demo-outcome-panel">
-            <span className="badge">Recorded outcome</span>
-            <h3>{decisionCopy.title}</h3>
-            <p>{decisionCopy.body}</p>
+            <div className="demo-outcome-panel"><span className="badge">Recorded outcome</span><h3>{decisionCopy.title}</h3><p>{decisionCopy.body}</p></div>
           </div>
         </div>
-      </section></section>
+      </section>
 
-      <section className="section"><div className="shell">
-        <div className="section-head"><div><div className="eyebrow">Resource Recovery Record</div><h2>What this demo has actually recorded.</h2></div><p>Only explicit decisions appear here. A signal alone is not counted as recovery.</p></div>
-        <div className="metric-grid">
-          <div className="metric"><span className="badge">Reviewed</span><strong>{completed}</strong><h3>Items assessed</h3><small>Out of three requested medicines.</small></div>
-          <div className="metric"><span className="badge">Avoided</span><strong>{avoided.length}</strong><h3>Supplies deferred</h3><small>Demo items confirmed as not needed this cycle.</small></div>
-          <div className="metric"><span className="badge">Value</span><strong>£{avoidedValue.toFixed(2)}</strong><h3>Illustrative cost avoidance</h3><small>Demo only; real financial benefit requires validation.</small></div>
-          <div className="metric"><span className="badge">Safety</span><strong>{reviews.length}</strong><h3>Professional reviews</h3><small>Clinically meaningful cases escalated rather than automated.</small></div>
+      <section className="section">
+        <div className="shell">
+          <div className="section-head"><div><div className="eyebrow">Resource Recovery Record</div><h2>What this demo has actually recorded.</h2></div><p>Only explicit decisions appear here. A signal alone is not counted as recovery.</p></div>
+          <div className="metric-grid">
+            <div className="metric"><span className="badge">Reviewed</span><strong>{completed}</strong><h3>Items assessed</h3><small>Out of three requested medicines.</small></div>
+            <div className="metric"><span className="badge">Avoided</span><strong>{avoided.length}</strong><h3>Supplies deferred</h3><small>Demo items confirmed as not needed this cycle.</small></div>
+            <div className="metric"><span className="badge">Value</span><strong>£{avoidedValue.toFixed(2)}</strong><h3>Illustrative cost avoidance</h3><small>Demo only; real financial benefit requires validation.</small></div>
+            <div className="metric"><span className="badge">Safety</span><strong>{reviews.length}</strong><h3>Professional reviews</h3><small>Clinically meaningful cases escalated rather than automated.</small></div>
+          </div>
+          <div className="recovery-record" style={{marginTop:18}}>
+            <div><small>Signal</small><strong>{avoided.length ? "Stock confirms repeat not required" : reviews.length ? "Medication discrepancy requires review" : "No verified recovery yet"}</strong></div>
+            <div><small>Action</small><strong>{avoided.length ? "Repeat deferred" : reviews.length ? "Escalated" : "Pending"}</strong></div>
+            <div><small>Benefit type</small><strong>{avoided.length ? "Cost avoidance" : "Not yet classified"}</strong></div>
+            <div><small>Autonomous medicine changes</small><strong>0</strong></div>
+          </div>
         </div>
-
-        <div className="recovery-record" style={{marginTop:18}}>
-          <div><small>Signal</small><strong>{avoided.length ? "Stock confirms repeat not required" : reviews.length ? "Medication discrepancy requires review" : "No verified recovery yet"}</strong></div>
-          <div><small>Action</small><strong>{avoided.length ? "Repeat deferred" : reviews.length ? "Escalated" : "Pending"}</strong></div>
-          <div><small>Benefit type</small><strong>{avoided.length ? "Cost avoidance" : "Not yet classified"}</strong></div>
-          <div><small>Autonomous medicine changes</small><strong>0</strong></div>
-        </div>
-      </div></section>
+      </section>
 
       <section className="section"><div className="shell quote">The innovation is not another reminder. It is a closed feedback loop between the previous supply and the next decision.</div></section>
     </>
