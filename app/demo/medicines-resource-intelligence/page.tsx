@@ -2,25 +2,17 @@
 
 import { useMemo, useState } from "react";
 
-const baseline = {
-  drugCost: 420,
-  pharmacyMinutes: 24,
-  nursingMinutes: 38,
-  chairMinutes: 120,
-  consumables: 18,
-  unusedRisk: 0.08,
-};
-
+const baseline = { drugCost: 420, pharmacyMinutes: 24, nursingMinutes: 38, chairMinutes: 120, consumables: 18, unusedRisk: 0.08 };
 const options = {
-  current: { label: "Current IV pathway", drugCost: 420, pharmacyMinutes: 24, nursingMinutes: 38, chairMinutes: 120, consumables: 18, unusedRisk: 0.08 },
-  rta: { label: "Ready-to-administer pathway", drugCost: 432, pharmacyMinutes: 8, nursingMinutes: 24, chairMinutes: 110, consumables: 13, unusedRisk: 0.05 },
-  sc: { label: "Clinically eligible SC pathway", drugCost: 445, pharmacyMinutes: 4, nursingMinutes: 14, chairMinutes: 35, consumables: 8, unusedRisk: 0.03 },
+  current: { label: "Current IV pathway", drugCost: 420, pharmacyMinutes: 24, nursingMinutes: 38, chairMinutes: 120, consumables: 18, unusedRisk: 0.08, note: "Existing baseline pathway." },
+  rta: { label: "Ready-to-administer", drugCost: 432, pharmacyMinutes: 8, nursingMinutes: 24, chairMinutes: 110, consumables: 13, unusedRisk: 0.05, note: "Less local preparation and lower handling burden." },
+  sc: { label: "Clinically eligible SC", drugCost: 445, pharmacyMinutes: 4, nursingMinutes: 14, chairMinutes: 35, consumables: 8, unusedRisk: 0.03, note: "Illustrative lower-resource route for an eligible patient." },
 };
 
 type PathwayKey = keyof typeof options;
 
 export default function MedicinesResourceIntelligenceDemoPage() {
-  const [selected, setSelected] = useState<PathwayKey>("current");
+  const [selected, setSelected] = useState<PathwayKey>("rta");
   const [approved, setApproved] = useState(false);
   const pathway = options[selected];
 
@@ -33,59 +25,92 @@ export default function MedicinesResourceIntelligenceDemoPage() {
     unusedRisk: baseline.unusedRisk - pathway.unusedRisk,
   }), [pathway]);
 
+  const totalClinicalMinutes = baseline.pharmacyMinutes + baseline.nursingMinutes + baseline.chairMinutes;
+  const selectedClinicalMinutes = pathway.pharmacyMinutes + pathway.nursingMinutes + pathway.chairMinutes;
+  const capacityRelease = totalClinicalMinutes - selectedClinicalMinutes;
+  const acquisitionDelta = delta.drugCost - delta.consumables;
+
   return (
     <>
-      <section className="page-head"><div className="shell">
-        <div className="eyebrow">Interactive prototype · demo data only</div>
-        <h1>Medicines Resource Intelligence: compare the whole pathway, not just the drug price.</h1>
-        <p className="lede">This fictional example shows how the same clinically required treatment can consume different amounts of pharmacy, nursing, chair and consumable resource. Clinical eligibility is assumed for demonstration only.</p>
-      </div></section>
+      <section className="page-head">
+        <div className="shell demo-head-grid">
+          <div>
+            <div className="eyebrow">Interactive prototype · fictional data</div>
+            <h1>Medicines Resource Intelligence</h1>
+            <p className="lede">Compare the whole treatment pathway, not just the medicine price. The demo separates acquisition cost from scarce clinical capacity and requires explicit approval before any change counts.</p>
+          </div>
+          <div className="demo-status-card"><span className="badge">Demo treatment</span><strong>Injectable pathway</strong><span>3 pathway options</span><span>Clinical eligibility assumed for demonstration</span></div>
+        </div>
+      </section>
 
       <section className="section"><div className="shell">
-        <div className="two-col">
-          <div>
-            <div className="eyebrow">Selected treatment</div><h2>High-resource injectable pathway</h2>
-            <p className="lede">The question is not simply which formulation costs less. The question is what the safe end-to-end pathway consumes.</p>
-            <div style={{display:"grid", gap:10, marginTop:20}}>
-              {(Object.entries(options) as [PathwayKey, typeof options[PathwayKey]][]).map(([key,item]) => <button key={key} className={selected === key ? "button primary" : "button secondary"} onClick={() => {setSelected(key); setApproved(false);}} style={{justifyContent:"flex-start"}}>{item.label}</button>)}
+        <div className="demo-stepper">
+          {[["1","Baseline"],["2","Compare"],["3","Approve"],["4","Verify"]].map(([n,t]) => <div className="demo-step" key={n}><span>{n}</span><strong>{t}</strong></div>)}
+        </div>
+      </div></section>
+
+      <section className="section"><div className="shell demo-workspace">
+        <aside className="demo-sidebar">
+          <div className="eyebrow">Pathway options</div><h3>Select a scenario</h3>
+          <div className="demo-list">
+            {(Object.entries(options) as [PathwayKey, typeof options[PathwayKey]][]).map(([key,item]) => (
+              <button key={key} className={`demo-list-item ${selected === key ? "active" : ""}`} onClick={() => { setSelected(key); setApproved(false); }}>
+                <span><strong>{item.label}</strong><small>{item.note}</small></span>
+                <span className={`signal-dot ${key === "current" ? "ok" : "warn"}`} />
+              </button>
+            ))}
+          </div>
+        </aside>
+
+        <div className="demo-main">
+          <div className="demo-panel">
+            <div className="meta-row"><span className="badge">Selected pathway</span><span>{pathway.label}</span></div>
+            <h2>What changes compared with today?</h2>
+            <div className="comparison-grid">
+              <div className="comparison-card baseline"><span>Current</span><strong>£{baseline.drugCost + baseline.consumables}</strong><small>medicine + consumables</small><p>{baseline.pharmacyMinutes} pharmacy min · {baseline.nursingMinutes} nursing min · {baseline.chairMinutes} chair min</p></div>
+              <div className="comparison-arrow">→</div>
+              <div className="comparison-card selected"><span>{pathway.label}</span><strong>£{pathway.drugCost + pathway.consumables}</strong><small>medicine + consumables</small><p>{pathway.pharmacyMinutes} pharmacy min · {pathway.nursingMinutes} nursing min · {pathway.chairMinutes} chair min</p></div>
+            </div>
+
+            <div className="demo-signal-grid four">
+              <div><small>Drug cost change</small><strong>{delta.drugCost >= 0 ? "+" : ""}£{delta.drugCost}</strong><span>vs baseline</span></div>
+              <div><small>Pharmacy time</small><strong>{delta.pharmacyMinutes} min</strong><span>potentially released</span></div>
+              <div><small>Nursing time</small><strong>{delta.nursingMinutes} min</strong><span>potentially released</span></div>
+              <div><small>Chair capacity</small><strong>{delta.chairMinutes} min</strong><span>potentially released</span></div>
+            </div>
+
+            <div className="demo-flag-box">
+              <span className="badge">Why this deserves review</span>
+              <p>The selected pathway changes more than acquisition price. It may release <strong>{capacityRelease} clinical minutes</strong> while changing medicine and consumable spend by <strong>{acquisitionDelta >= 0 ? "+" : ""}£{acquisitionDelta}</strong> per treatment in this fictional example.</p>
+              <p>Unused-dose risk changes from {Math.round(baseline.unusedRisk*100)}% to {Math.round(pathway.unusedRisk*100)}%.</p>
+            </div>
+
+            <div className="demo-decision-block">
+              <div><div className="eyebrow">Clinical governance</div><h3>Can this pathway be used?</h3></div>
+              <button className={approved ? "button primary" : "button secondary"} onClick={() => setApproved(!approved)}>{approved ? "Approved for demo ✓" : "Simulate clinical approval"}</button>
             </div>
           </div>
-          <div className="card evidence-card"><span className="badge">Selected pathway</span><h3>{pathway.label}</h3><p>Demo patient is assumed clinically suitable for all options shown. A live implementation would require explicit eligibility rules and professional approval.</p><button className="button primary" style={{marginTop:16}} onClick={() => setApproved(true)}>{approved ? "Clinically approved for demo" : "Simulate clinical approval"}</button></div>
+
+          <div className={`demo-outcome-panel ${approved ? "success" : ""}`}>
+            <span className="badge">Verification status</span>
+            <h3>{approved ? "Eligible for measured implementation" : "Not yet a recovery claim"}</h3>
+            <p>{approved ? "The pathway can now move into a measured implementation where actual resource reuse and safety outcomes are recorded." : "A modelled comparison is only an opportunity signal. No capacity or financial benefit should be claimed until clinically approved and observed."}</p>
+          </div>
         </div>
-      </div></section>
+      </section></section>
 
       <section className="section"><div className="shell">
-        <div className="section-head"><div><div className="eyebrow">Whole-pathway comparison</div><h2>See where the resource moves.</h2></div><p>A higher medicine acquisition cost can still be resource-favourable if it releases scarce clinical capacity. That does not automatically make it cash-saving.</p></div>
-        <div className="metric-grid">
-          <div className="metric"><span className="badge">Drug</span><strong>£{pathway.drugCost}</strong><h3>Acquisition</h3><small>{delta.drugCost === 0 ? "Baseline" : `${delta.drugCost > 0 ? "+" : ""}£${delta.drugCost} vs current`}</small></div>
-          <div className="metric"><span className="badge">Pharmacy</span><strong>{pathway.pharmacyMinutes} min</strong><h3>Preparation</h3><small>{delta.pharmacyMinutes} minutes potentially released</small></div>
-          <div className="metric"><span className="badge">Nursing</span><strong>{pathway.nursingMinutes} min</strong><h3>Preparation + administration</h3><small>{delta.nursingMinutes} minutes potentially released</small></div>
-          <div className="metric"><span className="badge">Capacity</span><strong>{pathway.chairMinutes} min</strong><h3>Chair time</h3><small>{delta.chairMinutes} minutes potentially released</small></div>
+        <div className="section-head"><div><div className="eyebrow">Resource Recovery Record</div><h2>Keep money, capacity and safety separate.</h2></div></div>
+        <div className="recovery-record">
+          <div><small>Clinical status</small><strong>{approved ? "Approved for demo" : "Awaiting approval"}</strong></div>
+          <div><small>Acquisition impact</small><strong>{selected === "current" ? "No change" : `${acquisitionDelta >= 0 ? "+" : ""}£${acquisitionDelta}`}</strong></div>
+          <div><small>Capacity signal</small><strong>{capacityRelease} min</strong></div>
+          <div><small>Benefit classification</small><strong>{approved && selected !== "current" ? "Capacity / cost avoidance" : "Not verified"}</strong></div>
         </div>
-        <div className="metric-grid" style={{marginTop:16}}>
-          <div className="metric"><span className="badge">Consumables</span><strong>£{pathway.consumables}</strong><h3>Per treatment</h3><small>£{delta.consumables} lower than current if positive.</small></div>
-          <div className="metric"><span className="badge">Waste risk</span><strong>{Math.round(pathway.unusedRisk * 100)}%</strong><h3>Prepared-but-unused demo risk</h3><small>{Math.round(delta.unusedRisk * 100)} percentage points lower than current if positive.</small></div>
-          <div className="metric"><span className="badge">Status</span><strong>{approved ? "Approved" : "Review"}</strong><h3>Clinical decision</h3><small>No pathway change counts until authorised.</small></div>
-          <div className="metric"><span className="badge">Benefit type</span><strong>{selected === "current" ? "None" : "Mixed"}</strong><h3>Resource effect</h3><small>Drug cost, consumables and capacity remain separated.</small></div>
-        </div>
+        <details className="reveal-panel" style={{marginTop:18}}><summary>How Sitora would verify this in a real pilot</summary><div><p>Record the clinical eligibility decision, actual route/formulation used, preparation and administration timestamps, chair/bed utilisation, cancellations, unused doses, patient outcome and any additional staff work created. Only then classify observed capacity release, cost avoidance or cash-releasing benefit.</p></div></details>
       </div></section>
 
-      <section className="section"><div className="shell">
-        <div className="section-head"><div><div className="eyebrow">Resource Recovery Record</div><h2>Only approved, observed change can become verified recovery.</h2></div></div>
-        <div className="card-grid">
-          <article className="card"><h3>Before</h3><p>Current IV pathway</p><ul className="list-clean"><li>{baseline.pharmacyMinutes} pharmacy minutes</li><li>{baseline.nursingMinutes} nursing minutes</li><li>{baseline.chairMinutes} chair minutes</li><li>£{baseline.drugCost} medicine + £{baseline.consumables} consumables</li></ul></article>
-          <article className="card"><h3>After</h3><p>{pathway.label}</p><ul className="list-clean"><li>{pathway.pharmacyMinutes} pharmacy minutes</li><li>{pathway.nursingMinutes} nursing minutes</li><li>{pathway.chairMinutes} chair minutes</li><li>£{pathway.drugCost} medicine + £{pathway.consumables} consumables</li></ul></article>
-        </div>
-        <details className="reveal-panel" style={{marginTop:18}} open><summary>How Sitora would classify the result</summary><div>
-          <p><strong>Cash-releasing:</strong> only if a real budget line falls and finance validates it.</p>
-          <p><strong>Cost avoidance:</strong> future spend prevented or consumables avoided.</p>
-          <p><strong>Capacity release:</strong> pharmacy, nursing or chair minutes made genuinely reusable.</p>
-          <p><strong>Net benefit:</strong> resource released minus implementation and operating cost.</p>
-          <p><strong>Safety condition:</strong> clinical outcomes and unintended consequences must remain within agreed limits.</p>
-        </div></details>
-      </div></section>
-
-      <section className="section"><div className="shell quote">The cheapest medicine is not always the lowest-resource pathway, and the lowest-resource pathway is not automatically the safest or the cheapest. Measure the whole pathway.</div></section>
+      <section className="section"><div className="shell quote">A medicine can cost more and still consume less NHS resource. The job is to measure the whole pathway and prove whether the released capacity is real.</div></section>
     </>
   );
 }
