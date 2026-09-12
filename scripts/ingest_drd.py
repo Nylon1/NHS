@@ -91,7 +91,7 @@ def main():
 
     data_type_col = choose_column(headers, ["data type", "geography type", "organisation type", "organization type", "org type", "level"])
     geo_name_col = choose_column(headers, ["organisation name", "organization name", "provider name", "geography name", "org name", "trust name"])
-    geo_code_col = choose_column(headers, ["organisation code", "organization code", "provider code", "geography code", "org code", "trust code", "code"])
+    geo_code_col = "Code" if "Code" in headers else choose_column(headers, ["organisation code", "organization code", "provider code", "org code", "trust code"])
     metric_col = choose_column(headers, ["measure", "metric name", "measure name", "indicator name", "metric", "indicator"])
     value_col = choose_column(headers, ["value", "metric value", "measure value", "indicator value"])
     region_col = choose_column(headers, ["region of provider", "region"])
@@ -148,11 +148,10 @@ def main():
     total_discharges_metric = find_metric("number of patients discharged in total")
     bed_days_metric = find_metric("total bed days lost", "delayed discharge")
     same_day_metric = find_metric("date of discharge is same", "discharge ready date")
-    delay_21_pct_metric = find_metric("patients discharged", "21 days or more")
-    # Prefer the percentage variant for 21+ day delay if available.
+    delay_21_pct_metric = None
     for metric in by_metric:
         nm = norm(metric)
-        if "% of patients discharged" in metric.lower() and "21 days or more" in nm and "between the discharge ready date" in nm:
+        if metric.lower().startswith("% of patients discharged") and "21 days or more" in nm and "between the discharge ready date" in nm:
             delay_21_pct_metric = metric
             break
 
@@ -174,7 +173,6 @@ def main():
             "delay_21_plus_rate": delayed_21_pct,
         })
 
-    # National distributions across true provider-level rows only.
     derived_distributions = {
         "discharges": describe([x["discharges"] for x in provider_summary]),
         "bed_days_lost": describe([x["bed_days_lost"] for x in provider_summary]),
@@ -183,22 +181,10 @@ def main():
         "delay_21_plus_rate": describe([x["delay_21_plus_rate"] for x in provider_summary]),
     }
 
-    # Flag variation, not "waste". Require at least 100 discharges to reduce tiny-volume distortion.
     eligible = [x for x in provider_summary if (x.get("discharges") or 0) >= 100]
-    by_avg_delay = sorted(
-        [x for x in eligible if x.get("average_delay_days") is not None],
-        key=lambda x: x["average_delay_days"],
-        reverse=True,
-    )
-    by_bed_days = sorted(
-        [x for x in eligible if x.get("bed_days_lost") is not None],
-        key=lambda x: x["bed_days_lost"],
-        reverse=True,
-    )
-    by_same_day = sorted(
-        [x for x in eligible if x.get("same_day_discharge_rate") is not None],
-        key=lambda x: x["same_day_discharge_rate"],
-    )
+    by_avg_delay = sorted([x for x in eligible if x.get("average_delay_days") is not None], key=lambda x: x["average_delay_days"], reverse=True)
+    by_bed_days = sorted([x for x in eligible if x.get("bed_days_lost") is not None], key=lambda x: x["bed_days_lost"], reverse=True)
+    by_same_day = sorted([x for x in eligible if x.get("same_day_discharge_rate") is not None], key=lambda x: x["same_day_discharge_rate"])
 
     rankings = {
         "highest_average_delay_days": by_avg_delay[:20],
@@ -206,7 +192,6 @@ def main():
         "lowest_same_day_discharge_rate": by_same_day[:20],
     }
 
-    # Simple national-median opportunity screen. This is an investigative signal only, not a savings claim.
     national_median_avg = derived_distributions["average_delay_days"]["median"] if derived_distributions["average_delay_days"] else None
     opportunity = []
     if national_median_avg is not None:
