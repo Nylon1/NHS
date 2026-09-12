@@ -11,14 +11,40 @@ export default function Home() {
     <>
       <section className="hero">
         <div className="shell">
-          <div className="eyebrow">NHS resource waste observatory</div>
-          <h1>The NHS has known where major efficiency opportunities sit for a decade. The missing layer is continuous measurement.</h1>
+          <div className="eyebrow">NHS resource intelligence</div>
+          <h1>Measure resource loss. Intervene before it repeats. Verify what was actually recovered.</h1>
           <p className="lede">
-            Sitora NHS Resource Intelligence connects historic reviews with current operational data to show where money, medicines, workforce time and clinical capacity are being lost, where an intervention is plausible, and whether anything was genuinely recovered.
+            Sitora connects historic reviews with current operational data to show where money, medicines, workforce time and clinical capacity are being lost. Our first flagship programme focuses on medicines: closing the repeat-supply loop and optimising the pathway around every medicine that is genuinely required.
           </p>
           <div className="hero-actions">
-            <Link className="button primary" href="/evidence">Explore the evidence</Link>
-            <Link className="button secondary" href="/pilot">See the 90 day pilot</Link>
+            <Link className="button primary" href="/medicines-proposal">Explore the medicines proposal</Link>
+            <Link className="button secondary" href="/evidence">Explore the evidence</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="shell">
+          <div className="section-head">
+            <div>
+              <div className="eyebrow">Two flagship solutions</div>
+              <h2>Close the medicine loop, then optimise the resource pathway.</h2>
+            </div>
+            <p>The two solutions solve different parts of the same problem. One asks whether another supply is needed. The other asks whether a required medicine is being delivered through the most appropriate and resource-efficient clinically safe pathway.</p>
+          </div>
+          <div className="card-grid">
+            <Link className="card card-link evidence-card" href="/medicines-proposal">
+              <div className="meta-row"><span className="badge">Solution 1</span><span>Patient and prescription level</span></div>
+              <h2>Medicine Loop</h2>
+              <p>Connect prescribing, dispensing, expected consumption, patient-held stock and medication changes before the next repeat supply decision.</p>
+              <p><strong>Core question:</strong> Should this medicine be supplied again now?</p>
+            </Link>
+            <Link className="card card-link evidence-card" href="/medicines-proposal">
+              <div className="meta-row"><span className="badge">Solution 2</span><span>Provider and pathway level</span></div>
+              <h2>Medicines Resource Intelligence</h2>
+              <p>Measure the full pathway around medicines, including formulation, route, pharmacy and aseptic capacity, nursing time, chairs, beds, consumables and unused preparations.</p>
+              <p><strong>Core question:</strong> If the medicine is needed, are we delivering it through the right pathway?</p>
+            </Link>
           </div>
         </div>
       </section>
@@ -99,9 +125,9 @@ export default function Home() {
           <div className="section-head">
             <div>
               <div className="eyebrow">Current investigations</div>
-              <h2>Four pathways, one recurring problem.</h2>
+              <h2>Other pathways test the same Resource Intelligence architecture.</h2>
             </div>
-            <p>Different specialties repeatedly show the same pattern: fragmented information makes resource loss hard to detect before it occurs.</p>
+            <p>Discharge, theatres, appointments and other pathways remain important. They demonstrate that the same Observe → Detect → Explain → Intervene → Verify model can extend beyond medicines.</p>
           </div>
           <div className="card-grid">
             {investigations.map((item) => (
@@ -144,7 +170,7 @@ export default function Home() {
       <section className="section">
         <div className="shell">
           <div className="quote">
-            The question is not only “what did the NHS spend?” It is “did this activity need to happen, did it need to happen here, and did it need this level of resource?”
+            Every medicine should be needed, supplied in the right quantity, delivered through the right clinically appropriate pathway, and measured through to its actual use or waste.
           </div>
         </div>
       </section>
