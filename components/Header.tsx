@@ -4,6 +4,7 @@ const nav = [
   ["Medicines", "/medicines-proposal"],
   ["Commissioner summary", "/commissioner-summary"],
   ["Business case", "/business-case"],
+  ["FAQ", "/faq"],
   ["Dashboard", "/dashboard"],
   ["Benchmarking", "/benchmarking"],
   ["Bottlenecks", "/bottlenecks"],
