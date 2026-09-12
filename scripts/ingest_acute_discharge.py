@@ -47,6 +47,15 @@ def choose(headers, terms):
     return max(ranked, default=(0, None))[1]
 
 
+def decode_payload(payload: bytes):
+    for encoding in ("utf-8-sig", "cp1252", "latin-1"):
+        try:
+            return payload.decode(encoding), encoding
+        except UnicodeDecodeError:
+            continue
+    return payload.decode("utf-8", errors="replace"), "utf-8-replace"
+
+
 def describe(values):
     values = sorted(v for v in values if v is not None)
     if not values:
@@ -64,33 +73,22 @@ def describe(values):
     }
 
 
-def decode_payload(payload: bytes) -> tuple[str, str]:
-    for encoding in ("utf-8-sig", "cp1252", "latin-1"):
-        try:
-            return payload.decode(encoding), encoding
-        except UnicodeDecodeError:
-            continue
-    return payload.decode("utf-8", errors="replace"), "utf-8-replacement"
-
-
 def classify_reason(metric: str) -> str | None:
     n = norm(metric)
-    # The discharge sitrep uses both explicit reasons and pathway/destination labels.
-    if not any(token in n for token in [
-        "delay reason", "reason for delay", "awaiting", "waiting for", "reason", "pathway"
-    ]):
-        return None
     groups = [
-        ("Hospital process", ["decision", "assessment", "diagnostic", "pharmacy", "medication", "internal", "medical review", "hospital process"]),
-        ("Home care / package of care", ["package of care", "domiciliary", "home care", "care package", "pathway 1"]),
-        ("Residential / nursing placement", ["residential", "nursing home", "care home", "placement", "pathway 3"]),
-        ("Community / rehabilitation", ["rehab", "rehabilitation", "community bed", "intermediate care", "community hospital", "pathway 2"]),
+        ("Hospital process", ["decision", "assessment", "diagnostic", "pharmacy", "medication", "internal", "medical review", "clinical decision"]),
+        ("Home care / package of care", ["package of care", "domiciliary", "home care", "care package"]),
+        ("Residential / nursing placement", ["residential", "nursing home", "care home", "placement"]),
+        ("Community / rehabilitation", ["rehab", "rehabilitation", "community bed", "intermediate care", "community hospital"]),
         ("Social care assessment", ["social care", "social worker", "social services"]),
         ("Equipment / home adaptation", ["equipment", "adaptation", "housing"]),
         ("Transport", ["transport", "ambulance"]),
         ("Patient / family choice", ["patient choice", "family choice", "choice"]),
         ("Funding / approval", ["funding", "approval", "continuing healthcare", "chc"]),
     ]
+    # Only classify metrics from delay-reason groups or labels that clearly indicate waiting/delay.
+    if not any(token in n for token in ["delay", "awaiting", "waiting", "reason"]):
+        return None
     for label, tokens in groups:
         if any(token in n for token in tokens):
             return label
@@ -110,36 +108,27 @@ def main():
     rows = list(reader)
     headers = reader.fieldnames or []
 
-    provider_col = choose(headers, [
-        "provider name", "organisation name", "organization name", "trust name",
-        "provider", "organisation", "organization", "trust"
-    ])
-    provider_code_col = choose(headers, [
-        "provider code", "organisation code", "organization code", "trust code", "org code", "code"
-    ])
-    region_col = choose(headers, ["region"])
-    icb_col = choose(headers, ["icb", "integrated care board"])
-    metric_col = choose(headers, ["measure", "metric type", "metric", "indicator", "category"])
-    value_col = choose(headers, ["value", "measure value", "metric value", "count"])
-    type_col = choose(headers, ["data type", "organisation type", "organization type", "level"])
+    # Prefer the exact August 2026 schema when present; fall back to fuzzy detection.
+    provider_col = "Org Name" if "Org Name" in headers else choose(headers, ["org name", "provider name", "organisation name", "organization name", "trust name"])
+    provider_code_col = "Org Code" if "Org Code" in headers else choose(headers, ["org code", "provider code", "organisation code", "organization code", "trust code"])
+    region_col = "Region" if "Region" in headers else choose(headers, ["region"])
+    icb_col = "ICB" if "ICB" in headers else choose(headers, ["icb", "integrated care board"])
+    metric_col = "Metric" if "Metric" in headers else choose(headers, ["metric", "measure", "indicator"])
+    metric_group_col = "Metric Group" if "Metric Group" in headers else choose(headers, ["metric group", "measure group", "indicator group"])
+    value_col = "Value" if "Value" in headers else choose(headers, ["value", "measure value", "metric value"])
+    type_col = "Level" if "Level" in headers else choose(headers, ["level", "data type", "organisation type", "organization type"])
 
     categorical_profile = {}
-    for header in headers:
-        values = [str(r.get(header, "")).strip() for r in rows if str(r.get(header, "")).strip()]
-        unique = Counter(values)
-        if len(unique) <= 40:
-            categorical_profile[header] = unique.most_common(40)
+    for h in headers:
+        vals = [str(r.get(h, "")).strip() for r in rows if str(r.get(h, "")).strip()]
+        unique = Counter(vals)
+        if len(unique) <= 50:
+            categorical_profile[h] = unique.most_common(50)
 
-    # Accept exact provider/trust level rows, while also handling files where the level is named Provider/Trust level.
     provider_rows = []
-    level_values = Counter()
     for row in rows:
-        if type_col:
-            level = norm(row.get(type_col, ""))
-            if level:
-                level_values[level] += 1
-            if level and not any(token in level for token in ["provider", "trust"]):
-                continue
+        if type_col and norm(row.get(type_col, "")) != "provider":
+            continue
         provider = str(row.get(provider_col, "")).strip() if provider_col else ""
         if provider:
             provider_rows.append(row)
@@ -150,14 +139,17 @@ def main():
 
     for row in provider_rows:
         metric = str(row.get(metric_col, "")).strip() if metric_col else ""
+        metric_group = str(row.get(metric_group_col, "")).strip() if metric_group_col else ""
         value = to_number(row.get(value_col, "")) if value_col else None
         provider = str(row.get(provider_col, "")).strip() if provider_col else ""
         if not metric or not provider or value is None:
             continue
-        group = classify_reason(metric)
-        if group:
-            reason_by_provider[provider][group] += value
-            reason_metrics[metric] += 1
+        group_context = norm(metric_group)
+        if "delay reason" not in group_context:
+            continue
+        reason_group = classify_reason(metric) or "Other / uncategorised"
+        reason_by_provider[provider][reason_group] += value
+        reason_metrics[f"{metric_group} | {metric}"] += 1
         provider_meta[provider] = {
             "provider": provider,
             "code": str(row.get(provider_code_col, "")).strip() if provider_code_col else "",
@@ -200,13 +192,13 @@ def main():
         "provider_row_count": len(provider_rows),
         "provider_count_with_reason_signal": len(providers),
         "headers": headers,
-        "level_values": level_values.most_common(30),
         "categorical_profile": categorical_profile,
         "detected_columns": {
             "provider": provider_col, "provider_code": provider_code_col, "region": region_col,
-            "icb": icb_col, "metric": metric_col, "value": value_col, "type": type_col,
+            "icb": icb_col, "metric": metric_col, "metric_group": metric_group_col,
+            "value": value_col, "type": type_col,
         },
-        "detected_reason_metrics": [{"metric": metric, "rows": count, "group": classify_reason(metric)} for metric, count in reason_metrics.most_common()],
+        "detected_reason_metrics": [{"metric": metric, "rows": count} for metric, count in reason_metrics.most_common()],
         "national_reason_mix": national_mix,
         "reason_total_distribution": describe([p["total_reason_signal"] for p in providers]),
         "providers": providers,
@@ -215,13 +207,9 @@ def main():
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
     print(json.dumps({
-        "encoding": encoding,
-        "headers": headers,
-        "level_values": level_values.most_common(20),
         "rows": len(rows), "provider_rows": len(provider_rows),
         "providers_with_reason_signal": len(providers),
         "detected_columns": result["detected_columns"],
-        "reason_metrics": result["detected_reason_metrics"][:20],
         "national_reason_mix": national_mix,
         "top_provider_reason_signals": providers[:5],
     }, indent=2))
