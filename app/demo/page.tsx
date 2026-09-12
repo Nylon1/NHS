@@ -1,47 +1,17 @@
 import Link from "next/link";
 
-export default function DemoHubPage() {
-  return (
-    <>
-      <section className="page-head">
-        <div className="shell">
-          <div className="eyebrow">Working prototypes · synthetic workflows + published evidence</div>
-          <h1>See the medicines intelligence model working across care settings.</h1>
-          <p className="lede">The core Medicine Loop closes medication changes across organisations. WasteGuard tackles repeat oversupply. Medicines Resource Intelligence uses published NHS and peer-reviewed evidence to identify resource opportunities that still require local verification.</p>
-        </div>
-      </section>
+const products = [
+  {n:"01",tag:"Core workflow",title:"Medicine Loop",signal:"Cross-setting medication change",question:"Does every affected service reflect the same authorised medication change?",body:"Follow a hospital-stopped medicine across GP, pharmacy, care home and community care until every required downstream action is reconciled.",proof:"Backed by UK discharge and medicines-reconciliation evidence.",href:"/demo/medicine-loop"},
+  {n:"02",tag:"Waste prevention",title:"WasteGuard",signal:"Repeat oversupply",question:"Should this repeat item actually be supplied again now?",body:"See how cumulative supply, expected use, stock and medication changes can trigger a proportionate human review before avoidable dispensing.",proof:"Backed by NHSBSA oversupply data and UK repeat-dispensing research.",href:"/demo/wasteguard"},
+  {n:"03",tag:"Resource intelligence",title:"Medicines Resource Intelligence",signal:"Pathway capacity",question:"Which medicine-pathway opportunities deserve local measurement?",body:"Explore NHS and peer-reviewed examples showing how route, formulation, preparation and delivery model can alter nursing, pharmacy and treatment capacity.",proof:"Evidence-backed scenarios with source, setting and limitation shown.",href:"/demo/medicines-resource-intelligence"},
+];
 
-      <section className="section">
-        <div className="shell card-grid">
-          <Link className="card card-link evidence-card" href="/demo/medicine-loop">
-            <div className="meta-row"><span className="badge">Core demo</span><span>Synthetic patient workflow</span></div>
-            <h2>Medicine Loop</h2>
-            <p>Follow a hospital-stopped medicine through GP, community pharmacy, care home and community care workflows until every required action is acknowledged and reconciled.</p>
-            <p><strong>Core question:</strong> Does every affected service now reflect the same authorised medication change?</p>
-          </Link>
+export default function DemoHubPage(){return <>
+  <section className="page-head product-demo-head"><div className="shell"><div className="eyebrow">Interactive product experience</div><h1>Three medicines problems. Three workflows you can test now.</h1><p className="lede">Start with the operational problem, interact with the proposed Sitora workflow, inspect the evidence behind it, then see exactly what a controlled NHS pilot would still need to prove.</p><div className="hero-actions"><a className="button primary" href="#products">Choose a demo</a><Link className="button secondary" href="/pilot">See the pilot design</Link></div></div></section>
 
-          <Link className="card card-link evidence-card" href="/demo/wasteguard">
-            <div className="meta-row"><span className="badge">WasteGuard</span><span>Synthetic repeat-supply workflow</span></div>
-            <h2>WasteGuard</h2>
-            <p>Compare timing, expected use, patient-held stock and medication changes to identify repeat supply that may not be needed this cycle.</p>
-            <p><strong>Core question:</strong> Should this repeat item be supplied again now?</p>
-          </Link>
+  <section className="section" id="products"><div className="shell demo-product-stack">{products.map(p=><article className="demo-product-row" key={p.title}><div className="demo-product-index"><span>{p.n}</span><small>{p.tag}</small></div><div className="demo-product-copy"><div className="meta-row"><span className="badge">{p.signal}</span><span>Evidence-linked</span></div><h2>{p.title}</h2><p className="demo-product-question">{p.question}</p><p>{p.body}</p><div className="demo-product-proof"><small>Evidence position</small><strong>{p.proof}</strong></div></div><div className="demo-product-action"><Link className="button primary" href={p.href}>Open demo →</Link><span>Interactive · no patient data</span></div></article>)}</div></section>
 
-          <Link className="card card-link evidence-card" href="/demo/medicines-resource-intelligence">
-            <div className="meta-row"><span className="badge">Evidence demo</span><span>NHS + published evidence</span></div>
-            <h2>Medicines Resource Intelligence</h2>
-            <p>Explore evidence-backed examples showing how route, formulation, preparation and delivery model can change nursing, pharmacy, chair and other NHS resource use.</p>
-            <p><strong>Core question:</strong> Which locally relevant pathway opportunities deserve a measured pilot?</p>
-          </Link>
-        </div>
-      </section>
+  <section className="section"><div className="shell"><div className="section-head"><div><div className="eyebrow">Common proof standard</div><h2>Every demo separates evidence from the claim Sitora still has to earn.</h2></div></div><div className="evidence-triptych"><div className="card"><span className="badge">01 Proven already</span><h3>Is the underlying problem or intervention real?</h3><p>NHS, UK or peer-reviewed evidence establishes the mechanism and its relevance.</p></div><div className="card"><span className="badge">02 Sitora adds</span><h3>What operational layer is missing?</h3><p>Detection, ownership, workflow, reconciliation, prioritisation or whole-pathway measurement.</p></div><div className="card"><span className="badge">03 Pilot must prove</span><h3>Does it work safely here?</h3><p>Observed local outcomes, workload, safety, reusable capacity and independently validated financial effects.</p></div></div></div></section>
 
-      <section className="section">
-        <div className="shell callout">
-          <strong>Important</strong>
-          <p>Medicine Loop and WasteGuard use synthetic patient/workflow data. The resource demo uses published evidence with source links and limitations. None of the demos are clinical tools, and published effects are never presented as verified local savings.</p>
-        </div>
-      </section>
-    </>
-  );
-}
+  <section className="section pilot-funnel"><div className="shell two-col"><div><div className="eyebrow">Next step after the demos</div><h2>Do not buy the claim. Test it.</h2><p className="lede">A controlled 20-week evaluation establishes baseline, introduces governed interventions and ends with a Scale / Modify / Stop decision.</p></div><div className="pilot-funnel-actions"><Link className="button primary" href="/pilot">Run a controlled pilot</Link><Link className="button secondary" href="/commissioner-summary">Commissioner summary</Link><small>Independent concept · not an NHS-endorsed service</small></div></div></section>
+</>}
