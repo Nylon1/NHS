@@ -10,7 +10,7 @@ const primary = [
 ];
 
 const moreGroups = [
-  { label: "Decision", links: [["Business case", "/business-case"],["Technical implementation", "/technical-implementation"],["Methodology", "/methodology"]] },
+  { label: "Decision", links: [["Business case", "/business-case"],["Pilot protocol", "/pilot-protocol"],["Minimum data specification", "/data-specification"],["Technical implementation", "/technical-implementation"],["Methodology", "/methodology"]] },
   { label: "Evidence", links: [["Research", "/research"],["Findings", "/findings"]] },
   { label: "Opportunity", links: [["Opportunity register", "/opportunities"],["Loss map", "/loss-map"],["Bottlenecks", "/bottlenecks"],["Benchmarking", "/benchmarking"]] },
   { label: "Measurement", links: [["Dashboard", "/dashboard"],["Resource register", "/register"],["Interventions", "/interventions"]] },
